@@ -1,0 +1,11 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Space+Grotesk:wght@400;600&display=swap');
+html {
+  scroll-behavior: smooth;
+}
+.hover-scale {
+  transition: transform .25s ease;
+}
+.hover-scale:hover {
+  transform: scale(1.03);
+}
