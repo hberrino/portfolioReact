@@ -1,4 +1,6 @@
 import Foto from "../assets/imgs/FotoCV.jpg";
+import { techs } from '../Data/data.js';
+import PdfIcon from "../assets/icons/pdf.svg"
 
 export default function Hero() {
   return (
@@ -20,7 +22,7 @@ export default function Hero() {
             <h1 className="pb-2 text-3xl md:text-5xl font-extrabold tracking-tight md:pt-6 md:pr-5">
               Hola, soy <span className="text-purple-400">Hernán</span>
             </h1>
-            <div className="w-24 h-24 rounded-full overflow-hidden border-4 border-purple-800 shadow-lg">
+            <div className="w-24 h-24 rounded-full overflow-hidden border-2 border-purple-800 shadow-lg">
               <img
                 src={Foto}
                 alt="Hernán Berrino"
@@ -39,38 +41,41 @@ export default function Hero() {
 
           <div className="flex flex-wrap gap-4 mt-6 md:mt-10 justify-center md:justify-start md:pb-2">
             <a
-              href="#projects"
-              className="px-8 py-3 bg-purple-600 rounded-lg hover:bg-purple-700 transition shadow-md"
-            >
-              Ver Proyectos
-            </a>
+  href="#projects"
+  className="px-8 py-3 bg-purple-600 rounded-lg text-white
+             transition-all animate-glow hover:bg-purple-700"
+>
+  Ver Proyectos
+</a>
             <a
-              href="docs/cv_hbmES.pdf"
-              download="cv_hbmES.pdf"
-              className="px-8 py-3 bg-white/10 rounded-lg border border-white/10 hover:bg-white/20 transition"
-            >
-              Descargar CV
-            </a>
+  href="docs/cv_hbmES.pdf"
+  download="cv_hbmES.pdf"
+  className="flex items-center gap-2 px-8 py-3 bg-white/10 rounded-lg border border-white/10 hover:bg-white/20 transition"
+>
+  Descargar CV -
+  <img src={PdfIcon} alt="PDF" className="w-5 h-5" />
+</a>
           </div>
         </div>
 
         {/* Card */}
-        <div className="flex-1 flex justify-center w-full md:w-auto">
+        <div className="mt-4 flex-1 flex justify-center w-full md:w-auto">
           <div className="w-full md:w-auto relative bg-white/5 backdrop-blur-md border border-white/10 rounded-xl p-6 flex flex-col gap-6">
             <h3 className="text-center text-lg font-semibold text-gray-200 md:text-start">
               Qué puedo aportar
             </h3>
 
             <div className="flex flex-wrap gap-2 justify-center md:justify-start">
-              {["JS", "React", "Node", "Express", "Tailwind", "MySQL", "Java", "MongoDB", "HTML", "CSS","Git"].map((tech) => (
-                <span
-                  key={tech}
-                  className="px-3 py-1 bg-purple-600/30 text-purple-200 text-sm rounded-md"
-                >
-                  {tech}
-                </span>
-              ))}
-            </div>
+   {techs.map(({ name, icon }) => (
+       <span
+        key={name}
+      className="flex items-center gap-1 px-3 py-1 bg-purple-600/30 text-purple-200 text-sm rounded-md"
+    >
+      <img src={icon} alt={name} className="w-4 h-4" />
+      {name}
+    </span>
+  ))}
+</div>
 
             <hr className="border-white/10" />
             <p className="text-center text-sm text-gray-300 leading-relaxed md:text-start">

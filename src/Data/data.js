@@ -1,3 +1,30 @@
+import JSIcon from '../assets/icons/JS.svg';
+import ReactIcon from '../assets/icons/React.svg';
+import NodeIcon from '../assets/icons/Node.svg';
+import ExpressIcon from '../assets/icons/Express.svg';
+import TailwindIcon from '../assets/icons/Tailwind.svg';
+import MySQLIcon from '../assets/icons/MySQL.svg';
+import JavaIcon from '../assets/icons/Java.svg';
+import MongoDBIcon from '../assets/icons/MongoDB.svg';
+import HTMLIcon from '../assets/icons/html5.svg';
+import CSSIcon from '../assets/icons/CSS.svg';
+import GithubIcon from '../assets/icons/Github.svg';
+
+
+export const techs = [
+  { name: "JS", icon: JSIcon },
+  { name: "React", icon: ReactIcon },
+  { name: "Node", icon: NodeIcon },
+  { name: "Express", icon: ExpressIcon },
+  { name: "Tailwind", icon: TailwindIcon },
+  { name: "MySQL", icon: MySQLIcon },
+  { name: "Java", icon: JavaIcon },
+  { name: "MongoDB", icon: MongoDBIcon },
+  { name: "HTML", icon: HTMLIcon },
+  { name: "CSS", icon: CSSIcon },
+  { name: "Git", icon: GithubIcon },
+];
+
 export const navbarLinks = [
   { id: 'inicio', label: 'Inicio' },
   { id: 'sobremi', label: 'Sobre mí' },

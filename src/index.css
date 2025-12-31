@@ -10,3 +10,11 @@ html {
 .hover-scale:hover {
   transform: scale(1.03);
 }
+@keyframes glow-pulse {
+  0%, 100% { box-shadow: 0 0 7px rgba(255,215,0,0.3); }
+  50% { box-shadow: 0 0 15px rgba(255,215,0,0.4); }
+}
+
+.animate-glow {
+  animation: glow-pulse 2s infinite;
+}
