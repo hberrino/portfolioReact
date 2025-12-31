@@ -16,7 +16,7 @@ export default function App() {
       >
         <h2 className="text-3xl font-bold mb-6">Sobre mí</h2>
         <p className="max-w-xl text-center text-gray-700">
-          Contenido sobre vos...
+          CONTENIDO SOBRE MI PROXIMAMENTE
         </p>
       </section>
       <section
@@ -24,7 +24,7 @@ export default function App() {
         className="min-h-screen bg-white py-20 px-6 flex flex-col items-center justify-center pt-24"
       >
         <h2 className="text-3xl font-bold mb-6">Tecnologías</h2>
-        <p>Acá irán los logos...</p>
+        <p>lOGOS ICONS PROXIMAMENTE</p>
       </section>
       <section
         id="projects"
@@ -49,7 +49,7 @@ export default function App() {
         className="min-h-screen bg-gray-50 py-20 px-6 flex flex-col items-center justify-center pt-24"
       >
         <h2 className="text-3xl font-bold mb-6">Contacto</h2>
-        <p>Aquí pondremos un formulario luego...</p>
+        <p>FORMULARIO PROXIMAMENTE</p>
       </section>
     </>
   )
