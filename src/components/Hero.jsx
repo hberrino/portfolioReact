@@ -45,10 +45,11 @@ export default function Hero() {
               Ver Proyectos
             </a>
             <a
-              href="#tecnologias"
+              href="docs/cv_hbmES.pdf"
+              download="cv_hbmES.pdf"
               className="px-8 py-3 bg-white/10 rounded-lg border border-white/10 hover:bg-white/20 transition"
             >
-              Tecnologías
+              Descargar CV
             </a>
           </div>
         </div>
