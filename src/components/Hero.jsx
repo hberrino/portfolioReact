@@ -1,7 +1,7 @@
-export default function Hero() {
+ export default function Hero() {
   return (
     <section
-      className="relative min-h-screen flex items-center justify-center px-8 bg-[#0B0A10] text-white overflow-hidden"
+      className="relative min-h-screen flex items-center justify-center px-8 bg-[#0B0A10] text-white overflow-hidden animate-fade-in-right"
       id="inicio"
     >
       <div className="pointer-events-none absolute -top-40 -left-40 w-[450px] h-[450px] bg-purple-600/20 blur-[150px] rounded-full"></div>
