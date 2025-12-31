@@ -1,3 +1,4 @@
+ import Foto from "../assets/imgs/FotoCV.jpg";
  export default function Hero() {
   return (
     <section
@@ -23,7 +24,7 @@
     {/* Foto en círculo tipo card */}
     <div className="w-24 h-24 rounded-full overflow-hidden border-4 border-purple-800 shadow-lg">
       <img
-        src="./src/assets/imgs/FotoCV.jpg"
+        src={Foto}
         alt="Hernán Berrino"
         className="w-full h-full object-cover scale-170 object-[center_35%]"
       />
