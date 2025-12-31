@@ -14,9 +14,10 @@ export default function Hero() {
       <div className="max-w-6xl w-full flex flex-col md:flex-row gap-12 relative z-10 py-20 items-center">
 
         <div className="flex-1 flex flex-col justify-start items-center md:items-start text-center md:text-left gap-4 md:gap-2">
-          <p className="text-sm text-purple-400 tracking-wide font-medium pt-6 md:pt-2">
-            Disponible – Buscando primer experiencia
-          </p>
+          <p className="text-sm text-purple-400 tracking-wide font-medium pt-6 md:pt-2 flex items-center gap-2">
+  <span className="w-2 h-2 bg-green-500 rounded-full inline-block"></span>
+  Disponible – Buscando primer experiencia
+</p>
 
           <div className="flex flex-col md:flex-row items-center md:items-start gap-4 md:gap-6">
             <h1 className="pb-2 text-3xl md:text-5xl font-extrabold tracking-tight md:pt-6 md:pr-5">
