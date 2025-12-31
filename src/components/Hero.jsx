@@ -61,7 +61,7 @@ export default function Hero() {
             </h3>
 
             <div className="flex flex-wrap gap-2 justify-center md:justify-start">
-              {["JS", "React", "Node", "Express", "MySQL", "MongoDB", "Git"].map((tech) => (
+              {["JS", "React", "Node", "Express", "Tailwind", "MySQL", "Java", "MongoDB", "HTML", "CSS","Git"].map((tech) => (
                 <span
                   key={tech}
                   className="px-3 py-1 bg-purple-600/30 text-purple-200 text-sm rounded-md"
@@ -88,7 +88,7 @@ export default function Hero() {
               </h4>
 
               <div className="pt-3 flex flex-wrap gap-2 mt-2 justify-center md:justify-start">
-                {["Disciplina", "Constancia", "Iniciativa", "Comunicación", "Mentalidad resolutiva", "Curiosidad", "Adaptabilidad"].map((skill) => (
+                {["Disciplina", "Constancia", "Iniciativa", "Comunicación", "Creatividad","Mentalidad resolutiva", "Curiosidad", "Adaptabilidad"].map((skill) => (
                   <span
                     key={skill}
                     className="px-3 py-1 text-xs text-white bg-white/15 border border-white/20 rounded-lg backdrop-blur-sm hover:bg-white/25 hover:border-white/30 transition-all font-medium"
