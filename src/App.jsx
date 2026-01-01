@@ -9,30 +9,37 @@ import CELLS from "vanta/dist/vanta.cells.min";
 export default function App() {
   const vantaRef = useRef(null);
   const vantaEffect = useRef(null);
+  const isMobile = () => window.innerWidth < 768;
 
   useEffect(() => {
-    vantaEffect.current = CELLS({
-      el: vantaRef.current,
-      mouseControls: true,
-  touchControls: true,
-  gyroControls: false,
-  minHeight: 200.00,
-  minWidth: 200.00,
-  scale: 1.00,
-  color1: 0x0,
-  color2: 0x3a0a75,
-  size: 2.20,
-  speed: 1.3,
-      THREE,
-    });
+  if (isMobile()) return; // evitar carga en mobile
 
-    return () => {
-      if (vantaEffect.current) vantaEffect.current.destroy();
-    };
-  }, []);
+  vantaEffect.current = CELLS({
+    el: vantaRef.current,
+    mouseControls: true,
+    touchControls: true,
+    gyroControls: false,
+    minHeight: 200.00,
+    minWidth: 200.00,
+    scale: 1.00,
+    color1: 0x000000,
+    color2: 0x3a0a75,
+    size: 2.20,
+    speed: 2.90,
+    THREE,
+  });
+
+  return () => {
+    if (vantaEffect.current) vantaEffect.current.destroy();
+  };
+}, []);
 
   return (
-    <div ref={vantaRef} className="min-h-screen w-full text-white relative">
+    <div
+  ref={vantaRef}
+  className="min-h-screen w-full text-white relative 
+  bg-gradient-to-b from-neutral-950 via-neutral-900 to-neutral-950"
+>
       <Navbar />
       <Hero />
 
