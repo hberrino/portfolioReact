@@ -99,7 +99,7 @@ export default function Hero() {
                 {["Disciplina", "Constancia", "Iniciativa", "Comunicación", "Creatividad","Mentalidad resolutiva", "Curiosidad", "Adaptabilidad"].map((skill) => (
                   <span
                     key={skill}
-                    className="px-3 py-1 text-xs text-white bg-white/15 border border-white/20 rounded-lg backdrop-blur-sm hover:bg-white/25 hover:border-white/30 transition-all font-medium"
+                    className="px-3 py-1 text-xs font-medium rounded-lg backdrop-blur-sm transition-all text-white bg-white/10 border border-white/20 hover:bg-white/20 hover:border-white/30"
                   >
                     {skill}
                   </span>
