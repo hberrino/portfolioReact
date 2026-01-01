@@ -1,12 +1,13 @@
 import Foto from "../assets/imgs/FotoCV.jpg";
 import { techs } from '../Data/data.js';
-import PdfIcon from "../assets/icons/pdf.svg"
+import PdfIcon from "../assets/icons/pdf.svg";
+
 
 export default function Hero() {
   return (
     <section
-      className="relative min-h-screen flex items-center justify-center px-6 md:px-8 bg-[#0B0A10] text-white overflow-hidden animate-fade-in-right"
       id="inicio"
+      className="relative min-h-screen flex items-center justify-center px-6 md:px-8 text-white overflow-hidden animate-fade-in-right"
     >
       <div className="pointer-events-none absolute -top-40 -left-40 w-[450px] h-[450px] bg-purple-600/20 blur-[150px] rounded-full"></div>
       <div className="pointer-events-none absolute bottom-0 right-0 w-[500px] h-[500px] bg-purple-700/10 blur-[220px] rounded-full"></div>
