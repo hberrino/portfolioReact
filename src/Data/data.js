@@ -32,7 +32,7 @@ export const projects = [
     description: "Aplicación full stack para gestión de estacionamiento, con cálculo automático de tarifas basado en duración y tipo de vehículo. Desarrollada con JS, CSS, HTML, API, y librerias externas.",
     github: "https://github.com/hberrino/ParkingV1",
     demo: "https://hberrino.github.io/ParkingV1/",
-    video: "public/videos/Parkingvid.mp4"
+    video: `${import.meta.env.BASE_URL}videos/Parkingvid.mp4`,
   },
   {
     title: "API de Usuarios",
