@@ -25,14 +25,6 @@ export const techs = [
   { name: "Git", icon: GithubIcon },
 ];
 
-export const navbarLinks = [
-  { id: 'inicio', label: 'Inicio' },
-  { id: 'sobremi', label: 'Sobre mí' },
-  { id: 'tecnologias', label: 'Tecnologías' },
-    { id: 'projects', label: 'Trabajos' },
-    { id: 'contacto', label: 'Contacto' },
-];
-
 export const projects = [
   {
     title: "Parking Dinamico con Calculador de costo.",
@@ -49,4 +41,5 @@ export const projects = [
     description: "Sitio web personal con React + Tailwind",
     github: "https://github.com/hernan/portfolio"
   }
+  
 ];
