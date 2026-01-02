@@ -1,14 +1,13 @@
 import { useState, useEffect, useRef } from "react";
-import Navbar from './components/Navbar'
-import Hero from './components/Hero'
-import ProjectCard from './components/ProjectCard'
-import { projects } from './Data/data.js'
+import Navbar from "./components/Navbar";
+import Hero from "./components/Hero";
+import Projects from "./components/Projects";
 import * as THREE from "three";
 import CELLS from "vanta/dist/vanta.cells.min";
 import { texts } from "./Data/texts.js";
 
 export default function App() {
-  const [lang, setLang] = useState("es"); // <- Estado global del idioma
+  const [lang, setLang] = useState("es");
   const t = texts[lang];
 
   const vantaRef = useRef(null);
@@ -23,13 +22,13 @@ export default function App() {
       mouseControls: true,
       touchControls: true,
       gyroControls: false,
-      minHeight: 200.00,
-      minWidth: 200.00,
-      scale: 1.00,
+      minHeight: 200.0,
+      minWidth: 200.0,
+      scale: 1.0,
       color1: 0x000000,
       color2: 0x3a0a75,
-      size: 2.20,
-      speed: 2.90,
+      size: 2.2,
+      speed: 2.9,
       THREE,
     });
 
@@ -46,13 +45,7 @@ export default function App() {
       <Navbar lang={lang} setLang={setLang} />
       <Hero lang={lang} />
 
-      <section
-        id="sobremi"
-        className="min-h-screen py-20 px-6 flex flex-col items-center justify-center pt-24"
-      >
-        <h2 className="text-3xl font-bold mb-6">{t.sections.aboutTitle}</h2>
-        <p className="max-w-xl text-center">{t.sections.aboutPlaceholder}</p>
-      </section>
+      <Projects title={t.sections.projectsTitle} />
 
       <section
         id="tecnologias"
@@ -65,23 +58,15 @@ export default function App() {
       </section>
 
       <section
-        id="projects"
-        className="min-h-screen py-12 px-4 flex flex-col items-center justify-center pt-24"
+        id="sobremi"
+        className="min-h-screen py-20 px-6 flex flex-col items-center justify-center pt-24"
       >
-        <h2 className="text-3xl font-bold text-center mb-8" data-aos="fade-up">
-          {t.sections.projectsTitle}
+        <h2 className="text-3xl font-bold mb-6">
+          {t.sections.aboutTitle}
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {projects.map((p, i) => (
-            <ProjectCard
-              key={i}
-              title={p.title}
-              description={p.description}
-              github={p.github}
-              lang={lang} 
-            />
-          ))}
-        </div>
+        <p className="max-w-xl text-center">
+          {t.sections.aboutPlaceholder}
+        </p>
       </section>
 
       <section

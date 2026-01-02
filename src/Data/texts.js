@@ -1,4 +1,3 @@
-// Data/texts.js
 export const texts = {
   es: {
     card: {
@@ -21,15 +20,15 @@ export const texts = {
     },
     nav: {
   inicio: "Inicio",
-  about: "Sobre mí",
-  tecnologias: "Tecnologías",
   projects: "Trabajos",
-  contact: "Contacto",
+  tecnologias: "Tecnologías",
+  sobremi: "Sobre mi",
+  contacto: "Contacto",
 },
     sections: {
       aboutTitle: "Sobre mí",
       aboutPlaceholder: "Contenido sobre mí próximamente",
-      projectsTitle: "Mis Proyectos",
+      projectsTitle: "Proyectos destacados",
       contactTitle: "Contacto",
     },
     hero: {
@@ -66,15 +65,15 @@ export const texts = {
     },
     nav: {
   inicio: "Home",
-  about: "About me",
-  tecnologias: "Technologies",
   projects: "Projects",
-  contact: "Contact",
+  tecnologias: "Technologies",
+  sobremi: "About me",
+  contacto: "Contact",
 },
     sections: {
       aboutTitle: "About me",
       aboutPlaceholder: "About section coming soon",
-      projectsTitle: "My Projects",
+      projectsTitle: "Featured projects",
       contactTitle: "Contact",
     },
     hero: {

@@ -8,7 +8,8 @@ import JavaIcon from '../assets/icons/Java.svg';
 import MongoDBIcon from '../assets/icons/MongoDB.svg';
 import HTMLIcon from '../assets/icons/html5.svg';
 import CSSIcon from '../assets/icons/CSS.svg';
-import GithubIcon from '../assets/icons/Github.svg';
+import GithubIcon from '../assets/icons/github.svg';
+import Linkedin from '../assets/icons/linkedin.svg';
 
 
 export const techs = [
@@ -27,19 +28,20 @@ export const techs = [
 
 export const projects = [
   {
-    title: "Parking Dinamico con Calculador de costo.",
-    description: "App CRUD hecha con React y LocalStorage",
-    github: "https://github.com/hberrino/ParkingV1"
+    title: "Parking Dinámico con Calculador de Costo",
+    description: "Aplicación full stack para gestión de estacionamiento, con cálculo automático de tarifas basado en duración y tipo de vehículo. Desarrollada con JS, CSS, HTML, API, y librerias externas.",
+    github: "https://github.com/hberrino/ParkingV1",
+    demo: "https://hberrino.github.io/ParkingV1/",
+    video: "public/videos/Parkingvid.mp4"
   },
   {
     title: "API de Usuarios",
-    description: "Backend REST usando Java + Spring Boot",
+    description: "Backend REST desarrollado con Java y Spring Boot.",
     github: "https://github.com/hernan/spring-api"
   },
   {
     title: "Portfolio v1",
-    description: "Sitio web personal con React + Tailwind",
+    description: "Sitio web personal desarrollado con React y Tailwind.",
     github: "https://github.com/hernan/portfolio"
   }
-  
 ];

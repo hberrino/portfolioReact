@@ -2,6 +2,8 @@ import Foto from "../assets/imgs/FotoCV.jpg";
 import { techs } from '../Data/data.js';
 import PdfIcon from "../assets/icons/pdf.svg";
 import { texts } from "../Data/texts.js";
+import GithubIcon from '../assets/icons/github.svg';
+import Linkedin from '../assets/icons/linkedin.svg';
 
 
 export default function Hero({lang}) {
@@ -18,16 +20,41 @@ export default function Hero({lang}) {
       <div className="max-w-6xl w-full flex flex-col md:flex-row gap-12 relative z-10 py-20 items-center">
 
         <div className="flex-1 flex flex-col justify-start items-center md:items-start text-center md:text-left gap-4 md:gap-2">
-          <p className="text-sm text-purple-400 tracking-wide font-medium pt-6 md:pt-2 flex items-center gap-2">
-  <span className="w-2 h-2 bg-green-500 rounded-full inline-block"></span>
+          <div className="w-full flex justify-between items-center pt-6 md:pt-2">
+  <p className="text-xs md:text-sm text-purple-400 tracking-wide font-medium flex items-center gap-2">
+  <span className="w-1.5 h-1.5 md:w-2 md:h-2 bg-green-500 rounded-full inline-block"></span>
   {t.hero.availability}
 </p>
+
+
+  <div className="flex items-center gap-2 pb-1 pr-2 md:pb-0 md:pr-6">
+    <span className="text-purple-400 text-lg hidden md:inline">→</span>
+    <div className="flex gap-1">
+      <a
+        href="https://github.com/hberrino"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="p-2 rounded-full hover:bg-purple-500/20 transition transform hover:scale-110"
+      >
+        <img src={GithubIcon} alt="GitHub" className="w-5 h-5" />
+      </a>
+      <a
+        href="https://linkedin.com/in/hernanberrino"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="p-2 rounded-full  hover:bg-purple-500/20 transition transform hover:scale-110"
+      >
+        <img src={Linkedin} alt="LinkedIn" className="w-5 h-5" />
+      </a>
+    </div>
+  </div>
+</div>
 
           <div className="flex flex-col md:flex-row items-center md:items-start gap-4 md:gap-6">
             <h1 className="pb-2 text-3xl md:text-5xl font-extrabold tracking-tight md:pt-6 md:pr-5">
               {t.hero.greeting} <span className="text-purple-400">Hernán</span>
             </h1>
-            <div className="w-24 h-24 rounded-full overflow-hidden border-2 border-purple-800 shadow-lg">
+            <div className="md:translate-y-7 w-24 h-24 rounded-full overflow-hidden border-2 border-purple-800 shadow-lg">
               <img
                 src={Foto}
                 alt="Hernán Berrino"
@@ -43,7 +70,6 @@ export default function Hero({lang}) {
           <p className="text-lg text-gray-300 leading-relaxed mt-4 md:mt-6 max-w-xl">
             {t.hero.description}
           </p>
-
           <div className="flex flex-wrap gap-4 mt-6 md:mt-10 justify-center md:justify-start md:pb-2">
             <a
   href="#projects"

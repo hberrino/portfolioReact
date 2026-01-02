@@ -27,17 +27,15 @@ export default function Navbar({ lang, setLang }) {
             className="w-12 h-12 scale-[3] pt-1 object-contain"
           />
         </a>
-
-        {/* Desktop links */}
         <ul className="hidden md:flex gap-6 text-gray-300 items-center">
           {Object.values(texts[lang].nav).map((label, i) => (
             <li key={i}>
               <a
-                href={`#${Object.keys(texts[lang].nav)[i]}`}
-                className="hover:text-purple-400 hover:drop-shadow-[0_0_6px_rgba(168,85,247,0.7)] transition-colors duration-200"
-              >
-                {label}
-              </a>
+  href={`#${Object.keys(texts[lang].nav)[i]}`}
+  className="relative pb-1 border-b-2 border-transparent hover:border-purple-400/70 transition-all duration-300"
+>
+  {label}
+</a>
             </li>
           ))}
           <li className="relative">
