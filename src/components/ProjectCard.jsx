@@ -19,7 +19,6 @@ export default function ProjectCard({
       "
       data-aos="fade-up"
     >
-      {/* Media */}
       {(video || image) && (
         <div className="relative w-full aspect-video overflow-hidden">
           {video ? (
@@ -43,8 +42,6 @@ export default function ProjectCard({
           <div className="absolute inset-0 bg-black/20" />
         </div>
       )}
-
-      {/* Content */}
       <div className="p-5 flex flex-col gap-2">
         <h3 className="text-sm font-semibold text-white">
           {title}

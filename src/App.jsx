@@ -39,9 +39,17 @@ export default function App() {
 
   return (
     <div
-      ref={vantaRef}
-      className="min-h-screen w-full text-white relative bg-gradient-to-b from-neutral-950 via-neutral-900 to-neutral-950"
-    >
+  ref={vantaRef}
+  className="
+    min-h-screen
+    w-full
+    text-white
+    relative
+    bg-gradient-to-b from-neutral-950 via-neutral-900 to-neutral-950
+    overflow-x-hidden
+  "
+  style={{ backgroundAttachment: "fixed" }}
+>
       <Navbar lang={lang} setLang={setLang} />
       <Hero lang={lang} />
 
