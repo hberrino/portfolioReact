@@ -35,9 +35,16 @@ export const projects = [
     video: `${import.meta.env.BASE_URL}videos/Parkingvid.mp4`,
   },
   {
-    title: "API de Usuarios",
-    description: "Backend REST desarrollado con Java y Spring Boot.",
-    github: "https://github.com/hernan/spring-api"
+    title: "Pagina informativa de motocicletas",
+    description: "Web realizada con JavaScript, CSS, HTML, y consumiendo una API para el sistema de ranking",
+    github: "https://github.com/hberrino/Mototopsweb",
+    demo: "https://hberrino.github.io/Mototopsweb/",
+    images: [
+    `${import.meta.env.BASE_URL}images/mototops1.jpg`,
+    `${import.meta.env.BASE_URL}images/mototops2.jpg`,
+    `${import.meta.env.BASE_URL}images/mototops3.jpg`,
+    `${import.meta.env.BASE_URL}images/mototops4.jpg`,
+  ],
   },
   {
     title: "Portfolio v1",
