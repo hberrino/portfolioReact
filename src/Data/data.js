@@ -8,8 +8,12 @@ import JavaIcon from '../assets/icons/Java.svg';
 import MongoDBIcon from '../assets/icons/MongoDB.svg';
 import HTMLIcon from '../assets/icons/html5.svg';
 import CSSIcon from '../assets/icons/CSS.svg';
-import GithubIcon from '../assets/icons/github.svg';
+import GitHubIcon from '../assets/icons/github.svg';
 import Linkedin from '../assets/icons/linkedin.svg';
+import GitIcon from '../assets/icons/git.svg';
+import VScodeIcon from '../assets/icons/vscode.svg';
+import ViteIcon from '../assets/icons/vite.svg';
+import IntellijIcon from '../assets/icons/intellij.svg';
 
 
 export const techs = [
@@ -23,8 +27,17 @@ export const techs = [
   { name: "MongoDB", icon: MongoDBIcon },
   { name: "HTML", icon: HTMLIcon },
   { name: "CSS", icon: CSSIcon },
-  { name: "Git", icon: GithubIcon },
+  { name: "Github", icon: GitHubIcon },
+  { name: "Git", icon: GitIcon },
+  { name: "VSCode", icon: VScodeIcon },
+  { name: "Vite", icon: ViteIcon },
+  { name: "IntelliJ", icon: IntellijIcon },
 ];
+export const techGroups = {
+  frontend: ["JS", "React", "HTML", "CSS", "Tailwind"],
+  backend: ["Node", "Express", "Java", "MongoDB", "MySQL"],
+  tools: ["Git", "Github", "VSCode", "NPM", "Vite", "IntelliJ"],
+};
 
 export const projects = [
   {

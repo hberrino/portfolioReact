@@ -25,9 +25,6 @@ export default function ProjectCard({
       "
       data-aos="fade-up"
     >
-      {/* ===== MEDIA ===== */}
-
-      {/* Video (proyecto destacado) */}
       {video && (
         <div className="relative w-full aspect-video overflow-hidden">
           <video
@@ -57,7 +54,6 @@ export default function ProjectCard({
 
           {images.length > 1 && (
             <>
-              {/* Flecha izquierda */}
               <button
                 onClick={() =>
                   setCurrent(
@@ -76,8 +72,6 @@ export default function ProjectCard({
               >
                 ‹
               </button>
-
-              {/* Flecha derecha */}
               <button
                 onClick={() =>
                   setCurrent((current + 1) % images.length)
@@ -94,8 +88,6 @@ export default function ProjectCard({
               >
                 ›
               </button>
-
-              {/* Indicadores */}
               <div className=" absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1">
                 {images.map((_, i) => (
                   <span
@@ -112,8 +104,6 @@ export default function ProjectCard({
           )}
         </div>
       )}
-
-      {/* ===== CONTENT ===== */}
       <div className="p-5 flex flex-col gap-2">
         <h3 className="text-sm font-semibold text-white">
           {title}

@@ -5,6 +5,7 @@ import Projects from "./components/Projects";
 import * as THREE from "three";
 import CELLS from "vanta/dist/vanta.cells.min";
 import { texts } from "./Data/texts.js";
+import Tecnologias from "./components/Tecnologias.jsx";
 
 export default function App() {
   const [lang, setLang] = useState("es");
@@ -54,16 +55,8 @@ export default function App() {
       <Hero lang={lang} />
 
       <Projects title={t.sections.projectsTitle} />
+      <Tecnologias lang={lang} />
 
-      <section
-        id="tecnologias"
-        className="min-h-screen py-20 px-6 flex flex-col items-center justify-center pt-24"
-      >
-        <h2 className="text-3xl font-bold mb-6">
-          {lang === "es" ? "Tecnologías" : "Technologies"}
-        </h2>
-        <p>LOGOS / ICONS PROXIMAMENTE</p>
-      </section>
 
       <section
         id="sobremi"

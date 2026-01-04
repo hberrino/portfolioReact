@@ -15,7 +15,7 @@ export default function Projects({ title }) {
         items-center
       "
     >
-      <div className="text-center mb-16" data-aos="fade-up">
+      <div className="text-center mb-16 pt-7" data-aos="fade-up">
         <span className="text-xs uppercase tracking-widest text-purple-400">
           Portfolio
         </span>
