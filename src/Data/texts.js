@@ -1,5 +1,14 @@
 export const texts = {
   es: {
+    about: {
+      me: `Soy desarrollador web y me encuentro en la etapa final de mi formación universitaria.
+Durante mi carrera construí una base sólida en programación estructurada y programación orientada a objetos, lo que me permitió desarrollar una forma de pensar ordenada y analítica.
+Me motiva enfrentar nuevos desafíos y adquirir experiencias que me permitan seguir creciendo y mejorando como desarrollador.`,
+      offer: `Desarrollo soluciones web modernas y responsivas, adaptadas a distintos dispositivos y necesidades.
+Me enfoco en crear interfaces funcionales y visualmente atractivas, cuidando el rendimiento, la accesibilidad y la mantenibilidad del código.
+Busco aportar valor en cada proyecto mediante desarrollos sólidos y bien estructurados.`,
+    },
+
     card: {
       softSkills: [
         "Disciplina",
@@ -18,19 +27,24 @@ export const texts = {
         "No solo estudio: ejecuto, entrego y demuestro con proyectos reales.",
       softSkillsTitle: "Soft skills",
     },
+
     nav: {
-  inicio: "Inicio",
-  projects: "Trabajos",
-  tecnologias: "Tecnologías",
-  sobremi: "Sobre mi",
-  contacto: "Contacto",
-},
+      inicio: "Inicio",
+      projects: "Trabajos",
+      tecnologias: "Tecnologías",
+      sobremi: "Sobre mi",
+      contacto: "Contacto",
+    },
+
     sections: {
       aboutTitle: "Sobre mí",
-      aboutPlaceholder: "Contenido sobre mí próximamente",
+      aboutMeTitle: "Quién soy",
+      aboutOfferTitle: "Qué hago",
       projectsTitle: "Proyectos destacados",
       contactTitle: "Contacto",
+      footerBuilt: "Realizado con",
     },
+
     hero: {
       availability: "Disponible – Buscando primer experiencia",
       greeting: "Hola, soy",
@@ -42,9 +56,30 @@ export const texts = {
         downloadCV: "Descargar CV",
       },
     },
+
+    contact: {
+      title: "Trabajemos juntos",
+      subtitle:
+        "Estoy abierto a nuevas oportunidades, proyectos y colaboraciones. Si tenés una idea o propuesta, charlamos.",
+      linkedin: "LinkedIn",
+      gmail: "Gmail",
+      name: "Nombre",
+      email: "Correo",
+      message: "Mensaje",
+      send: "Enviar mensaje",
+    },
   },
 
   en: {
+    about: {
+      me: `I am a web developer currently in the final stage of my university studies.
+Throughout my academic journey, I built a strong foundation in structured programming and object-oriented programming, which helped me develop an organized and analytical way of thinking.
+I am motivated by new challenges and by gaining experiences that allow me to continue growing and improving as a developer.`,
+      offer: `I develop modern and responsive web solutions, adapted to different devices and needs.
+I focus on building functional and visually appealing interfaces, paying attention to performance, accessibility, and code maintainability.
+My goal is to add value to each project through solid and well-structured developments.`,
+    },
+
     card: {
       softSkills: [
         "Discipline",
@@ -63,19 +98,24 @@ export const texts = {
         "I don’t just study: I execute, deliver, and prove it with real projects.",
       softSkillsTitle: "Soft skills",
     },
+
     nav: {
-  inicio: "Home",
-  projects: "Projects",
-  tecnologias: "Technologies",
-  sobremi: "About me",
-  contacto: "Contact",
-},
+      inicio: "Home",
+      projects: "Projects",
+      tecnologias: "Technologies",
+      sobremi: "About me",
+      contacto: "Contact",
+    },
+
     sections: {
       aboutTitle: "About me",
-      aboutPlaceholder: "About section coming soon",
+      aboutMeTitle: "Who I am",
+      aboutOfferTitle: "What I do",
       projectsTitle: "Featured projects",
       contactTitle: "Contact",
+      footerBuilt: "Built with",
     },
+
     hero: {
       availability: "Available – Looking for first professional experience",
       greeting: "Hi, I'm",
@@ -86,6 +126,18 @@ export const texts = {
         projects: "View Projects",
         downloadCV: "Download CV",
       },
+    },
+
+    contact: {
+      title: "Let’s work together",
+      subtitle:
+        "I’m open to new opportunities, projects, and collaborations. If you have an idea or proposal, let’s talk.",
+      linkedin: "LinkedIn",
+      gmail: "Gmail",
+      name: "Name",
+      email: "Email",
+      message: "Message",
+      send: "Send message",
     },
   },
 };

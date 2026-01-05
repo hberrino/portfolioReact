@@ -39,8 +39,6 @@ export default function ProjectCard({
           <div className="absolute inset-0 bg-black/20" />
         </div>
       )}
-
-      {/* Slider de imágenes */}
       {!video && hasImages && (
         <div className="relative w-full aspect-video overflow-hidden">
           <img
@@ -124,7 +122,7 @@ export default function ProjectCard({
               transition-colors
             "
           >
-            Código
+            Code
           </a>
 
           {demo && (

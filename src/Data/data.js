@@ -41,27 +41,47 @@ export const techGroups = {
 
 export const projects = [
   {
-    title: "Parking Dinámico con Calculador de Costo",
-    description: "Aplicación full stack para gestión de estacionamiento, con cálculo automático de tarifas basado en duración y tipo de vehículo. Desarrollada con JS, CSS, HTML, API, y librerias externas.",
+    title: {
+      es: "Parking dinámico con calculador de costo",
+      en: "Dynamic parking with cost calculator",
+    },
+    description: {
+      es: "Aplicación full stack para gestión de estacionamiento, con cálculo automático de tarifas según duración y tipo de vehículo.",
+      en: "Full stack application for parking management, with automatic fare calculation based on duration and vehicle type.",
+    },
     github: "https://github.com/hberrino/ParkingV1",
     demo: "https://hberrino.github.io/ParkingV1/",
     video: `${import.meta.env.BASE_URL}videos/Parkingvid.mp4`,
   },
+
   {
-    title: "Pagina informativa de motocicletas",
-    description: "Web realizada con JavaScript, CSS, HTML, y consumiendo una API para el sistema de ranking",
+    title: {
+      es: "Página informativa de motocicletas",
+      en: "Motorcycle information website",
+    },
+    description: {
+      es: "Sitio web desarrollado con JavaScript, CSS y HTML, consumiendo una API para el sistema de ranking.",
+      en: "Website built with JavaScript, CSS and HTML, consuming an API for the ranking system.",
+    },
     github: "https://github.com/hberrino/Mototopsweb",
     demo: "https://hberrino.github.io/Mototopsweb/",
     images: [
-    `${import.meta.env.BASE_URL}images/mototops1.jpg`,
-    `${import.meta.env.BASE_URL}images/mototops2.jpg`,
-    `${import.meta.env.BASE_URL}images/mototops3.jpg`,
-    `${import.meta.env.BASE_URL}images/mototops4.jpg`,
-  ],
+      `${import.meta.env.BASE_URL}images/mototops1.jpg`,
+      `${import.meta.env.BASE_URL}images/mototops2.jpg`,
+      `${import.meta.env.BASE_URL}images/mototops3.jpg`,
+      `${import.meta.env.BASE_URL}images/mototops4.jpg`,
+    ],
   },
+
   {
-    title: "Portfolio v1",
-    description: "Sitio web personal desarrollado con React y Tailwind.",
-    github: "https://github.com/hernan/portfolio"
-  }
+    title: {
+      es: "Web de fotografía y contenido audiovisual",
+      en: "Photography and audiovisual content website",
+    },
+    description: {
+      es: "Sitio web desarrollado con React y Tailwind para una empresa de fotografía.",
+      en: "Website developed with React and Tailwind for a photography company.",
+    },
+    github: "https://github.com/hberrino/",
+  },
 ];

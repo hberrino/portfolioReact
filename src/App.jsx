@@ -6,6 +6,9 @@ import * as THREE from "three";
 import CELLS from "vanta/dist/vanta.cells.min";
 import { texts } from "./Data/texts.js";
 import Tecnologias from "./components/Tecnologias.jsx";
+import Sobremi from "./components/Sobremi.jsx"
+import Contacto from "./components/Contacto.jsx";
+import Footer from "./components/Footer.jsx"
 
 export default function App() {
   const [lang, setLang] = useState("es");
@@ -54,31 +57,17 @@ export default function App() {
       <Navbar lang={lang} setLang={setLang} />
       <Hero lang={lang} />
 
-      <Projects title={t.sections.projectsTitle} />
+      <Projects
+  title={t.sections.projectsTitle}
+  lang={lang}
+/>
       <Tecnologias lang={lang} />
 
 
-      <section
-        id="sobremi"
-        className="min-h-screen py-20 px-6 flex flex-col items-center justify-center pt-24"
-      >
-        <h2 className="text-3xl font-bold mb-6">
-          {t.sections.aboutTitle}
-        </h2>
-        <p className="max-w-xl text-center">
-          {t.sections.aboutPlaceholder}
-        </p>
-      </section>
+      <Sobremi lang={lang} />
 
-      <section
-        id="contacto"
-        className="min-h-screen py-20 px-6 flex flex-col items-center justify-center pt-24"
-      >
-        <h2 className="text-3xl font-bold mb-6">
-          {t.sections.contactTitle}
-        </h2>
-        <p>FORMULARIO PROXIMAMENTE</p>
-      </section>
+      <Contacto lang={lang} />
+      <Footer lang={lang}/>
     </div>
   );
 }
