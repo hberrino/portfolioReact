@@ -9,7 +9,6 @@ export default function ProjectCard({
   images,
 }) {
   const [current, setCurrent] = useState(0);
-
   const hasImages = images && images.length > 0;
 
   return (
@@ -25,8 +24,9 @@ export default function ProjectCard({
       "
       data-aos="fade-up"
     >
+      {/* VIDEO */}
       {video && (
-        <div className="relative w-full aspect-video overflow-hidden">
+        <div className="relative w-full h-[220px] overflow-hidden">
           <video
             src={video}
             autoPlay
@@ -39,23 +39,35 @@ export default function ProjectCard({
           <div className="absolute inset-0 bg-black/20" />
         </div>
       )}
+
+      {/* IMAGES */}
       {!video && hasImages && (
-        <div className="relative w-full aspect-video overflow-hidden">
+        <div className="
+          relative w-full h-[220px]
+          overflow-hidden
+          flex items-center justify-center
+          bg-black/20
+        ">
           <img
-  src={images[current]}
-  alt={`${title} screenshot ${current + 1}`}
-  className="max-w-full h-auto object-contain transition-opacity duration-300"
-  loading="lazy"
-/>
+            src={images[current]}
+            alt={`${title} screenshot ${current + 1}`}
+            className="
+              max-h-full max-w-full
+              object-contain
+              transition-opacity duration-300
+            "
+            loading="lazy"
+          />
 
-          <div className="absolute inset-0 bg-black/20" />
-
+          {/* NAV */}
           {images.length > 1 && (
             <>
               <button
                 onClick={() =>
                   setCurrent(
-                    current === 0 ? images.length - 1 : current - 1
+                    current === 0
+                      ? images.length - 1
+                      : current - 1
                   )
                 }
                 className="
@@ -70,6 +82,7 @@ export default function ProjectCard({
               >
                 ‹
               </button>
+
               <button
                 onClick={() =>
                   setCurrent((current + 1) % images.length)
@@ -86,7 +99,11 @@ export default function ProjectCard({
               >
                 ›
               </button>
-              <div className=" absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1">
+
+              <div className="
+                absolute bottom-3 left-1/2
+                -translate-x-1/2 flex gap-1
+              ">
                 {images.map((_, i) => (
                   <span
                     key={i}
@@ -102,6 +119,8 @@ export default function ProjectCard({
           )}
         </div>
       )}
+
+      {/* CONTENT */}
       <div className="p-5 flex flex-col gap-2">
         <h3 className="text-sm font-semibold text-white">
           {title}
@@ -118,8 +137,7 @@ export default function ProjectCard({
             rel="noopener noreferrer"
             className="
               text-xs font-medium text-neutral-300
-              hover:text-white
-              transition-colors
+              hover:text-white transition-colors
             "
           >
             Code
@@ -132,8 +150,7 @@ export default function ProjectCard({
               rel="noopener noreferrer"
               className="
                 text-xs font-medium text-purple-400
-                hover:text-purple-300
-                transition-colors
+                hover:text-purple-300 transition-colors
               "
             >
               Demo

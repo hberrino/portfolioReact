@@ -36,6 +36,21 @@ export const projects = [
     demo: "https://hberrino.github.io/ParkingV1/",
     video: "/videos/Parkingvid.mp4",
   },
+  {
+    title: {
+      es: "Web de fotografía y contenido audiovisual",
+      en: "Photography and audiovisual content website",
+    },
+    description: {
+      es: "Sitio web desarrollado con React y Tailwind para una empresa de fotografía.",
+      en: "Website developed with React and Tailwind for a photography company.",
+    },
+    github: "https://github.com/hberrino/",
+    demo:"https://github.com/hberrino/RuloFotografiaWeb",
+    images: [
+      "/images/RulowebLanding.jpg",
+    ],
+  },
 
   {
     title: {
@@ -54,17 +69,5 @@ export const projects = [
       "/images/mototops3.jpg",
       "/images/mototops4.jpg",
     ],
-  },
-
-  {
-    title: {
-      es: "Web de fotografía y contenido audiovisual",
-      en: "Photography and audiovisual content website",
-    },
-    description: {
-      es: "Sitio web desarrollado con React y Tailwind para una empresa de fotografía.",
-      en: "Website developed with React and Tailwind for a photography company.",
-    },
-    github: "https://github.com/hberrino/",
   },
 ];
