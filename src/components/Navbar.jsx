@@ -4,6 +4,7 @@ import { texts } from "../Data/texts.js";
 export default function Navbar({ lang, setLang }) {
   const [isOpen, setIsOpen] = useState(false);
   const [langOpen, setLangOpen] = useState(false);
+  const Logo = "/imgs/LOGO.png";
 
   const languages = [
     { code: "es", label: "ES", flag: "/icons/argflag.svg" },
@@ -13,6 +14,7 @@ export default function Navbar({ lang, setLang }) {
   const handleLangChange = (code) => {
     setLang(code);
     setLangOpen(false);
+    setIsOpen(false);
   };
 
   return (
@@ -20,7 +22,7 @@ export default function Navbar({ lang, setLang }) {
       <div className="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
         <a href="#inicio" className="flex items-center gap-3">
           <img
-            src="/imgs/LOGO.png"
+            src={Logo}
             alt="Logo HB DEV"
             className="w-12 h-12 scale-[3] pt-1 object-contain"
           />
@@ -41,7 +43,7 @@ export default function Navbar({ lang, setLang }) {
           <li className="relative">
             <button
               onClick={() => setLangOpen(!langOpen)}
-              className="flex items-center gap-2 px-3 py-1 rounded-md border border-white/20 bg-white/10 hover:bg-white/20 hover:scale-105 transition-all duration-300"
+              className="flex items-center gap-2 px-3 py-1 rounded-md border border-white/20 bg-white/10 hover:bg-white/20 transition-all"
             >
               <img
                 src={languages.find((l) => l.code === lang).flag}
@@ -54,7 +56,7 @@ export default function Navbar({ lang, setLang }) {
             </button>
 
             {langOpen && (
-              <ul className="absolute right-0 mt-2 w-24 bg-white/10 backdrop-blur-md border border-white/20 rounded-md shadow-lg overflow-hidden animate-fade-in-down">
+              <ul className="absolute right-0 mt-2 w-24 bg-white/10 backdrop-blur-md border border-white/20 rounded-md shadow-lg overflow-hidden">
                 {languages.map((l) => (
                   <li key={l.code}>
                     <button
@@ -76,26 +78,14 @@ export default function Navbar({ lang, setLang }) {
           onClick={() => setIsOpen(!isOpen)}
           aria-label="Toggle menu"
         >
-          <span
-            className={`block w-6 h-0.5 bg-gray-300 transition-transform duration-300 ${
-              isOpen ? "rotate-45 translate-y-2" : ""
-            }`}
-          ></span>
-          <span
-            className={`block w-6 h-0.5 bg-gray-300 transition-opacity duration-300 ${
-              isOpen ? "opacity-0" : "opacity-100"
-            }`}
-          ></span>
-          <span
-            className={`block w-6 h-0.5 bg-gray-300 transition-transform duration-300 ${
-              isOpen ? "-rotate-45 -translate-y-2" : ""
-            }`}
-          ></span>
+          <span className={`block w-6 h-0.5 bg-gray-300 ${isOpen ? "rotate-45 translate-y-2" : ""}`}></span>
+          <span className={`block w-6 h-0.5 bg-gray-300 ${isOpen ? "opacity-0" : ""}`}></span>
+          <span className={`block w-6 h-0.5 bg-gray-300 ${isOpen ? "-rotate-45 -translate-y-2" : ""}`}></span>
         </button>
       </div>
 
       <div
-        className={`md:hidden bg-[#0B0A10]/90 backdrop-blur-md absolute w-full left-0 px-6 py-4 transition-all duration-300 ${
+        className={`md:hidden bg-[#0B0A10]/90 backdrop-blur-md absolute w-full left-0 px-6 py-4 transition-all ${
           isOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0 overflow-hidden"
         }`}
       >
@@ -115,7 +105,7 @@ export default function Navbar({ lang, setLang }) {
           <li className="flex justify-center mt-2 relative">
             <button
               onClick={() => setLangOpen(!langOpen)}
-              className="flex items-center gap-2 px-4 py-2 rounded-md border border-white/20 bg-white/10 hover:bg-white/20 hover:scale-105 transition-all duration-300"
+              className="flex items-center gap-2 px-4 py-2 rounded-md border border-white/20 bg-white/10 hover:bg-white/20 transition-all"
             >
               <img
                 src={languages.find((l) => l.code === lang).flag}
@@ -128,7 +118,7 @@ export default function Navbar({ lang, setLang }) {
             </button>
 
             {langOpen && (
-              <ul className="absolute mt-2 w-28 bg-white/10 backdrop-blur-md border border-white/20 rounded-md shadow-lg animate-fade-in-down">
+              <ul className="absolute mt-2 w-28 bg-white/10 backdrop-blur-md border border-white/20 rounded-md shadow-lg">
                 {languages.map((l) => (
                   <li key={l.code}>
                     <button

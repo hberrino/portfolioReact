@@ -4,6 +4,7 @@ import { texts } from "../Data/texts.js";
 export default function Hero({ lang }) {
   const t = texts[lang];
   const softSkills = t.card.softSkills;
+  const Foto = "/imgs/FotoCV.jpg";
 
   return (
     <section
@@ -50,7 +51,7 @@ export default function Hero({ lang }) {
             </h1>
             <div className="md:translate-y-7 w-24 h-24 rounded-full overflow-hidden border-2 border-purple-800 shadow-lg">
               <img
-                src="/imgs/FotoCV.jpg"
+                src={Foto}
                 alt="Hernán Berrino"
                 className="w-full h-full object-cover scale-170 object-[center_35%]"
               />
