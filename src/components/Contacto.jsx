@@ -1,9 +1,40 @@
+import { useState } from "react";
 import { texts } from "../Data/texts";
 import LinkedinIcon from "../assets/icons/linkedin.svg";
 import MailIcon from "../assets/icons/gmail.svg";
 
 export default function Contacto({ lang }) {
   const t = texts[lang]?.contact ?? texts.es.contact;
+  const [status, setStatus] = useState("idle");
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setStatus("loading");
+
+    const form = e.target;
+
+    try {
+      const res = await fetch("https://formspree.io/f/xwvpgbdn", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          name: form.name.value,
+          email: form.email.value,
+          message: form.message.value,
+        }),
+      });
+
+      if (!res.ok) throw new Error();
+
+      form.reset();
+      setStatus("success");
+    } catch {
+      setStatus("error");
+    }
+  };
 
   return (
     <section
@@ -21,27 +52,20 @@ export default function Contacto({ lang }) {
         "
         data-aos="fade-up"
       >
-        {/* Header */}
         <div className="text-center mb-14">
           <h2 className="text-3xl md:text-4xl font-bold mb-2">
             {t.title}
           </h2>
           <span
-  className="
-    block
-    w-12
-    h-1
-    mx-auto
-    rounded-full
-    bg-gradient-to-r from-purple-500 to-fuchsia-500
-  "
-/>
+            className="
+              block w-12 h-1 mx-auto rounded-full
+              bg-gradient-to-r from-purple-500 to-fuchsia-500
+            "
+          />
           <p className="text-white/70 max-w-xl mx-auto pt-4">
             {t.subtitle}
           </p>
         </div>
-
-        {/* Quick actions */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
           <a
             href="https://www.linkedin.com/"
@@ -49,10 +73,8 @@ export default function Contacto({ lang }) {
             rel="noopener noreferrer"
             className="
               flex items-center gap-3
-              px-7 py-3
-              rounded-full
-              border border-white/20
-              bg-white/5
+              px-7 py-3 rounded-full
+              border border-white/20 bg-white/5
               text-sm font-medium
               hover:bg-white/10 hover:border-white/30
               transition
@@ -66,10 +88,8 @@ export default function Contacto({ lang }) {
             href="mailto:tuemail@gmail.com"
             className="
               flex items-center gap-3
-              px-7 py-3
-              rounded-full
-              border border-white/20
-              bg-white/5
+              px-7 py-3 rounded-full
+              border border-white/20 bg-white/5
               text-sm font-medium
               hover:bg-white/10 hover:border-white/30
               transition
@@ -79,75 +99,78 @@ export default function Contacto({ lang }) {
             {t.gmail}
           </a>
         </div>
-
-        {/* Form */}
         <form
+          onSubmit={handleSubmit}
           className="grid grid-cols-1 md:grid-cols-2 gap-6"
-          onSubmit={(e) => e.preventDefault()}
         >
           <input
+            name="name"
             type="text"
             placeholder={t.name}
+            required
             className="
-              col-span-1
-              bg-white/5
-              border border-white/10
-              rounded-xl
-              px-5 py-4
-              text-sm
-              outline-none
-              focus:border-purple-400/60
+              bg-white/5 border border-white/10
+              rounded-xl px-5 py-4 text-sm
+              outline-none focus:border-purple-400/60
               transition
             "
           />
 
           <input
+            name="email"
             type="email"
             placeholder={t.email}
+            required
             className="
-              col-span-1
-              bg-white/5
-              border border-white/10
-              rounded-xl
-              px-5 py-4
-              text-sm
-              outline-none
-              focus:border-purple-400/60
+              bg-white/5 border border-white/10
+              rounded-xl px-5 py-4 text-sm
+              outline-none focus:border-purple-400/60
               transition
             "
           />
 
           <textarea
+            name="message"
             placeholder={t.message}
             rows={5}
+            required
             className="
               md:col-span-2
-              bg-white/5
-              border border-white/10
-              rounded-xl
-              px-5 py-4
-              text-sm
-              outline-none
-              resize-none
+              bg-white/5 border border-white/10
+              rounded-xl px-5 py-4 text-sm
+              outline-none resize-none
               focus:border-purple-400/60
               transition
             "
           />
 
-          <div className="md:col-span-2 flex justify-center mt-4">
+          <div className="md:col-span-2 flex flex-col items-center mt-4 gap-3">
             <button
               type="submit"
+              disabled={status === "loading"}
               className="
-                px-10 py-4
-                rounded-full
+                px-10 py-4 rounded-full
                 bg-gradient-to-r from-purple-600 to-fuchsia-600
                 text-sm font-medium
                 hover:opacity-90
                 transition
+                disabled:opacity-60
               "
             >
-              {t.send}
+              {status === "loading" ? "Enviando..." : t.send}
             </button>
+
+            {status === "success" && (
+              <p className="pt-5 text-green-600 text-sm">
+               Gracias por contactarme!
+              </p>
+            )}
+
+            {status === "error" && (
+              <p className="text-red-400 text-sm">
+                Ocurrió un error. Intentá nuevamente.
+              </p>
+            )}
           </div>
         </form>
       </div>
