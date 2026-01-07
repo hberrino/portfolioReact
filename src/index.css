@@ -1,18 +1,26 @@
 @import "tailwindcss";
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Space+Grotesk:wght@400;600&display=swap');
 @plugin "@midudev/tailwind-animations";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Space+Grotesk:wght@400;600&display=swap');
+
 html {
   scroll-behavior: smooth;
 }
+
 .hover-scale {
-  transition: transform .25s ease;
+  transition: transform 0.25s ease;
 }
+
 .hover-scale:hover {
   transform: scale(1.03);
 }
+
 @keyframes glow-pulse {
-  0%, 100% { box-shadow: 0 0 10px rgba(255,215,0,0.3); }
-  50% { box-shadow: 0 0 20px rgba(255,215,0,0.4); }
+  0%, 100% {
+    box-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.4);
+  }
 }
 
 .animate-glow {

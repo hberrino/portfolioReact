@@ -61,7 +61,6 @@ export default function Sobremi({ lang }) {
             </p>
           </div>
 
-          {/* Qué hago */}
           <div
             className="
               rounded-2xl

@@ -1,38 +1,21 @@
-import JSIcon from '../assets/icons/JS.svg';
-import ReactIcon from '../assets/icons/React.svg';
-import NodeIcon from '../assets/icons/Node.svg';
-import ExpressIcon from '../assets/icons/Express.svg';
-import TailwindIcon from '../assets/icons/Tailwind.svg';
-import MySQLIcon from '../assets/icons/MySQL.svg';
-import JavaIcon from '../assets/icons/Java.svg';
-import MongoDBIcon from '../assets/icons/MongoDB.svg';
-import HTMLIcon from '../assets/icons/html5.svg';
-import CSSIcon from '../assets/icons/CSS.svg';
-import GitHubIcon from '../assets/icons/github.svg';
-import Linkedin from '../assets/icons/linkedin.svg';
-import GitIcon from '../assets/icons/git.svg';
-import VScodeIcon from '../assets/icons/vscode.svg';
-import ViteIcon from '../assets/icons/vite.svg';
-import IntellijIcon from '../assets/icons/intellij.svg';
-
-
 export const techs = [
-  { name: "JS", icon: JSIcon },
-  { name: "React", icon: ReactIcon },
-  { name: "Node", icon: NodeIcon },
-  { name: "Express", icon: ExpressIcon },
-  { name: "Tailwind", icon: TailwindIcon },
-  { name: "MySQL", icon: MySQLIcon },
-  { name: "Java", icon: JavaIcon },
-  { name: "MongoDB", icon: MongoDBIcon },
-  { name: "HTML", icon: HTMLIcon },
-  { name: "CSS", icon: CSSIcon },
-  { name: "Github", icon: GitHubIcon },
-  { name: "Git", icon: GitIcon },
-  { name: "VSCode", icon: VScodeIcon },
-  { name: "Vite", icon: ViteIcon },
-  { name: "IntelliJ", icon: IntellijIcon },
+  { name: "JS", icon: "/icons/JS.svg" },
+  { name: "React", icon: "/icons/React.svg" },
+  { name: "Node", icon: "/icons/Node.svg" },
+  { name: "Express", icon: "/icons/Express.svg" },
+  { name: "Tailwind", icon: "/icons/Tailwind.svg" },
+  { name: "MySQL", icon: "/icons/MySQL.svg" },
+  { name: "Java", icon: "/icons/Java.svg" },
+  { name: "MongoDB", icon: "/icons/MongoDB.svg" },
+  { name: "HTML", icon: "/icons/html5.svg" },
+  { name: "CSS", icon: "/icons/CSS.svg" },
+  { name: "Github", icon: "/icons/github.svg" },
+  { name: "Git", icon: "/icons/git.svg" },
+  { name: "VSCode", icon: "/icons/vscode.svg" },
+  { name: "Vite", icon: "/icons/vite.svg" },
+  { name: "IntelliJ", icon: "/icons/intellij.svg" },
 ];
+
 export const techGroups = {
   frontend: ["JS", "React", "HTML", "CSS", "Tailwind"],
   backend: ["Node", "Express", "Java", "MongoDB", "MySQL"],
@@ -51,7 +34,7 @@ export const projects = [
     },
     github: "https://github.com/hberrino/ParkingV1",
     demo: "https://hberrino.github.io/ParkingV1/",
-    video: `${import.meta.env.BASE_URL}videos/Parkingvid.mp4`,
+    video: "/videos/Parkingvid.mp4",
   },
 
   {
@@ -66,10 +49,10 @@ export const projects = [
     github: "https://github.com/hberrino/Mototopsweb",
     demo: "https://hberrino.github.io/Mototopsweb/",
     images: [
-      `${import.meta.env.BASE_URL}images/mototops1.jpg`,
-      `${import.meta.env.BASE_URL}images/mototops2.jpg`,
-      `${import.meta.env.BASE_URL}images/mototops3.jpg`,
-      `${import.meta.env.BASE_URL}images/mototops4.jpg`,
+      "/images/mototops1.jpg",
+      "/images/mototops2.jpg",
+      "/images/mototops3.jpg",
+      "/images/mototops4.jpg",
     ],
   },
 

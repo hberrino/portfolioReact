@@ -1,7 +1,5 @@
 import { useState } from "react";
 import { texts } from "../Data/texts";
-import LinkedinIcon from "../assets/icons/linkedin.svg";
-import MailIcon from "../assets/icons/gmail.svg";
 
 export default function Contacto({ lang }) {
   const t = texts[lang]?.contact ?? texts.es.contact;
@@ -66,6 +64,8 @@ export default function Contacto({ lang }) {
             {t.subtitle}
           </p>
         </div>
+
+        {/* Quick actions */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
           <a
             href="https://www.linkedin.com/"
@@ -80,7 +80,11 @@ export default function Contacto({ lang }) {
               transition
             "
           >
-            <img src={LinkedinIcon} alt="LinkedIn" className="w-5 h-5" />
+            <img
+              src="/icons/linkedin.svg"
+              alt="LinkedIn"
+              className="w-5 h-5"
+            />
             {t.linkedin}
           </a>
 
@@ -95,10 +99,15 @@ export default function Contacto({ lang }) {
               transition
             "
           >
-            <img src={MailIcon} alt="Email" className="w-5 h-5" />
+            <img
+              src="/icons/gmail.svg"
+              alt="Email"
+              className="w-5 h-5"
+            />
             {t.gmail}
           </a>
         </div>
+
         <form
           onSubmit={handleSubmit}
           className="grid grid-cols-1 md:grid-cols-2 gap-6"
@@ -162,7 +171,7 @@ export default function Contacto({ lang }) {
 
             {status === "success" && (
               <p className="pt-5 text-green-600 text-sm">
-               Gracias por contactarme!
+                Gracias por contactarme!
               </p>
             )}
 
