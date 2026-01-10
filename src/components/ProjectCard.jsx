@@ -24,23 +24,28 @@ export default function ProjectCard({
       "
       data-aos="fade-up"
     >
-      {/* VIDEO */}
-      {video && (
-        <div className="relative w-full h-[220px] overflow-hidden">
-          <video
-            src={video}
-            autoPlay
-            muted
-            loop
-            playsInline
-            preload="metadata"
-            className="w-full h-full object-cover"
-          />
-          <div className="absolute inset-0 bg-black/20" />
-        </div>
-      )}
+{video && (
+  <div className="relative w-full h-[220px] overflow-hidden bg-black/20">
+    <video
+      src={video}
+      controls      
+      className="w-full h-full object-cover"
+      preload="metadata"
+    />
+  
+    <div className="absolute inset-0 bg-black/10 pointer-events-none" />
 
-      {/* IMAGES */}
+    <p className="
+      absolute bottom-2 right-2
+      bg-black/50 text-white text-xs
+      px-2 py-1 rounded-md
+      pointer-events-none
+      select-none
+    ">
+      Recomendado: Fullscreen
+    </p>
+  </div>
+)}
       {!video && hasImages && (
         <div className="
           relative w-full h-[220px]
@@ -59,7 +64,7 @@ export default function ProjectCard({
             loading="lazy"
           />
 
-          {/* NAV */}
+      
           {images.length > 1 && (
             <>
               <button
@@ -120,7 +125,7 @@ export default function ProjectCard({
         </div>
       )}
 
-      {/* CONTENT */}
+
       <div className="p-5 flex flex-col gap-2">
         <h3 className="text-sm font-semibold text-white">
           {title}
