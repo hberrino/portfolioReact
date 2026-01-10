@@ -24,98 +24,60 @@ export default function ProjectCard({
       "
       data-aos="fade-up"
     >
-{video && (
-  <div className="relative w-full h-[220px] overflow-hidden bg-black/20">
-    <video
-      src={video}
-      controls      
-      className="w-full h-full object-cover"
-      preload="metadata"
-    />
-  
-    <div className="absolute inset-0 bg-black/10 pointer-events-none" />
+      {video && (
+        <div className="relative w-full aspect-[16/9] overflow-hidden bg-black/20 rounded-t-2xl">
+          <video
+            src={video}
+            controls
+            className="w-full h-full object-contain"
+            preload="metadata"
+          />
+          <p className="
+            absolute bottom-2 right-2
+            bg-black/50 text-white text-xs
+            px-2 py-1 rounded-md
+            pointer-events-none
+            select-none
+          ">
+            Recomend: Fullscreen
+          </p>
+        </div>
+      )}
 
-    <p className="
-      absolute bottom-2 right-2
-      bg-black/50 text-white text-xs
-      px-2 py-1 rounded-md
-      pointer-events-none
-      select-none
-    ">
-      Recomendado: Fullscreen
-    </p>
-  </div>
-)}
+ 
       {!video && hasImages && (
-        <div className="
-          relative w-full h-[220px]
-          overflow-hidden
-          flex items-center justify-center
-          bg-black/20
-        ">
+        <div className="relative w-full aspect-[16/9] overflow-hidden bg-black/20 rounded-t-2xl flex items-center justify-center">
           <img
             src={images[current]}
             alt={`${title} screenshot ${current + 1}`}
-            className="
-              max-h-full max-w-full
-              object-contain
-              transition-opacity duration-300
-            "
+            className="w-full h-full object-contain transition-opacity duration-300"
             loading="lazy"
           />
 
-      
           {images.length > 1 && (
             <>
               <button
                 onClick={() =>
-                  setCurrent(
-                    current === 0
-                      ? images.length - 1
-                      : current - 1
-                  )
+                  setCurrent(current === 0 ? images.length - 1 : current - 1)
                 }
-                className="
-                  absolute left-3 top-1/2 -translate-y-1/2
-                  bg-black/40 backdrop-blur-sm
-                  w-8 h-8 rounded-full
-                  flex items-center justify-center
-                  text-white text-sm
-                  hover:bg-black/60
-                  transition
-                "
+                className="absolute left-3 top-1/2 -translate-y-1/2 bg-black/40 backdrop-blur-sm w-8 h-8 rounded-full flex items-center justify-center text-white text-sm hover:bg-black/60 transition"
               >
                 ‹
               </button>
-
               <button
                 onClick={() =>
                   setCurrent((current + 1) % images.length)
                 }
-                className="
-                  absolute right-3 top-1/2 -translate-y-1/2
-                  bg-black/40 backdrop-blur-sm
-                  w-8 h-8 rounded-full
-                  flex items-center justify-center
-                  text-white text-sm
-                  hover:bg-black/60
-                  transition
-                "
+                className="absolute right-3 top-1/2 -translate-y-1/2 bg-black/40 backdrop-blur-sm w-8 h-8 rounded-full flex items-center justify-center text-white text-sm hover:bg-black/60 transition"
               >
                 ›
               </button>
-
-              <div className="
-                absolute bottom-3 left-1/2
-                -translate-x-1/2 flex gap-1
-              ">
+              <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1">
                 {images.map((_, i) => (
                   <span
                     key={i}
                     className={`w-1.5 h-1.5 rounded-full ${
-                      i === current
-                        ? "bg-white"
-                        : "bg-white/40"
+                      i === current ? "bg-white" : "bg-white/40"
                     }`}
                   />
                 ))}
@@ -125,38 +87,28 @@ export default function ProjectCard({
         </div>
       )}
 
-
       <div className="p-5 flex flex-col gap-2">
         <h3 className="text-sm font-semibold text-white">
           {title}
         </h3>
-
         <p className="text-xs text-neutral-300 leading-relaxed">
           {description}
         </p>
-
         <div className="flex items-center gap-4 mt-2">
           <a
             href={github}
             target="_blank"
             rel="noopener noreferrer"
-            className="
-              text-xs font-medium text-neutral-300
-              hover:text-white transition-colors
-            "
+            className="text-xs font-medium text-neutral-300 hover:text-white transition-colors"
           >
             Code
           </a>
-
           {demo && (
             <a
               href={demo}
               target="_blank"
               rel="noopener noreferrer"
-              className="
-                text-xs font-medium text-purple-400
-                hover:text-purple-300 transition-colors
-              "
+              className="text-xs font-medium text-purple-400 hover:text-purple-300 transition-colors"
             >
               Demo
             </a>

@@ -29,8 +29,8 @@ export const projects = [
       en: "Dynamic parking with cost calculator",
     },
     description: {
-      es: "Aplicación full stack para gestión de estacionamiento, con cálculo automático de tarifas según duración y tipo de vehículo.",
-      en: "Full stack application for parking management, with automatic fare calculation based on duration and vehicle type.",
+      es: "Aplicación full stack creada desde cero por mí, como único participante de principio a fin. Gestión de estacionamiento, con cálculo automático de tarifas según duración y tipo de vehículo.",
+en: "Full-stack application built from scratch by me as the sole developer from start to finish. Parking management with automatic fare calculation based on duration and vehicle type.",
     },
     github: "https://github.com/hberrino/ParkingV1",
     demo: "https://hberrino.github.io/ParkingV1/",
