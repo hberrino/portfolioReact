@@ -25,24 +25,34 @@ export default function ProjectCard({
       data-aos="fade-up"
     >
       {video && (
-        <div className="relative w-full aspect-[16/9] overflow-hidden bg-black/20 rounded-t-2xl">
-          <video
-            src={video}
-            controls
-            className="w-full h-full object-contain"
-            preload="metadata"
-          />
-          <p className="
-            absolute bottom-2 right-2
-            bg-black/50 text-white text-xs
-            px-2 py-1 rounded-md
-            pointer-events-none
-            select-none
-          ">
-            Recomend: Fullscreen
-          </p>
-        </div>
-      )}
+  <div className="relative w-full aspect-[16/9] overflow-hidden bg-black/20 rounded-t-2xl">
+    <video
+      src={video}
+      controls
+      className="w-full h-full object-contain"
+      preload="metadata"
+    />
+    <p className="
+      absolute top-2 left-1/2 -translate-x-1/2
+      bg-black/50 text-white text-xs
+      px-2 py-1 rounded-md
+      pointer-events-none select-none
+    ">
+      FOR DEMO: USER: test | PASS: test123
+    </p>
+
+    {/* Mensaje de recomendación abajo */}
+    <p className="
+      absolute bottom-2 right-2
+      bg-black/50 text-white text-xs
+      px-2 py-1 rounded-md
+      pointer-events-none select-none
+    ">
+      Recomend: Fullscreen
+    </p>
+  </div>
+)}
+
 
  
       {!video && hasImages && (
