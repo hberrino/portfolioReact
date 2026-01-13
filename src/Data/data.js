@@ -30,11 +30,16 @@ export const projects = [
     },
     description: {
       es: "Aplicación full stack creada desde cero por mí, como único participante de principio a fin. Gestión de estacionamiento, con cálculo automático de tarifas según duración y tipo de vehículo.",
-en: "Full-stack application built from scratch by me as the sole developer from start to finish. Parking management with automatic fare calculation based on duration and vehicle type.",
+      en: "Full-stack application built from scratch by me as the sole developer from start to finish. Parking management with automatic fare calculation based on duration and vehicle type.",
     },
     github: "https://github.com/hberrino/ParkingReactRemodel",
     demo: "https://parkingdemo-nine.vercel.app/",
     video: "/videos/Parkingvid.mp4",
+    techs: ["React", "Tailwind", "MongoDB", "Node", "Express", "Vite", "Git"],
+    deploy: {
+      backend: "Render",
+      frontend: "Vercel",
+    },
   },
   {
     title: {
@@ -46,12 +51,13 @@ en: "Full-stack application built from scratch by me as the sole developer from 
       en: "Website developed with React and Tailwind for a photography company.",
     },
     github: "https://github.com/hberrino/",
-    demo:"https://github.com/hberrino/RuloFotografiaWeb",
-    images: [
-      "/images/RulowebLanding.jpg",
-    ],
+    demo: "https://github.com/hberrino/RuloFotografiaWeb",
+    images: ["/images/RulowebLanding.jpg"],
+    techs: ["React", "Tailwind", "Vite", "Git"],
+    deploy: {
+      frontend: "GitHub Pages",
+    },
   },
-
   {
     title: {
       es: "Página informativa de motocicletas",
@@ -69,5 +75,9 @@ en: "Full-stack application built from scratch by me as the sole developer from 
       "/images/mototops3.jpg",
       "/images/mototops4.jpg",
     ],
+    techs: ["JS", "HTML", "CSS", "API (Mockapi)"],
+    deploy: {
+      frontend: "GitHub Pages",
+    },
   },
 ];
