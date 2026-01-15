@@ -40,7 +40,7 @@ export default function ProjectCard({
 
       {/* Images */}
       {!video && hasImages && (
-        <div className="relative w-full aspect-video sm:aspect-[16/9] overflow-hidden bg-black/30">
+        <div className="relative w-full aspect-video sm:aspect-[16/9] overflow-hidden bg-black/30 flex-grow">
           <img
             src={images[current]}
             alt={`${title} screenshot ${current + 1}`}
