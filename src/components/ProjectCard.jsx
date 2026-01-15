@@ -20,7 +20,7 @@ export default function ProjectCard({
     .filter(Boolean);
 
   return (
-    <article className="relative group rounded-2xl sm:rounded-3xl overflow-hidden bg-gradient-to-br from-white/[0.08] to-white/[0.02] backdrop-blur-xl border border-white/[0.15] shadow-2xl hover:shadow-purple-500/20 transition-all duration-500 hover:scale-[1.02] hover:border-purple-400/30" data-aos="fade-up">
+    <article className="relative group rounded-2xl sm:rounded-3xl overflow-hidden bg-gradient-to-br from-white/[0.08] to-white/[0.02] backdrop-blur-xl border border-white/[0.15] shadow-2xl hover:shadow-purple-500/20 transition-all duration-500 hover:scale-[1.02] hover:border-purple-400/30 h-full flex flex-col" data-aos="fade-up">
       
       {/* Efecto de brillo sutil */}
       <div className="absolute inset-0 bg-gradient-to-tr from-purple-500/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
@@ -78,7 +78,7 @@ export default function ProjectCard({
       {/* Contenido principal */}
       <div className="relative p-4 sm:p-7 space-y-4 sm:space-y-5">
         {/* Header con título y descripción */}
-        <div className="space-y-2 sm:space-y-3">
+        <div className="space-y-2 sm:space-y-3 flex-grow">
           <h3 className="text-lg sm:text-xl font-bold text-white leading-tight">{title}</h3>
           <p className="text-xs sm:text-sm text-neutral-300 leading-relaxed line-clamp-2">{description}</p>
         </div>

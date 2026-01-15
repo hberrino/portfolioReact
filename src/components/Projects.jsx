@@ -54,28 +54,30 @@ export default function Projects({ title, lang }) {
         </p>
       </div>
 
-      <div className="w-full max-w-2xl lg:max-w-3xl flex flex-col gap-16 relative z-10">
-        {projects.map((project, index) => (
-          <div
-            key={index}
-            ref={(el) => (cardsRef.current[index] = el)}
-            data-index={index}
-            className={`transform transition-all duration-700 ${
-              visibleCards.has(index)
-                ? 'opacity-100 translate-y-0'
-                : 'opacity-0 translate-y-12'
-            }`}
-            style={{
-              transitionDelay: visibleCards.has(index) ? `${index * 150}ms` : '0ms'
-            }}
-          >
-            <ProjectCard
-              {...project}
-              title={project.title[lang]}
-              description={project.description[lang]}
-            />
-          </div>
-        ))}
+      <div className="w-full max-w-6xl lg:max-w-7xl flex flex-col gap-16 relative z-10">
+        <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8 lg:gap-10 items-start">
+          {projects.map((project, index) => (
+            <div
+              key={index}
+              ref={(el) => (cardsRef.current[index] = el)}
+              data-index={index}
+              className={`transform transition-all duration-700 h-full ${
+                visibleCards.has(index)
+                  ? 'opacity-100 translate-y-0'
+                  : 'opacity-0 translate-y-12'
+              }`}
+              style={{
+                transitionDelay: visibleCards.has(index) ? `${index * 150}ms` : '0ms'
+              }}
+            >
+              <ProjectCard
+                {...project}
+                title={project.title[lang]}
+                description={project.description[lang]}
+              />
+            </div>
+          ))}
+        </div>
       </div>
 
       <div className="absolute top-12 sm:top-20 left-4 sm:left-10 w-24 sm:w-32 h-24 sm:h-32 bg-purple-500/10 rounded-full blur-3xl animate-pulse"></div>
