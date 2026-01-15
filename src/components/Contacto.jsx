@@ -91,11 +91,10 @@ export default function Contacto({ lang }) {
       id="contacto"
       className="min-h-screen px-4 sm:px-6 py-20 sm:py-28 flex items-center justify-center relative"
     >
-      <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 via-transparent to-fuchsia-500/5 pointer-events-none"></div>
       
       <div
         ref={sectionRef}
-        className={`w-full max-w-2xl lg:max-w-3xl rounded-3xl bg-gradient-to-br from-white/5 to-white/[0.02] backdrop-blur-md border border-white/10 p-6 sm:p-8 md:p-14 transform transition-all duration-400 ${
+        className={`w-full max-w-2xl lg:max-w-3xl rounded-3xl bg-gradient-to-br from-white/5 to-white/[0.02] backdrop-blur-md border border-white/10 p-4 sm:p-6 md:p-10 transform transition-all duration-400 ${
           visible
             ? 'opacity-100 translate-y-0 scale-100'
             : 'opacity-0 translate-y-8 scale-95'
@@ -104,7 +103,7 @@ export default function Contacto({ lang }) {
         <div 
           ref={(el) => (elementsRef.current[0] = el)}
           data-index="0"
-          className={`text-center mb-12 sm:mb-14 transform transition-all duration-400 ${
+          className={`text-center mb-8 sm:mb-10 transform transition-all duration-400 ${
             visibleElements.has(0)
               ? 'opacity-100 translate-y-0'
               : 'opacity-0 translate-y-6'
@@ -113,23 +112,23 @@ export default function Contacto({ lang }) {
             transitionDelay: visibleElements.has(0) ? '100ms' : '0ms'
           }}
         >
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-2">
+          <h2 className="text-xl sm:text-2xl md:text-3xl font-bold mb-2">
             {t.title}
           </h2>
           <span className="block w-12 sm:w-16 h-1 mx-auto rounded-full bg-gradient-to-r from-purple-500 to-fuchsia-500"></span>
-          <p className="text-white/70 max-w-xl mx-auto pt-4 text-sm sm:text-base">
+          <p className="text-white/70 max-w-xl mx-auto pt-3 text-sm sm:text-base">
             {t.subtitle}
           </p>
         </div>
 
-        <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center mb-12 sm:mb-16">
+        <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center mb-8 sm:mb-12">
           <a
             href="https://www.linkedin.com/"
             target="_blank"
             rel="noopener noreferrer"
             ref={(el) => (elementsRef.current[1] = el)}
             data-index="1"
-            className={`flex items-center gap-3 px-4 sm:px-7 py-3 rounded-full border border-white/20 bg-white/5 text-sm font-medium hover:bg-white/10 hover:border-white/30 transition-all transform ${
+            className={`flex items-center gap-2 sm:gap-3 px-3 sm:px-5 py-2 rounded-full border border-white/20 bg-white/5 text-sm font-medium hover:bg-white/10 hover:border-white/30 transition-all transform ${
               visibleElements.has(1)
                 ? 'opacity-100 translate-y-0'
                 : 'opacity-0 translate-y-6'
@@ -150,7 +149,7 @@ export default function Contacto({ lang }) {
             href="mailto:tuemail@gmail.com"
             ref={(el) => (elementsRef.current[2] = el)}
             data-index="2"
-            className={`flex items-center gap-3 px-4 sm:px-7 py-3 rounded-full border border-white/20 bg-white/5 text-sm font-medium hover:bg-white/10 hover:border-white/30 transition-all transform ${
+            className={`flex items-center gap-2 sm:gap-3 px-3 sm:px-5 py-2 rounded-full border border-white/20 bg-white/5 text-sm font-medium hover:bg-white/10 hover:border-white/30 transition-all transform ${
               visibleElements.has(2)
                 ? 'opacity-100 translate-y-0'
                 : 'opacity-0 translate-y-6'
@@ -170,14 +169,14 @@ export default function Contacto({ lang }) {
 
         <form
           onSubmit={handleSubmit}
-          className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6"
+          className="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4"
         >
           <input
             name="name"
             type="text"
             placeholder={t.name}
             required
-            className="bg-white/5 border border-white/10 rounded-xl px-4 sm:px-5 py-3 sm:py-4 text-sm outline-none focus:border-purple-400/60 transition-all"
+            className="bg-white/5 border border-white/10 rounded-xl px-3 sm:px-4 py-2 sm:py-3 text-sm outline-none focus:border-purple-400/60 transition-all"
           />
 
           <input
@@ -185,28 +184,28 @@ export default function Contacto({ lang }) {
             type="email"
             placeholder={t.email}
             required
-            className="bg-white/5 border border-white/10 rounded-xl px-4 sm:px-5 py-3 sm:py-4 text-sm outline-none focus:border-purple-400/60 transition-all"
+            className="bg-white/5 border border-white/10 rounded-xl px-3 sm:px-4 py-2 sm:py-3 text-sm outline-none focus:border-purple-400/60 transition-all"
           />
 
           <textarea
             name="message"
             placeholder={t.message}
-            rows={5}
+            rows={4}
             required
-            className="md:col-span-2 bg-white/5 border border-white/10 rounded-xl px-4 sm:px-5 py-3 sm:py-4 text-sm outline-none resize-none focus:border-purple-400/60 transition-all"
+            className="md:col-span-2 bg-white/5 border border-white/10 rounded-xl px-3 sm:px-4 py-2 sm:py-3 text-sm outline-none resize-none focus:border-purple-400/60 transition-all"
           />
 
-          <div className="md:col-span-2 flex flex-col items-center mt-4 gap-3">
+          <div className="md:col-span-2 flex flex-col items-center mt-2 gap-3">
             <button
               type="submit"
               disabled={status === "loading"}
-              className="px-6 sm:px-10 py-3 sm:py-4 rounded-full bg-gradient-to-r from-purple-600 to-fuchsia-600 text-sm font-medium hover:opacity-90 transition disabled:opacity-60"
+              className="px-6 sm:px-10 py-2.5 sm:py-3.5 rounded-full bg-gradient-to-r from-purple-600 to-fuchsia-600 text-sm font-medium hover:opacity-90 transition disabled:opacity-60"
             >
               {status === "loading" ? "Enviando..." : t.send}
             </button>
 
             {status === "success" && (
-              <p className="pt-5 text-green-600 text-sm">
+              <p className="pt-3 text-green-600 text-sm">
                 Gracias por contactarme!
               </p>
             )}

@@ -5,8 +5,8 @@ export default function Footer({ lang }) {
 
   const scrollToTop = () => {
     const startPosition = window.pageYOffset;
+    const duration = 800;
     const startTime = performance.now();
-    const duration = 800; // ms
 
     const easeInOutCubic = (t) => {
       return t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;

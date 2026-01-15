@@ -65,8 +65,7 @@ export default function Tecnologias({ lang }) {
       id="tecnologias"
       className="w-full max-w-6xl lg:max-w-7xl mx-auto px-4 sm:px-6 pt-20 sm:pt-24 pb-24 sm:pb-32 flex flex-col gap-20 sm:gap-28 relative"
     >
-      <div className="absolute inset-0 bg-gradient-to-t from-purple-500/5 via-transparent to-transparent pointer-events-none"></div>
-      
+            
       <div 
         ref={(el) => (sectionsRef.current[0] = el)}
         data-index="0"

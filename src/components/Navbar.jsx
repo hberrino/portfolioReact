@@ -12,7 +12,6 @@ export default function Navbar({ lang, setLang }) {
     { code: "en", label: "EN", flag: "/icons/usaflag.svg" },
   ];
 
-  // Handle scroll effect
   useEffect(() => {
     const handleScroll = () => {
       const scrollTop = window.pageYOffset;

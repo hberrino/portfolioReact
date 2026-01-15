@@ -40,7 +40,6 @@ export default function Projects({ title, lang }) {
       id="projects"
       className="min-h-screen pt-26 pb-32 px-4 sm:px-6 flex flex-col items-center relative"
     >
-      <div className="absolute inset-0 bg-gradient-to-b from-purple-500/5 via-transparent to-transparent pointer-events-none"></div>
       
       <div className="text-center mb-12 sm:mb-16 relative z-10">
         <h2 className="mt-2 text-2xl sm:text-3xl md:text-4xl font-bold text-neutral-100 mb-4">

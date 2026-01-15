@@ -13,13 +13,17 @@ import Footer from "./components/Footer.jsx"
 export default function App() {
   const [lang, setLang] = useState("es");
   const t = texts[lang];
+  const [isMobileDevice, setIsMobileDevice] = useState(false);
 
   const vantaRef = useRef(null);
   const vantaEffect = useRef(null);
   const isMobile = () => window.innerWidth < 768;
 
-  // Smooth scroll implementation
   useEffect(() => {
+    const checkMobile = () => setIsMobileDevice(window.innerWidth < 768);
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+
     const handleSmoothScroll = (e) => {
       const href = e.target.getAttribute('href');
       if (href && href.startsWith('#')) {
@@ -28,7 +32,7 @@ export default function App() {
         const targetElement = document.getElementById(targetId);
         
         if (targetElement) {
-          const offsetTop = targetElement.offsetTop - 80; // Offset for navbar
+          const offsetTop = targetElement.offsetTop - 80;
           window.scrollTo({
             top: offsetTop,
             behavior: 'smooth'
@@ -37,22 +41,20 @@ export default function App() {
       }
     };
 
-    // Add smooth scroll to all anchor links
     document.addEventListener('click', handleSmoothScroll);
     
     return () => {
       document.removeEventListener('click', handleSmoothScroll);
+      window.removeEventListener('resize', checkMobile);
     };
   }, []);
 
-  // Scroll progress indicator
   useEffect(() => {
     const handleScroll = () => {
       const scrollTop = window.pageYOffset;
       const docHeight = document.documentElement.scrollHeight - window.innerHeight;
       const scrollPercent = (scrollTop / docHeight) * 100;
       
-      // Update scroll progress bar if it exists
       const progressBar = document.getElementById('scroll-progress');
       if (progressBar) {
         progressBar.style.width = `${scrollPercent}%`;
@@ -64,7 +66,7 @@ export default function App() {
   }, []);
 
   useEffect(() => {
-    if (isMobile()) return;
+    if (isMobileDevice) return;
 
     vantaEffect.current = CELLS({
       el: vantaRef.current,
@@ -88,19 +90,21 @@ export default function App() {
 
   return (
     <div
-  ref={vantaRef}
-  className="
-    min-h-screen
-    w-full
-    text-white
-    relative
-    bg-gradient-to-b from-neutral-950 via-neutral-900 to-neutral-950
-    overflow-hidden
-    scroll-smooth
-  "
-  style={{ scrollBehavior: 'smooth' }}
->
-      {/* Scroll Progress Bar */}
+      ref={vantaRef}
+      className={`
+        min-h-screen
+        w-full
+        text-white
+        relative
+        ${isMobileDevice 
+          ? 'bg-gradient-to-b from-neutral-950 via-neutral-900 to-neutral-950' 
+          : 'bg-black'
+        }
+        overflow-hidden
+        scroll-smooth
+      `}
+      style={{ scrollBehavior: 'smooth' }}
+    >
       <div className="fixed top-0 left-0 w-full h-1 bg-white/10 z-50">
         <div id="scroll-progress" className="h-full bg-gradient-to-r from-purple-500 to-fuchsia-500 transition-all duration-300" style={{ width: '0%' }}></div>
       </div>

@@ -61,7 +61,6 @@ export default function Sobremi({ lang }) {
       id="sobremi"
       className="min-h-screen flex items-center justify-center px-4 sm:px-6 md:px-12 py-20 sm:py-24 relative"
     >
-      <div className="absolute inset-0 bg-gradient-to-r from-purple-500/5 via-transparent to-fuchsia-500/5 pointer-events-none"></div>
       
       <div 
         ref={sectionRef}
