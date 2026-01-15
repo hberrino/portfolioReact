@@ -95,8 +95,7 @@ export default function App() {
     text-white
     relative
     bg-gradient-to-b from-neutral-950 via-neutral-900 to-neutral-950
-    overflow-x-hidden
-    overflow-y-auto
+    overflow-hidden
     scroll-smooth
   "
   style={{ scrollBehavior: 'smooth' }}

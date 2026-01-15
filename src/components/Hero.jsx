@@ -108,7 +108,7 @@ export default function Hero({ lang }) {
             {t.hero.role}
           </h2>
 
-          <p className="text-base sm:text-lg text-gray-300 leading-relaxed mt-4 md:mt-6 max-w-xl px-4 sm:px-0">
+          <p className="text-base sm:text-lg text-gray-300 leading-relaxed mt-4 md:mt-6 max-w-xl px-4 sm:px-0 break-words">
             {t.hero.description}
           </p>
 
@@ -147,13 +147,13 @@ export default function Hero({ lang }) {
               {t.card.contributionTitle}
             </h3>
 
-            <div className="flex flex-wrap gap-2 justify-center md:justify-start">
+            <div className="flex flex-wrap gap-2 justify-center md:justify-start break-words">
               {techs.map(({ name, icon }) => (
                 <span
                   key={name}
-                  className="flex items-center gap-1 px-2 sm:px-3 py-1 bg-gradient-to-r from-purple-600/30 to-fuchsia-600/30 text-purple-200 text-xs sm:text-sm rounded-md border border-purple-500/20 hover:border-purple-400/40 transition-all"
+                  className="flex items-center gap-1 px-2 sm:px-3 py-1 bg-gradient-to-r from-purple-600/30 to-fuchsia-600/30 text-purple-200 text-xs sm:text-sm rounded-md border border-purple-500/20 hover:border-purple-400/40 transition-all whitespace-nowrap"
                 >
-                  <img src={icon} alt={name} className="w-3 h-3 sm:w-4 sm:h-4" />
+                  <img src={icon} alt={name} className="w-3 h-3 sm:w-4 sm:h-4 flex-shrink-0" />
                   {name}
                 </span>
               ))}
