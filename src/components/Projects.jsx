@@ -54,7 +54,7 @@ export default function Projects({ title, lang }) {
         </p>
       </div>
 
-      <div className="w-full max-w-3xl flex flex-col gap-16 relative z-10">
+      <div className="w-full max-w-2xl lg:max-w-3xl flex flex-col gap-16 relative z-10">
         {projects.map((project, index) => (
           <div
             key={index}

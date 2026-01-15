@@ -95,7 +95,7 @@ export default function Contacto({ lang }) {
       
       <div
         ref={sectionRef}
-        className={`w-full max-w-4xl rounded-3xl bg-gradient-to-br from-white/5 to-white/[0.02] backdrop-blur-md border border-white/10 p-6 sm:p-8 md:p-14 transform transition-all duration-400 ${
+        className={`w-full max-w-2xl lg:max-w-3xl rounded-3xl bg-gradient-to-br from-white/5 to-white/[0.02] backdrop-blur-md border border-white/10 p-6 sm:p-8 md:p-14 transform transition-all duration-400 ${
           visible
             ? 'opacity-100 translate-y-0 scale-100'
             : 'opacity-0 translate-y-8 scale-95'

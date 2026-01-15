@@ -65,7 +65,7 @@ export default function Sobremi({ lang }) {
       
       <div 
         ref={sectionRef}
-        className="max-w-5xl w-full transform transition-all duration-500"
+        className="max-w-4xl lg:max-w-5xl w-full transform transition-all duration-500"
       >
         <div 
           ref={(el) => (elementsRef.current[0] = el)}

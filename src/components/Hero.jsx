@@ -142,7 +142,7 @@ export default function Hero({ lang }) {
             transitionDelay: visibleElements.has(1) ? '400ms' : '0ms'
           }}
         >
-          <div className="w-full md:w-auto relative bg-gradient-to-br from-white/10 to-white/[0.02] backdrop-blur-md border border-white/20 rounded-2xl p-6 sm:p-8 flex flex-col gap-6 shadow-xl">
+          <div className="w-full md:w-auto lg:max-w-md relative bg-gradient-to-br from-white/10 to-white/[0.02] backdrop-blur-md border border-white/20 rounded-2xl p-6 sm:p-8 flex flex-col gap-6 shadow-xl">
             <h3 className="text-center text-lg font-semibold text-gray-200 md:text-start">
               {t.card.contributionTitle}
             </h3>
