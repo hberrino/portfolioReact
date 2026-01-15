@@ -1,15 +1,27 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { texts } from "../Data/texts.js";
 
 export default function Navbar({ lang, setLang }) {
   const [isOpen, setIsOpen] = useState(false);
   const [langOpen, setLangOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
   const Logo = "/imgs/LOGO.png";
 
   const languages = [
     { code: "es", label: "ES", flag: "/icons/argflag.svg" },
     { code: "en", label: "EN", flag: "/icons/usaflag.svg" },
   ];
+
+  // Handle scroll effect
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollTop = window.pageYOffset;
+      setScrolled(scrollTop > 50);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   const handleLangChange = (code) => {
     setLang(code);
@@ -18,13 +30,17 @@ export default function Navbar({ lang, setLang }) {
   };
 
   return (
-    <nav className="fixed top-0 left-0 w-full z-50 backdrop-blur-md bg-black/10 border-b border-white/10 animate-fade-in-down">
+    <nav className={`fixed top-0 left-0 w-full z-50 backdrop-blur-md transition-all duration-300 ${
+      scrolled 
+        ? 'bg-black/40 border-b border-white/20 shadow-lg' 
+        : 'bg-black/10 border-b border-white/10'
+    } animate-fade-in-down`}>
       <div className="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
-        <a href="#inicio" className="flex items-center gap-3">
+        <a href="#inicio" className="flex items-center gap-3 group">
           <img
             src={Logo}
             alt="Logo HB DEV"
-            className="w-12 h-12 scale-[3] pt-1 object-contain"
+            className="w-12 h-12 scale-[3] pt-1 object-contain transition-transform duration-300 group-hover:scale-[3.2]"
           />
         </a>
 
@@ -33,7 +49,9 @@ export default function Navbar({ lang, setLang }) {
             <li key={i}>
               <a
                 href={`#${Object.keys(texts[lang].nav)[i]}`}
-                className="relative pb-1 border-b-2 border-transparent hover:border-purple-400/70 transition-all duration-300"
+                className={`relative pb-1 border-b-2 border-transparent transition-all duration-300 hover:border-purple-400/70 ${
+                  scrolled ? 'hover:text-white' : 'hover:text-purple-300'
+                }`}
               >
                 {label}
               </a>
@@ -43,7 +61,9 @@ export default function Navbar({ lang, setLang }) {
           <li className="relative">
             <button
               onClick={() => setLangOpen(!langOpen)}
-              className="flex items-center gap-2 px-3 py-1 rounded-md border border-white/20 bg-white/10 hover:bg-white/20 transition-all"
+              className={`flex items-center gap-2 px-3 py-1 rounded-md border border-white/20 bg-white/10 hover:bg-white/20 transition-all ${
+                scrolled ? 'bg-white/20' : 'bg-white/10'
+              }`}
             >
               <img
                 src={languages.find((l) => l.code === lang).flag}
@@ -78,9 +98,9 @@ export default function Navbar({ lang, setLang }) {
           onClick={() => setIsOpen(!isOpen)}
           aria-label="Toggle menu"
         >
-          <span className={`block w-6 h-0.5 bg-gray-300 ${isOpen ? "rotate-45 translate-y-2" : ""}`}></span>
-          <span className={`block w-6 h-0.5 bg-gray-300 ${isOpen ? "opacity-0" : ""}`}></span>
-          <span className={`block w-6 h-0.5 bg-gray-300 ${isOpen ? "-rotate-45 -translate-y-2" : ""}`}></span>
+          <span className={`block w-6 h-0.5 bg-gray-300 transition-all duration-300 ${isOpen ? "rotate-45 translate-y-2" : ""}`}></span>
+          <span className={`block w-6 h-0.5 bg-gray-300 transition-all duration-300 ${isOpen ? "opacity-0" : ""}`}></span>
+          <span className={`block w-6 h-0.5 bg-gray-300 transition-all duration-300 ${isOpen ? "-rotate-45 -translate-y-2" : ""}`}></span>
         </button>
       </div>
 

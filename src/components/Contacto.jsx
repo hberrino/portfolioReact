@@ -1,9 +1,61 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { texts } from "../Data/texts";
 
 export default function Contacto({ lang }) {
   const t = texts[lang]?.contact ?? texts.es.contact;
   const [status, setStatus] = useState("idle");
+  const [visible, setVisible] = useState(false);
+  const [visibleElements, setVisibleElements] = useState(new Set());
+  const sectionRef = useRef(null);
+  const elementsRef = useRef([]);
+
+  useEffect(() => {
+    const sectionObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setVisible(true);
+          }
+        });
+      },
+      {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+      }
+    );
+
+    const elementsObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const index = parseInt(entry.target.dataset.index);
+            setVisibleElements((prev) => new Set(prev).add(index));
+          }
+        });
+      },
+      {
+        threshold: 0.1,
+        rootMargin: '0px 0px -30px 0px'
+      }
+    );
+
+    if (sectionRef.current) {
+      sectionObserver.observe(sectionRef.current);
+    }
+
+    elementsRef.current.forEach((element) => {
+      if (element) elementsObserver.observe(element);
+    });
+
+    return () => {
+      if (sectionRef.current) {
+        sectionObserver.unobserve(sectionRef.current);
+      }
+      elementsRef.current.forEach((element) => {
+        if (element) elementsObserver.unobserve(element);
+      });
+    };
+  }, []);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -37,72 +89,80 @@ export default function Contacto({ lang }) {
   return (
     <section
       id="contacto"
-      className="min-h-screen px-6 py-28 flex items-center justify-center"
+      className="min-h-screen px-4 sm:px-6 py-20 sm:py-28 flex items-center justify-center relative"
     >
+      <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 via-transparent to-fuchsia-500/5 pointer-events-none"></div>
+      
       <div
-        className="
-          w-full max-w-4xl
-          rounded-3xl
-          bg-gradient-to-br from-white/5 to-white/[0.02]
-          backdrop-blur-md
-          border border-white/10
-          p-10 md:p-14
-        "
-        data-aos="fade-up"
+        ref={sectionRef}
+        className={`w-full max-w-4xl rounded-3xl bg-gradient-to-br from-white/5 to-white/[0.02] backdrop-blur-md border border-white/10 p-6 sm:p-8 md:p-14 transform transition-all duration-400 ${
+          visible
+            ? 'opacity-100 translate-y-0 scale-100'
+            : 'opacity-0 translate-y-8 scale-95'
+        }`}
       >
-        <div className="text-center mb-14">
-          <h2 className="text-3xl md:text-4xl font-bold mb-2">
+        <div 
+          ref={(el) => (elementsRef.current[0] = el)}
+          data-index="0"
+          className={`text-center mb-12 sm:mb-14 transform transition-all duration-400 ${
+            visibleElements.has(0)
+              ? 'opacity-100 translate-y-0'
+              : 'opacity-0 translate-y-6'
+          }`}
+          style={{
+            transitionDelay: visibleElements.has(0) ? '100ms' : '0ms'
+          }}
+        >
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-2">
             {t.title}
           </h2>
-          <span
-            className="
-              block w-12 h-1 mx-auto rounded-full
-              bg-gradient-to-r from-purple-500 to-fuchsia-500
-            "
-          />
-          <p className="text-white/70 max-w-xl mx-auto pt-4">
+          <span className="block w-12 sm:w-16 h-1 mx-auto rounded-full bg-gradient-to-r from-purple-500 to-fuchsia-500"></span>
+          <p className="text-white/70 max-w-xl mx-auto pt-4 text-sm sm:text-base">
             {t.subtitle}
           </p>
         </div>
 
-        {/* Quick actions */}
-        <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
+        <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center mb-12 sm:mb-16">
           <a
             href="https://www.linkedin.com/"
             target="_blank"
             rel="noopener noreferrer"
-            className="
-              flex items-center gap-3
-              px-7 py-3 rounded-full
-              border border-white/20 bg-white/5
-              text-sm font-medium
-              hover:bg-white/10 hover:border-white/30
-              transition
-            "
+            ref={(el) => (elementsRef.current[1] = el)}
+            data-index="1"
+            className={`flex items-center gap-3 px-4 sm:px-7 py-3 rounded-full border border-white/20 bg-white/5 text-sm font-medium hover:bg-white/10 hover:border-white/30 transition-all transform ${
+              visibleElements.has(1)
+                ? 'opacity-100 translate-y-0'
+                : 'opacity-0 translate-y-6'
+            }`}
+            style={{
+              transitionDelay: visibleElements.has(1) ? '200ms' : '0ms'
+            }}
           >
             <img
               src="/icons/linkedin.svg"
               alt="LinkedIn"
-              className="w-5 h-5"
+              className="w-4 h-4 sm:w-5 sm:h-5"
             />
             {t.linkedin}
           </a>
 
           <a
             href="mailto:tuemail@gmail.com"
-            className="
-              flex items-center gap-3
-              px-7 py-3 rounded-full
-              border border-white/20 bg-white/5
-              text-sm font-medium
-              hover:bg-white/10 hover:border-white/30
-              transition
-            "
+            ref={(el) => (elementsRef.current[2] = el)}
+            data-index="2"
+            className={`flex items-center gap-3 px-4 sm:px-7 py-3 rounded-full border border-white/20 bg-white/5 text-sm font-medium hover:bg-white/10 hover:border-white/30 transition-all transform ${
+              visibleElements.has(2)
+                ? 'opacity-100 translate-y-0'
+                : 'opacity-0 translate-y-6'
+            }`}
+            style={{
+              transitionDelay: visibleElements.has(2) ? '300ms' : '0ms'
+            }}
           >
             <img
               src="/icons/gmail.svg"
               alt="Email"
-              className="w-5 h-5"
+              className="w-4 h-4 sm:w-5 sm:h-5"
             />
             {t.gmail}
           </a>
@@ -110,19 +170,14 @@ export default function Contacto({ lang }) {
 
         <form
           onSubmit={handleSubmit}
-          className="grid grid-cols-1 md:grid-cols-2 gap-6"
+          className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6"
         >
           <input
             name="name"
             type="text"
             placeholder={t.name}
             required
-            className="
-              bg-white/5 border border-white/10
-              rounded-xl px-5 py-4 text-sm
-              outline-none focus:border-purple-400/60
-              transition
-            "
+            className="bg-white/5 border border-white/10 rounded-xl px-4 sm:px-5 py-3 sm:py-4 text-sm outline-none focus:border-purple-400/60 transition-all"
           />
 
           <input
@@ -130,12 +185,7 @@ export default function Contacto({ lang }) {
             type="email"
             placeholder={t.email}
             required
-            className="
-              bg-white/5 border border-white/10
-              rounded-xl px-5 py-4 text-sm
-              outline-none focus:border-purple-400/60
-              transition
-            "
+            className="bg-white/5 border border-white/10 rounded-xl px-4 sm:px-5 py-3 sm:py-4 text-sm outline-none focus:border-purple-400/60 transition-all"
           />
 
           <textarea
@@ -143,28 +193,14 @@ export default function Contacto({ lang }) {
             placeholder={t.message}
             rows={5}
             required
-            className="
-              md:col-span-2
-              bg-white/5 border border-white/10
-              rounded-xl px-5 py-4 text-sm
-              outline-none resize-none
-              focus:border-purple-400/60
-              transition
-            "
+            className="md:col-span-2 bg-white/5 border border-white/10 rounded-xl px-4 sm:px-5 py-3 sm:py-4 text-sm outline-none resize-none focus:border-purple-400/60 transition-all"
           />
 
           <div className="md:col-span-2 flex flex-col items-center mt-4 gap-3">
             <button
               type="submit"
               disabled={status === "loading"}
-              className="
-                px-10 py-4 rounded-full
-                bg-gradient-to-r from-purple-600 to-fuchsia-600
-                text-sm font-medium
-                hover:opacity-90
-                transition
-                disabled:opacity-60
-              "
+              className="px-6 sm:px-10 py-3 sm:py-4 rounded-full bg-gradient-to-r from-purple-600 to-fuchsia-600 text-sm font-medium hover:opacity-90 transition disabled:opacity-60"
             >
               {status === "loading" ? "Enviando..." : t.send}
             </button>
@@ -183,6 +219,9 @@ export default function Contacto({ lang }) {
           </div>
         </form>
       </div>
+
+      <div className="absolute top-12 sm:top-20 left-4 sm:left-10 w-24 sm:w-32 h-24 sm:h-32 bg-purple-500/10 rounded-full blur-3xl animate-pulse"></div>
+      <div className="absolute bottom-12 sm:bottom-20 right-4 sm:right-10 w-32 sm:w-40 h-32 sm:h-40 bg-fuchsia-500/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
     </section>
   );
 }

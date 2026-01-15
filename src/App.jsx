@@ -18,6 +18,51 @@ export default function App() {
   const vantaEffect = useRef(null);
   const isMobile = () => window.innerWidth < 768;
 
+  // Smooth scroll implementation
+  useEffect(() => {
+    const handleSmoothScroll = (e) => {
+      const href = e.target.getAttribute('href');
+      if (href && href.startsWith('#')) {
+        e.preventDefault();
+        const targetId = href.substring(1);
+        const targetElement = document.getElementById(targetId);
+        
+        if (targetElement) {
+          const offsetTop = targetElement.offsetTop - 80; // Offset for navbar
+          window.scrollTo({
+            top: offsetTop,
+            behavior: 'smooth'
+          });
+        }
+      }
+    };
+
+    // Add smooth scroll to all anchor links
+    document.addEventListener('click', handleSmoothScroll);
+    
+    return () => {
+      document.removeEventListener('click', handleSmoothScroll);
+    };
+  }, []);
+
+  // Scroll progress indicator
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollTop = window.pageYOffset;
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const scrollPercent = (scrollTop / docHeight) * 100;
+      
+      // Update scroll progress bar if it exists
+      const progressBar = document.getElementById('scroll-progress');
+      if (progressBar) {
+        progressBar.style.width = `${scrollPercent}%`;
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   useEffect(() => {
     if (isMobile()) return;
 
@@ -51,9 +96,15 @@ export default function App() {
     relative
     bg-gradient-to-b from-neutral-950 via-neutral-900 to-neutral-950
     overflow-x-hidden
+    scroll-smooth
   "
-  style={{ backgroundAttachment: "fixed" }}
+  style={{ scrollBehavior: 'smooth' }}
 >
+      {/* Scroll Progress Bar */}
+      <div className="fixed top-0 left-0 w-full h-1 bg-white/10 z-50">
+        <div id="scroll-progress" className="h-full bg-gradient-to-r from-purple-500 to-fuchsia-500 transition-all duration-300" style={{ width: '0%' }}></div>
+      </div>
+
       <Navbar lang={lang} setLang={setLang} />
       <Hero lang={lang} />
 

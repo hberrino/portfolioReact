@@ -40,9 +40,13 @@ Busco aportar valor en cada proyecto mediante desarrollos sólidos y bien estruc
       aboutTitle: "Sobre mí",
       aboutMeTitle: "Quién soy",
       aboutOfferTitle: "Qué hago",
-      projectsTitle: "Proyectos destacados",
+      projectsTitle: "Trabajos",
+      projectsSubtitle: "Explora mis proyectos más recientes y descubre cómo transformo ideas en soluciones funcionales",
       contactTitle: "Contacto",
-      footerBuilt: "Realizado con",
+      footerBuilt: "Construido con",
+      frontend: "Frontend",
+      backend: "Backend",
+      tools: "Tools"
     },
 
     hero: {
@@ -95,7 +99,7 @@ My goal is to add value to each project through solid and well-structured develo
       description:
         "Strong foundations in logic and Java programming. I build APIs, CRUD systems, and dashboards using a modern stack. Able to work autonomously, research, unblock issues, and deliver functional results.",
       highlight:
-        "I don’t just study: I execute, deliver, and prove it with real projects.",
+        "I don't just study: I execute, deliver, and prove it with real projects.",
       softSkillsTitle: "Soft skills",
     },
 
@@ -111,9 +115,13 @@ My goal is to add value to each project through solid and well-structured develo
       aboutTitle: "About me",
       aboutMeTitle: "Who I am",
       aboutOfferTitle: "What I do",
-      projectsTitle: "Featured projects",
+      projectsTitle: "Projects",
+      projectsSubtitle: "Explore my latest projects and discover how I transform ideas into functional solutions",
       contactTitle: "Contact",
       footerBuilt: "Built with",
+      frontend: "Frontend",
+      backend: "Backend",
+      tools: "Tools"
     },
 
     hero: {
