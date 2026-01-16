@@ -50,9 +50,14 @@ export const projects = [
       es: "Sitio web desarrollado con React y Tailwind para una empresa de fotografía.",
       en: "Website developed with React and Tailwind for a photography company.",
     },
-    github: "https://github.com/hberrino/",
-    demo: "https://github.com/hberrino/RuloFotografiaWeb",
-    images: ["/images/RulowebLanding.jpg"],
+    github: "https://github.com/hberrino/RuloFotografiaWeb",
+    demo: "https://hberrino.github.io/RuloFotografiaWeb/",
+    images: [
+      "/images/RulowebLanding.jpg",
+      "/images/sobremirulo.jpg",
+      "/images/contacto.jpg",
+      "/images/buscaterulo.jpg",
+    ],
     techs: ["React", "Tailwind", "Vite", "Git"],
     deploy: {
       frontend: "GitHub Pages",
