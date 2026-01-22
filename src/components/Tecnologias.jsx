@@ -86,6 +86,21 @@ export default function Tecnologias({ lang }) {
           }
         </p>
       </div>
+      <TechSection 
+        title={t?.sections?.backend || "Backend"} 
+        sectionIndex={2}
+        visibleCards={visibleCards}
+        cardsRef={cardsRef}
+      >
+        {techGroups.backend.map((name, index) => (
+          <TechCard 
+            key={name} 
+            tech={getTech(name)} 
+            cardIndex={index}
+            totalOffset={techGroups.frontend.length}
+          />
+        ))}
+      </TechSection>
 
       <TechSection 
         title={t?.sections?.frontend || "Frontend"} 
@@ -99,22 +114,6 @@ export default function Tecnologias({ lang }) {
             tech={getTech(name)} 
             cardIndex={index}
             totalOffset={0}
-          />
-        ))}
-      </TechSection>
-
-      <TechSection 
-        title={t?.sections?.backend || "Backend"} 
-        sectionIndex={2}
-        visibleCards={visibleCards}
-        cardsRef={cardsRef}
-      >
-        {techGroups.backend.map((name, index) => (
-          <TechCard 
-            key={name} 
-            tech={getTech(name)} 
-            cardIndex={index}
-            totalOffset={techGroups.frontend.length}
           />
         ))}
       </TechSection>

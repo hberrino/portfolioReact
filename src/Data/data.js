@@ -1,25 +1,25 @@
 export const techs = [
+  { name: "Java", icon: "/icons/Java.svg" },
+  { name: "Springboot", icon: "/icons/Springboot.svg" },
+  { name: "Docker", icon: "/icons/Docker.svg" },
   { name: "JS", icon: "/icons/JS.svg" },
   { name: "React", icon: "/icons/React.svg" },
   { name: "Node", icon: "/icons/Node.svg" },
   { name: "Express", icon: "/icons/Express.svg" },
   { name: "Tailwind", icon: "/icons/Tailwind.svg" },
   { name: "MySQL", icon: "/icons/MySQL.svg" },
-  { name: "Java", icon: "/icons/Java.svg" },
   { name: "MongoDB", icon: "/icons/MongoDB.svg" },
   { name: "HTML", icon: "/icons/html5.svg" },
   { name: "CSS", icon: "/icons/CSS.svg" },
   { name: "Github", icon: "/icons/github.svg" },
   { name: "Git", icon: "/icons/git.svg" },
-  { name: "VSCode", icon: "/icons/vscode.svg" },
   { name: "Vite", icon: "/icons/vite.svg" },
-  { name: "IntelliJ", icon: "/icons/intellij.svg" },
 ];
 
 export const techGroups = {
   frontend: ["JS", "React", "HTML", "CSS", "Tailwind"],
-  backend: ["Node", "Express", "Java", "MongoDB", "MySQL"],
-  tools: ["Git", "Github", "VSCode", "NPM", "Vite", "IntelliJ"],
+  backend: ["Java", "Springboot", "Docker", "MySQL", "Node", "Express", "MongoDB"],
+  tools: ["Git", "Github", "NPM", "Vite"],
 };
 
 export const projects = [

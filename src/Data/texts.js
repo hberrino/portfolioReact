@@ -1,13 +1,15 @@
 export const texts = {
   es: {
-    about: {
-      me: `Soy desarrollador web y me encuentro en la etapa final de mi formación universitaria.
-Durante mi carrera construí una base sólida en programación estructurada y programación orientada a objetos, lo que me permitió desarrollar una forma de pensar ordenada y analítica.
-Me motiva enfrentar nuevos desafíos y adquirir experiencias que me permitan seguir creciendo y mejorando como desarrollador.`,
-      offer: `Desarrollo soluciones web modernas y responsivas, adaptadas a distintos dispositivos y necesidades.
-Me enfoco en crear interfaces funcionales y visualmente atractivas, cuidando el rendimiento, la accesibilidad y la mantenibilidad del código.
-Busco aportar valor en cada proyecto mediante desarrollos sólidos y bien estructurados.`,
-    },
+   about: {
+  me: `Soy desarrollador backend y me encuentro en la etapa final de mi formación universitaria en TUDAI – UNICEN.
+Me interesa el desarrollo de sistemas backend y la construcción de APIs REST con una lógica clara y bien estructurada.
+Busco incorporarme a un equipo profesional donde pueda aportar valor y seguir creciendo como desarrollador.`,
+
+  offer: `Cuento con una base sólida en programación estructurada, programación orientada a objetos y algoritmos, lo que me permite abordar problemas de forma analítica y ordenada.
+Trabajo con foco en la calidad del código, la mantenibilidad y las buenas prácticas de desarrollo.
+Además, tengo conocimientos sólidos de frontend, lo que me permite comprender el flujo completo de una aplicación y colaborar en desarrollos end-to-end.`,
+},
+
 
     card: {
       softSkills: [
@@ -52,9 +54,9 @@ Busco aportar valor en cada proyecto mediante desarrollos sólidos y bien estruc
     hero: {
       availability: "Disponible – Buscando primer experiencia",
       greeting: "Hola, soy",
-      role: "Full Stack Developer",
+      role: "Backend Java Developer",
       description:
-        "Último año de TUDAI – UNICEN. Desarrollo aplicaciones full stack y estoy listo para sumarme a un equipo profesional, aportar valor y seguir creciendo mediante desafíos reales.",
+        "Último año de TUDAI – UNICEN. Desarrollo APIs REST con Java Spring Boot, y sistemas backend con bases de datos relacionales. Conocimientos sólidos de frontend en React, para desarrollos end-to-end.",
       buttons: {
         projects: "Ver Proyectos",
         downloadCV: "Descargar CV",
@@ -76,13 +78,15 @@ Busco aportar valor en cada proyecto mediante desarrollos sólidos y bien estruc
 
   en: {
     about: {
-      me: `I am a web developer currently in the final stage of my university studies.
-Throughout my academic journey, I built a strong foundation in structured programming and object-oriented programming, which helped me develop an organized and analytical way of thinking.
-I am motivated by new challenges and by gaining experiences that allow me to continue growing and improving as a developer.`,
-      offer: `I develop modern and responsive web solutions, adapted to different devices and needs.
-I focus on building functional and visually appealing interfaces, paying attention to performance, accessibility, and code maintainability.
-My goal is to add value to each project through solid and well-structured developments.`,
-    },
+  me: `I am a backend developer and I am in the final stage of my university studies at TUDAI – UNICEN.
+I am interested in backend systems development and building REST APIs with clear and well-structured logic.
+I am looking to join a professional team where I can add value and continue growing as a developer.`,
+
+  offer: `I have a solid foundation in structured programming, object-oriented programming, and algorithms, which allows me to approach problems in an analytical and organized way.
+I work with a strong focus on code quality, maintainability, and good development practices.
+Additionally, I have solid frontend knowledge, which allows me to understand the complete application flow and collaborate on end-to-end development.`,
+},
+
 
     card: {
       softSkills: [
@@ -129,7 +133,7 @@ My goal is to add value to each project through solid and well-structured develo
       greeting: "Hi, I'm",
       role: "Full Stack Developer",
       description:
-        "Final year TUDAI student at UNICEN. I develop full stack applications and I am ready to join a professional team, add value, and grow through real-world challenges.",
+        "Final year at TUDAI - UNICEN. I develop REST APIs with Java Spring Boot and backend systems with relational databases. Strong frontend knowledge in React for end-to-end development.",
       buttons: {
         projects: "View Projects",
         downloadCV: "Download CV",
