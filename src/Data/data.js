@@ -14,12 +14,13 @@ export const techs = [
   { name: "Github", icon: "/icons/github.svg" },
   { name: "Git", icon: "/icons/git.svg" },
   { name: "Vite", icon: "/icons/vite.svg" },
+  { name: "Postman", icon: "/icons/Postman.png" },
 ];
 
 export const techGroups = {
   frontend: ["JS", "React", "HTML", "CSS", "Tailwind"],
   backend: ["Java", "Springboot", "Docker", "MySQL", "Node", "Express", "MongoDB"],
-  tools: ["Git", "Github", "NPM", "Vite"],
+  tools: ["Git", "Github", "NPM", "Vite", "Postman"],
 };
 
 export const projects = [
