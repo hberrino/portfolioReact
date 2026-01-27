@@ -26,6 +26,27 @@ export const techGroups = {
 export const projects = [
   {
     title: {
+      es: "Administrador de gimnasio",
+      en: "Gym management system",
+    },
+    description: {
+      es: "Sistema backend desarrollado para administrar un gimnasio tanto sus miembros como sus planes 100% desarrollado de cero por mí utilizando la arquitectura hexagonal y buenas prácticas.",
+      en: "Backend system developed to manage a gym including its members and plans, 100% developed from scratch by me using hexagonal architecture and best practices.",
+    },
+    github: "https://github.com/hberrino/Backend-Gimnasio",
+    images: [
+      "/images/backend1.jpg",
+      "/images/backend2.jpg",
+      "/images/backend3.jpg",
+      "/images/backend4.jpg",
+    ],
+    techs: ["Java", "Springboot", "MySQL", "Postman", "Docker"],
+    deploy: {
+      backend: "Docker build",
+    },
+  },
+  {
+    title: {
       es: "Parking dinámico con calculador de costo",
       en: "Dynamic parking with cost calculator",
     },
