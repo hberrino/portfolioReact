@@ -73,6 +73,7 @@ export default function Projects({ title, lang }) {
                 {...project}
                 title={project.title[lang]}
                 description={project.description[lang]}
+                lang={lang}
               />
             </div>
           ))}

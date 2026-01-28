@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { techs as techsData } from "../Data/data";
+import { texts } from "../Data/texts";
 
 export default function ProjectCard({
   title,
@@ -10,9 +11,11 @@ export default function ProjectCard({
   images,
   techs,
   deploy,
+  lang = "es",
 }) {
   const [current, setCurrent] = useState(0);
   const hasImages = images && images.length > 0;
+  const t = texts[lang];
 
   const techObjects = techs
     .map((t) => techsData.find((td) => td.name === t))
@@ -26,8 +29,8 @@ export default function ProjectCard({
       {video && (
         <div className="relative w-full aspect-video sm:aspect-[16/9] overflow-hidden bg-black/30">
           <video src={video} controls className="w-full h-full object-contain" preload="metadata" />
-          <div className="absolute top-2 sm:top-3 left-1/2 -translate-x-1/2 bg-black/60 backdrop-blur-md text-white text-xs px-2 py-1 sm:px-3 sm:py-1.5 rounded-full border border-white/20">
-            FOR DEMO: USER: test | PASS: test123
+          <div className="absolute top-2 sm:top-3 left-1/2 -translate-x-1/2 bg-black/60 backdrop-blur-md text-white text-xs px-2 py-1 sm:px-3 sm:py-1.5 rounded-full border border-white/20 text-center">
+            Demo user: test<br/>Demo pass: test123
           </div>
           <div className="absolute bottom-2 sm:bottom-3 right-2 sm:right-3 bg-black/60 backdrop-blur-md text-white text-xs px-2 py-1 sm:px-3 sm:py-1.5 rounded-full border border-white/20">
             Recomend: Fullscreen
@@ -43,6 +46,12 @@ export default function ProjectCard({
             className="w-full h-full object-cover transition-all duration-700 group-hover:scale-105"
             loading="lazy"
           />
+
+          {!demo && (
+            <div className="absolute top-2 sm:top-3 left-1/2 -translate-x-1/2 bg-black/60 backdrop-blur-md text-white text-xs px-2 py-1 sm:px-3 sm:py-1.5 rounded-full border border-white/20 text-center">
+              {t.projects.readmeNote}
+            </div>
+          )}
 
           {images.length > 1 && (
             <>

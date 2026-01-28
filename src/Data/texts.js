@@ -51,6 +51,10 @@ Además, tengo conocimientos sólidos de frontend, lo que me permite comprender 
       tools: "Tools"
     },
 
+    projects: {
+      readmeNote: "Para más información ver ReadMe en github."
+    },
+
     hero: {
       availability: "Disponible – Buscando primer experiencia",
       greeting: "Hola, soy",
@@ -126,6 +130,10 @@ Additionally, I have solid frontend knowledge, which allows me to understand the
       frontend: "Frontend",
       backend: "Backend",
       tools: "Tools"
+    },
+
+    projects: {
+      readmeNote: "For more information see ReadMe on github."
     },
 
     hero: {
