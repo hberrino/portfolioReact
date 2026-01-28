@@ -30,8 +30,8 @@ export const projects = [
       en: "Gym management system",
     },
     description: {
-      es: "Sistema backend desarrollado para administrar un gimnasio tanto sus miembros como sus planes 100% desarrollado de cero por mí utilizando la arquitectura hexagonal y buenas prácticas.",
-      en: "Backend system developed to manage a gym including its members and plans, 100% developed from scratch by me using hexagonal architecture and best practices.",
+      es: "Backend para la gestión de un gimnasio, desarrollado desde cero con Java y Spring Boot, siguiendo arquitectura en capas y buenas prácticas, ejecutable con Docker.",
+      en: "Backend for gym management, developed from scratch using Java and Spring Boot, following a layered architecture and good practices, and executable with Docker.",
     },
     github: "https://github.com/hberrino/Backend-Gimnasio",
     images: [
