@@ -78,16 +78,17 @@ export default function Sobremi({ lang }) {
             transitionDelay: visibleElements.has(0) ? '100ms' : '0ms'
           }}
         >
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-4">
-            {t.sections.aboutTitle}
-          </h2>
-          <span className="block w-12 sm:w-16 h-1 mx-auto rounded-full bg-gradient-to-r from-cyan-500 to-blue-500"></span>
-          <p className="mt-4 text-neutral-400 max-w-2xl mx-auto px-4 text-sm sm:text-base">
-            {lang === 'es' 
-              ? 'Conoce más sobre mi trayectoria y lo que ofrezco como desarrollador'
-              : 'Learn more about my background and what I offer as a developer'
-            }
+          <div className="relative inline-block mb-8">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-black bg-gradient-to-r from-violet-400 via-purple-400 to-pink-400 bg-clip-text text-transparent drop-shadow-2xl">
+              {t.sections.aboutTitle}
+            </h2>
+            <div className="absolute -inset-2 bg-gradient-to-r from-violet-500/20 to-pink-500/20 blur-xl rounded-full animate-pulse"></div>
+          </div>
+          
+          <p className="text-center text-base sm:text-lg text-neutral-200 max-w-2xl mx-auto mb-8 font-light">
+            {lang === 'es' ? 'Conoce más sobre mí y lo que hago' : 'Get to know more about me and what I do'}
           </p>
+
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-12 pt-8 sm:pt-10">

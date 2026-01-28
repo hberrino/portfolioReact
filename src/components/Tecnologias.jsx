@@ -65,25 +65,23 @@ export default function Tecnologias({ lang }) {
       id="tecnologias"
       className="w-full max-w-6xl lg:max-w-7xl mx-auto px-4 sm:px-6 pt-20 sm:pt-24 pb-24 sm:pb-32 flex flex-col gap-20 sm:gap-28 relative"
     >
-            
       <div 
         ref={(el) => (sectionsRef.current[0] = el)}
         data-index="0"
-        className={`text-center mb-12 sm:mb-16 transform transition-all duration-500 ${
+        className={`text-center mb-4 sm:mb-6 transform transition-all duration-500 ${
           visibleSections.has(0)
             ? 'opacity-100 translate-y-0'
             : 'opacity-0 translate-y-8'
         }`}
       >
-        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-neutral-100 mb-4">
-          {lang === 'es' ? 'Tecnologías' : 'Technologies'}
-        </h2>
-        <span className="block w-12 sm:w-16 h-1 mx-auto rounded-full bg-gradient-to-r from-cyan-500 to-blue-500"></span>
-        <p className="mt-4 text-neutral-400 max-w-2xl mx-auto px-4 text-sm sm:text-base">
-          {lang === 'es' 
-            ? 'Mi stack tecnológico y las herramientas que utilizo para crear soluciones modernas'
-            : 'My tech stack and the tools I use to build modern solutions'
-          }
+        <div className="relative inline-block mb-4">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-black bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent drop-shadow-2xl">
+            {lang === 'es' ? 'Tecnologías' : 'Technologies'}
+          </h2>
+          <div className="absolute -inset-1 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 blur-lg rounded-full"></div>
+        </div>
+        <p className="text-center text-base sm:text-lg text-neutral-200 max-w-2xl mx-auto mb-8 font-light">
+          {t?.sections?.technologiesSubtitle}
         </p>
       </div>
       <TechSection 

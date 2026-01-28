@@ -42,14 +42,16 @@ export default function Projects({ title, lang }) {
     >
       
       <div className="text-center mb-12 sm:mb-16 relative z-10">
-        <h2 className="mt-2 text-2xl sm:text-3xl md:text-4xl font-bold text-neutral-100 mb-4">
-          {title}
-        </h2>
-        <span
-          className="block w-12 sm:w-16 h-1 mx-auto rounded-full bg-gradient-to-r from-cyan-500 to-blue-500"
-        />
-        <p className="mt-4 text-neutral-400 max-w-2xl mx-auto px-4 text-sm sm:text-base">
-          {t.sections.projectsSubtitle}
+        <div className="relative inline-block">
+          <h2 className="mt-2 text-3xl sm:text-4xl md:text-5xl font-black mb-4 bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent drop-shadow-2xl">
+            {title}
+          </h2>
+          <div className="absolute -inset-1 bg-gradient-to-r from-cyan-500/30 to-blue-500/30 blur-xl rounded-full animate-pulse"></div>
+          <div className="absolute -inset-2 bg-gradient-to-r from-cyan-400/20 to-purple-400/20 blur-2xl rounded-full"></div>
+        </div>
+        
+        <p className="text-center text-base sm:text-lg text-neutral-200 max-w-2xl mx-auto mb-8 font-light">
+          {texts[lang]?.sections?.projectsSubtitle}
         </p>
       </div>
 

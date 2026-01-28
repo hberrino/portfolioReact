@@ -112,11 +112,29 @@ export default function Contacto({ lang }) {
             transitionDelay: visibleElements.has(0) ? '100ms' : '0ms'
           }}
         >
-          <h2 className="text-xl sm:text-2xl md:text-3xl font-bold mb-2">
-            {t.title}
-          </h2>
-          <span className="block w-12 sm:w-16 h-1 mx-auto rounded-full bg-gradient-to-r from-cyan-500 to-blue-500"></span>
-          <p className="text-white/70 max-w-xl mx-auto pt-3 text-sm sm:text-base">
+          <div className="relative inline-block mb-6">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-black bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent drop-shadow-2xl">
+              {t.title}
+            </h2>
+            <div className="absolute -inset-1 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 blur-lg rounded-full"></div>
+          </div>
+          
+          <div className="relative mt-6 mb-6">
+            <div className="absolute inset-0 flex items-center justify-center">
+              <div className="w-full h-0.5 bg-gradient-to-r from-transparent via-cyan-500/30 to-transparent"></div>
+            </div>
+            <div className="relative flex items-center justify-center gap-4">
+              <div className="w-8 h-0.5 bg-gradient-to-r from-transparent to-cyan-500"></div>
+              <div className="flex gap-2">
+                <div className="w-2 h-2 rounded-full bg-cyan-400"></div>
+                <div className="w-2 h-2 rounded-full bg-blue-400"></div>
+                <div className="w-2 h-2 rounded-full bg-purple-400"></div>
+              </div>
+              <div className="w-8 h-0.5 bg-gradient-to-l from-transparent to-cyan-500"></div>
+            </div>
+          </div>
+          
+          <p className="text-base sm:text-lg text-neutral-100 max-w-xl mx-auto leading-relaxed font-light tracking-wide text-center">
             {t.subtitle}
           </p>
         </div>
