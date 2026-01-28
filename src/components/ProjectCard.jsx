@@ -22,9 +22,9 @@ export default function ProjectCard({
     .filter(Boolean);
 
   return (
-    <article className="relative group rounded-2xl sm:rounded-3xl overflow-hidden bg-gradient-to-br from-white/[0.08] to-white/[0.02] backdrop-blur-xl border border-white/[0.15] shadow-2xl hover:shadow-purple-500/20 transition-all duration-500 hover:scale-[1.02] hover:border-purple-400/30 h-full flex flex-col" data-aos="fade-up">
+    <article className="relative group rounded-2xl sm:rounded-3xl overflow-hidden bg-gradient-to-br from-white/[0.08] to-white/[0.02] backdrop-blur-xl border border-white/[0.15] shadow-2xl hover:shadow-cyan-500/20 transition-all duration-500 hover:scale-[1.02] hover:border-cyan-400/30 h-full flex flex-col" data-aos="fade-up">
       
-      <div className="absolute inset-0 bg-gradient-to-tr from-purple-500/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+      <div className="absolute inset-0 bg-gradient-to-tr from-cyan-500/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
       
       {video && (
         <div className="relative w-full aspect-video sm:aspect-[16/9] overflow-hidden bg-black/30">
@@ -89,7 +89,7 @@ export default function ProjectCard({
         {techObjects.length > 0 && (
           <div className="flex flex-wrap gap-1.5 sm:gap-2">
             {techObjects.map((tech, i) => (
-              <div key={i} className="group/tech flex items-center gap-1 sm:gap-1.5 bg-gradient-to-r from-white/10 to-white/5 px-1.5 py-0.5 sm:px-2 sm:py-1 rounded-full text-xs text-white border border-white/10 hover:border-purple-400/30 hover:from-purple-400/20 hover:to-purple-400/10 transition-all duration-300">
+              <div key={i} className="group/tech flex items-center gap-1 sm:gap-1.5 bg-gradient-to-r from-white/10 to-white/5 px-1.5 py-0.5 sm:px-2 sm:py-1 rounded-full text-xs text-white border border-white/10 hover:border-cyan-400/30 hover:from-cyan-400/20 hover:to-cyan-400/10 transition-all duration-300">
                 <img src={tech.icon} alt={tech.name} className="w-2.5 h-2.5 sm:w-3 sm:h-3 opacity-80 group-hover/tech:opacity-100 transition-opacity" />
                 <span className="truncate">{tech.name}</span>
               </div>

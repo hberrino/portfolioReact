@@ -36,20 +36,23 @@ export default function Navbar({ lang, setLang }) {
     } animate-fade-in-down`}>
       <div className="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
         <a href="#inicio" className="flex items-center gap-3 group">
-          <img
-            src={Logo}
-            alt="Logo HB DEV"
-            className="w-12 h-12 scale-[3] pt-1 object-contain transition-transform duration-300 group-hover:scale-[3.2]"
-          />
+          <div className="flex flex-col animate-float">
+            <span className="text-xl font-bold tracking-tight text-white font-mono group-hover:text-cyan-400 transition-colors duration-300">
+              HB
+            </span>
+            <span className="text-xs font-light tracking-widest text-gray-400 group-hover:text-cyan-300 transition-colors duration-300 font-sans">
+              DEVELOPER
+            </span>
+          </div>
         </a>
 
-        <ul className="hidden md:flex gap-6 text-gray-300 items-center">
+        <ul className="hidden md:flex gap-8 text-gray-300 items-center font-sans">
           {Object.values(texts[lang].nav).map((label, i) => (
             <li key={i}>
               <a
                 href={`#${Object.keys(texts[lang].nav)[i]}`}
-                className={`relative pb-1 border-b-2 border-transparent transition-all duration-300 hover:border-purple-400/70 ${
-                  scrolled ? 'hover:text-white' : 'hover:text-purple-300'
+                className={`relative pb-1 border-b-2 border-transparent transition-all duration-300 hover:border-cyan-400/70 ${
+                  scrolled ? 'hover:text-white' : 'hover:text-cyan-300'
                 }`}
               >
                 {label}
@@ -113,7 +116,7 @@ export default function Navbar({ lang, setLang }) {
             <li key={i}>
               <a
                 href={`#${Object.keys(texts[lang].nav)[i]}`}
-                className="block py-2 hover:text-purple-400 transition-colors text-center"
+                className="block py-2 hover:text-cyan-400 transition-colors text-center"
                 onClick={() => setIsOpen(false)}
               >
                 {label}

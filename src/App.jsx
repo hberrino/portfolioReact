@@ -77,7 +77,7 @@ export default function App() {
       minWidth: 200.0,
       scale: 1.0,
       color1: 0x000000,
-      color2: 0x3a0a75,
+      color2: 0x0a4a7c,
       size: 2.2,
       speed: 2.9,
       THREE,
@@ -106,7 +106,7 @@ export default function App() {
       style={{ scrollBehavior: 'smooth' }}
     >
       <div className="fixed top-0 left-0 w-full h-1 bg-white/10 z-50">
-        <div id="scroll-progress" className="h-full bg-gradient-to-r from-purple-500 to-fuchsia-500 transition-all duration-300" style={{ width: '0%' }}></div>
+        <div id="scroll-progress" className="h-full bg-gradient-to-r from-cyan-500 to-blue-500 transition-all duration-300" style={{ width: '0%' }}></div>
       </div>
 
       <Navbar lang={lang} setLang={setLang} />

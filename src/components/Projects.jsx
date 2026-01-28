@@ -46,7 +46,7 @@ export default function Projects({ title, lang }) {
           {title}
         </h2>
         <span
-          className="block w-12 sm:w-16 h-1 mx-auto rounded-full bg-gradient-to-r from-purple-500 to-fuchsia-500"
+          className="block w-12 sm:w-16 h-1 mx-auto rounded-full bg-gradient-to-r from-cyan-500 to-blue-500"
         />
         <p className="mt-4 text-neutral-400 max-w-2xl mx-auto px-4 text-sm sm:text-base">
           {t.sections.projectsSubtitle}

@@ -78,7 +78,7 @@ export default function Tecnologias({ lang }) {
         <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-neutral-100 mb-4">
           {lang === 'es' ? 'Tecnologías' : 'Technologies'}
         </h2>
-        <span className="block w-12 sm:w-16 h-1 mx-auto rounded-full bg-gradient-to-r from-purple-500 to-fuchsia-500"></span>
+        <span className="block w-12 sm:w-16 h-1 mx-auto rounded-full bg-gradient-to-r from-cyan-500 to-blue-500"></span>
         <p className="mt-4 text-neutral-400 max-w-2xl mx-auto px-4 text-sm sm:text-base">
           {lang === 'es' 
             ? 'Mi stack tecnológico y las herramientas que utilizo para crear soluciones modernas'
@@ -134,8 +134,8 @@ export default function Tecnologias({ lang }) {
         ))}
       </TechSection>
 
-      <div className="absolute top-20 sm:top-40 right-4 sm:right-10 w-24 sm:w-32 h-24 sm:h-32 bg-purple-500/10 rounded-full blur-3xl animate-pulse"></div>
-      <div className="absolute bottom-20 sm:bottom-40 left-4 sm:left-10 w-32 sm:w-40 h-32 sm:h-40 bg-fuchsia-500/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '3s' }}></div>
+      <div className="absolute top-20 sm:top-40 right-4 sm:right-10 w-24 sm:w-32 h-24 sm:h-32 bg-cyan-500/10 rounded-full blur-3xl animate-pulse"></div>
+      <div className="absolute bottom-20 sm:bottom-40 left-4 sm:left-10 w-32 sm:w-40 h-32 sm:h-40 bg-blue-500/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '3s' }}></div>
     </section>
   );
 }
@@ -158,7 +158,7 @@ function TechSection({ title, children, sectionIndex, visibleCards, cardsRef }) 
         <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold tracking-wide text-white">
           {title}
         </h2>
-        <span className="flex-1 h-px bg-gradient-to-r from-purple-500/70 to-transparent"></span>
+        <span className="flex-1 h-px bg-gradient-to-r from-cyan-500/70 to-transparent"></span>
       </div>
 
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 sm:gap-6">
@@ -204,7 +204,7 @@ function TechCard({ tech, cardIndex, totalOffset }) {
   return (
     <div
       ref={cardRef}
-      className={`group flex flex-col items-center justify-center gap-3 p-4 sm:p-6 rounded-2xl bg-gradient-to-br from-white/5 to-white/[0.02] backdrop-blur-md border border-white/10 transition-all duration-300 transform hover:-translate-y-2 hover:border-purple-400/40 hover:shadow-[0_0_30px_-10px_rgba(168,85,247,0.4)] ${
+      className={`group flex flex-col items-center justify-center gap-3 p-4 sm:p-6 rounded-2xl bg-gradient-to-br from-white/5 to-white/[0.02] backdrop-blur-md border border-white/10 transition-all duration-300 transform hover:-translate-y-2 hover:border-cyan-400/40 hover:shadow-[0_0_30px_-10px_rgba(6,182,212,0.4)] ${
         visible
           ? 'opacity-100 translate-y-0 scale-100'
           : 'opacity-0 translate-y-8 scale-95'
@@ -214,7 +214,7 @@ function TechCard({ tech, cardIndex, totalOffset }) {
       }}
     >
       <div className="relative">
-        <div className="absolute inset-0 bg-gradient-to-br from-purple-500/20 to-fuchsia-500/20 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-xl"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-xl"></div>
         
         <img
           src={tech.icon}

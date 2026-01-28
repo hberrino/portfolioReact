@@ -57,7 +57,7 @@ export default function Footer({ lang }) {
 
       <button
         onClick={scrollToTop}
-        className="fixed bottom-8 right-6 w-12 h-12 bg-gradient-to-r from-purple-600 to-fuchsia-600 rounded-full flex items-center justify-center text-white shadow-lg hover:shadow-purple-500/25 transition-all duration-300 hover:scale-110 group"
+        className="fixed bottom-8 right-6 w-12 h-12 bg-gradient-to-r from-cyan-600 to-blue-600 rounded-full flex items-center justify-center text-white shadow-lg hover:shadow-cyan-500/25 transition-all duration-300 hover:scale-110 group"
         aria-label="Scroll to top"
       >
         <svg

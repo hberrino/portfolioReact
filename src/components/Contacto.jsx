@@ -115,7 +115,7 @@ export default function Contacto({ lang }) {
           <h2 className="text-xl sm:text-2xl md:text-3xl font-bold mb-2">
             {t.title}
           </h2>
-          <span className="block w-12 sm:w-16 h-1 mx-auto rounded-full bg-gradient-to-r from-purple-500 to-fuchsia-500"></span>
+          <span className="block w-12 sm:w-16 h-1 mx-auto rounded-full bg-gradient-to-r from-cyan-500 to-blue-500"></span>
           <p className="text-white/70 max-w-xl mx-auto pt-3 text-sm sm:text-base">
             {t.subtitle}
           </p>
@@ -176,7 +176,7 @@ export default function Contacto({ lang }) {
             type="text"
             placeholder={t.name}
             required
-            className="bg-white/5 border border-white/10 rounded-xl px-3 sm:px-4 py-2 sm:py-3 text-sm outline-none focus:border-purple-400/60 transition-all"
+            className="bg-white/5 border border-white/10 rounded-xl px-3 sm:px-4 py-2 sm:py-3 text-sm outline-none focus:border-cyan-400/60 transition-all"
           />
 
           <input
@@ -184,7 +184,7 @@ export default function Contacto({ lang }) {
             type="email"
             placeholder={t.email}
             required
-            className="bg-white/5 border border-white/10 rounded-xl px-3 sm:px-4 py-2 sm:py-3 text-sm outline-none focus:border-purple-400/60 transition-all"
+            className="bg-white/5 border border-white/10 rounded-xl px-3 sm:px-4 py-2 sm:py-3 text-sm outline-none focus:border-cyan-400/60 transition-all"
           />
 
           <textarea
@@ -192,14 +192,14 @@ export default function Contacto({ lang }) {
             placeholder={t.message}
             rows={4}
             required
-            className="md:col-span-2 bg-white/5 border border-white/10 rounded-xl px-3 sm:px-4 py-2 sm:py-3 text-sm outline-none resize-none focus:border-purple-400/60 transition-all"
+            className="md:col-span-2 bg-white/5 border border-white/10 rounded-xl px-3 sm:px-4 py-2 sm:py-3 text-sm outline-none resize-none focus:border-cyan-400/60 transition-all"
           />
 
           <div className="md:col-span-2 flex flex-col items-center mt-2 gap-3">
             <button
               type="submit"
               disabled={status === "loading"}
-              className="px-6 sm:px-10 py-2.5 sm:py-3.5 rounded-full bg-gradient-to-r from-purple-600 to-fuchsia-600 text-sm font-medium hover:opacity-90 transition disabled:opacity-60"
+              className="px-6 sm:px-10 py-2.5 sm:py-3.5 rounded-full bg-gradient-to-r from-cyan-600 to-blue-600 text-sm font-medium hover:opacity-90 transition disabled:opacity-60"
             >
               {status === "loading" ? "Enviando..." : t.send}
             </button>
@@ -219,8 +219,8 @@ export default function Contacto({ lang }) {
         </form>
       </div>
 
-      <div className="absolute top-12 sm:top-20 left-4 sm:left-10 w-24 sm:w-32 h-24 sm:h-32 bg-purple-500/10 rounded-full blur-3xl animate-pulse"></div>
-      <div className="absolute bottom-12 sm:bottom-20 right-4 sm:right-10 w-32 sm:w-40 h-32 sm:h-40 bg-fuchsia-500/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
+      <div className="absolute top-12 sm:top-20 left-4 sm:left-10 w-24 sm:w-32 h-24 sm:h-32 bg-cyan-500/10 rounded-full blur-3xl animate-pulse"></div>
+      <div className="absolute bottom-12 sm:bottom-20 right-4 sm:right-10 w-32 sm:w-40 h-32 sm:h-40 bg-blue-500/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
     </section>
   );
 }

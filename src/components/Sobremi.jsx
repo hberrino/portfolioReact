@@ -81,7 +81,7 @@ export default function Sobremi({ lang }) {
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-4">
             {t.sections.aboutTitle}
           </h2>
-          <span className="block w-12 sm:w-16 h-1 mx-auto rounded-full bg-gradient-to-r from-purple-500 to-fuchsia-500"></span>
+          <span className="block w-12 sm:w-16 h-1 mx-auto rounded-full bg-gradient-to-r from-cyan-500 to-blue-500"></span>
           <p className="mt-4 text-neutral-400 max-w-2xl mx-auto px-4 text-sm sm:text-base">
             {lang === 'es' 
               ? 'Conoce más sobre mi trayectoria y lo que ofrezco como desarrollador'
@@ -106,7 +106,7 @@ export default function Sobremi({ lang }) {
             <h3 className="text-lg sm:text-xl font-semibold mb-2">
               {t.sections.aboutMeTitle}
             </h3>
-            <div className="w-12 h-[2px] bg-violet-500/70 mb-6" />
+            <div className="w-12 h-[2px] bg-cyan-500/70 mb-6" />
             <p className="text-white/80 leading-relaxed whitespace-pre-line text-sm sm:text-base">
               {t.about.me}
             </p>
@@ -127,7 +127,7 @@ export default function Sobremi({ lang }) {
             <h3 className="text-lg sm:text-xl font-semibold mb-2">
               {t.sections.aboutOfferTitle}
             </h3>
-            <div className="w-12 h-[2px] bg-violet-500/70 mb-6" />
+            <div className="w-12 h-[2px] bg-cyan-500/70 mb-6" />
             <p className="text-white/80 leading-relaxed whitespace-pre-line text-sm sm:text-base">
               {t.about.offer}
             </p>
@@ -135,8 +135,8 @@ export default function Sobremi({ lang }) {
         </div>
       </div>
 
-      <div className="absolute top-12 sm:top-20 left-4 sm:left-10 w-24 sm:w-32 h-24 sm:h-32 bg-purple-500/10 rounded-full blur-3xl animate-pulse"></div>
-      <div className="absolute bottom-12 sm:bottom-20 right-4 sm:right-10 w-32 sm:w-40 h-32 sm:h-40 bg-fuchsia-500/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
+      <div className="absolute top-12 sm:top-20 left-4 sm:left-10 w-24 sm:w-32 h-24 sm:h-32 bg-cyan-500/10 rounded-full blur-3xl animate-pulse"></div>
+      <div className="absolute bottom-12 sm:bottom-20 right-4 sm:right-10 w-32 sm:w-40 h-32 sm:h-40 bg-blue-500/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
     </section>
   );
 }
