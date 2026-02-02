@@ -94,7 +94,7 @@ export default function Navbar({ lang, setLang }) {
 
 
 
-        <ul className="hidden md:flex gap-8 text-gray-300 items-center font-sans font-light">
+        <ul className="hidden md:flex gap-8 items-center font-sans">
 
           {Object.values(texts[lang].nav).map((label, i) => (
 
@@ -104,11 +104,7 @@ export default function Navbar({ lang, setLang }) {
 
                 href={`#${Object.keys(texts[lang].nav)[i]}`}
 
-                className={`relative pb-1 border-b-2 border-transparent transition-all duration-300 hover:border-cyan-400/70 ${
-
-                  scrolled ? 'hover:text-white' : 'hover:text-cyan-300'
-
-                } tracking-wide hover:font-normal`}
+                className="relative px-3 py-2 text-xs font-bold tracking-widest uppercase transition-all duration-300 text-white hover:text-white group after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:w-0 after:h-0.5 after:bg-gradient-to-r after:from-transparent after:via-cyan-400 after:to-transparent hover:after:w-full after:transition-all after:duration-500"
 
               >
 
