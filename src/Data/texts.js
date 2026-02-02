@@ -57,7 +57,7 @@ Además, tengo conocimientos sólidos de frontend, lo que me permite comprender 
     },
 
     hero: {
-      availability: "Disponible – Buscando primer experiencia",
+      availability: "Disponible, buscando un nuevo desafío.",
       greeting: "Hola, soy",
       role: "Backend Java Developer",
       description:
@@ -139,7 +139,7 @@ Additionally, I have solid frontend knowledge, which allows me to understand the
     },
 
     hero: {
-      availability: "Available – Looking for first professional experience",
+      availability: "Available, looking for a new challenge.",
       greeting: "Hi, I'm",
       role: "Full Stack Developer",
       description:

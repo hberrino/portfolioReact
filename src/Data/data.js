@@ -26,8 +26,47 @@ export const techGroups = {
 export const projects = [
   {
     title: {
-      es: "Administrador de gimnasio",
-      en: "Gym management system",
+      es: "Sistema backend E-commerce",
+      en: "E-commerce backend system",
+    },
+    description: {
+      es: "Backend para la gestión de un e-commerce, desarrollado con Java y Spring Boot. Implementa una arquitectura robusta en capas con manejo completo de inventario, pedidos y usuarios.",
+      en: "Backend for e-commerce management, developed with Java and Spring Boot. Implements a robust layered architecture with complete inventory, orders, and user management.",
+    },
+    github: "https://github.com/hberrino/EcommerceAdministrador/",
+    images: [
+      "/images/ecommerce1.jpg",
+      "/images/ecommerce2.jpg",
+      "/images/ecommerce3.jpg",
+      "/images/ecommerce4.jpg",
+    ],
+    techs: ["Java", "Springboot", "MySQL", "Postman", "Docker", "Git"],
+    deploy: {
+      backend: "Docker build",
+    },
+  },
+  {
+    title: {
+      es: "Aplicación web estacionamiento",
+      en: "Parking web application",
+    },
+    description: {
+      es: "Gestión de estacionamiento con cálculo automático de tarifas según duración y tipo de vehículo. Sistema integral para control de ingresos y egresos de vehículos.",
+      en: "Parking management with automatic fare calculation based on duration and vehicle type. Comprehensive system for vehicle entry and exit control.",
+    },
+    github: "https://github.com/hberrino/ParkingReactRemodel",
+    demo: "https://parkingdemo-nine.vercel.app/",
+    video: "/videos/Parkingvid.mp4",
+    techs: ["React", "Tailwind", "MongoDB", "Node", "Express", "Vite", "Git"],
+    deploy: {
+      backend: "Render",
+      frontend: "Vercel",
+    },
+  },
+  {
+    title: {
+      es: "Sistema backend Gimnasio",
+      en: "Gym backend system",
     },
     description: {
       es: "Backend para la gestión de un gimnasio, desarrollado desde cero con Java y Spring Boot, siguiendo arquitectura en capas y buenas prácticas, ejecutable con Docker.",
@@ -40,27 +79,9 @@ export const projects = [
       "/images/backend3.jpg",
       "/images/backend4.jpg",
     ],
-    techs: ["Java", "Springboot", "MySQL", "Postman", "Docker"],
+    techs: ["Java", "Springboot", "MySQL", "Postman", "Docker", "Git"],
     deploy: {
       backend: "Docker build",
-    },
-  },
-  {
-    title: {
-      es: "Parking dinámico con calculador de costo",
-      en: "Dynamic parking with cost calculator",
-    },
-    description: {
-      es: "Aplicación full stack creada desde cero por mí, como único participante de principio a fin. Gestión de estacionamiento, con cálculo automático de tarifas según duración y tipo de vehículo.",
-      en: "Full-stack application built from scratch by me as the sole developer from start to finish. Parking management with automatic fare calculation based on duration and vehicle type.",
-    },
-    github: "https://github.com/hberrino/ParkingReactRemodel",
-    demo: "https://parkingdemo-nine.vercel.app/",
-    video: "/videos/Parkingvid.mp4",
-    techs: ["React", "Tailwind", "MongoDB", "Node", "Express", "Vite", "Git"],
-    deploy: {
-      backend: "Render",
-      frontend: "Vercel",
     },
   },
   {
