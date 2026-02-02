@@ -288,9 +288,9 @@ export default function Hero({ lang }) {
 
           <div className="w-full md:w-auto relative p-6 sm:p-8 flex flex-col gap-8">
 
-            <div className="space-y-2">
+            <div className="space-y-3">
 
-              <h3 className="text-lg font-semibold text-gray-200 md:text-start">
+              <h3 className="text-lg sm:text-xl font-bold text-white md:text-start pl-3 border-l-2 border-gradient-to-b from-cyan-500 to-blue-500" style={{borderImage: 'linear-gradient(to bottom, #06b6d4, #3b82f6) 1'}}>
 
                 {t.card.contributionTitle}
 
