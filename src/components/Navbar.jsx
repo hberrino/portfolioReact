@@ -74,7 +74,7 @@ export default function Navbar({ lang, setLang }) {
 
         <a href="#inicio" className="flex items-center gap-3 group">
 
-          <div className="flex flex-col animate-float">
+          <div className="flex flex-col">
 
             <span className="text-xl font-bold tracking-tight text-white font-mono group-hover:text-cyan-400 transition-all duration-300 group-hover:scale-105">
 

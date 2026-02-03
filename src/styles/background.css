@@ -1,0 +1,160 @@
+/* Background grid pattern */
+.bg-grid-white\[0\.02\] {
+  background-image: 
+    linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+  background-size: 50px 50px;
+}
+
+.bg-grid-white\[0\.03\] {
+  background-image: 
+    linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 50px 50px;
+}
+
+.bg-grid-16 {
+  background-size: 16px 16px;
+}
+
+/* Animation delays */
+.animation-delay-2000 {
+  animation-delay: 2s;
+}
+
+.animation-delay-3000 {
+  animation-delay: 3s;
+}
+
+.animation-delay-4000 {
+  animation-delay: 4s;
+}
+
+.animation-delay-6000 {
+  animation-delay: 6s;
+}
+
+.animation-delay-8000 {
+  animation-delay: 8s;
+}
+
+/* Enhanced Ocean Animations */
+@keyframes wave {
+  0%, 100% { 
+    transform: translateY(0px) scale(1); 
+    opacity: 0.1;
+  }
+  50% { 
+    transform: translateY(-20px) scale(1.05); 
+    opacity: 0.2;
+  }
+}
+
+@keyframes caustic {
+  0%, 100% { 
+    transform: translateX(0px) translateY(0px) rotate(0deg); 
+    opacity: 0.3;
+  }
+  25% { 
+    transform: translateX(10px) translateY(-5px) rotate(1deg); 
+    opacity: 0.4;
+  }
+  50% { 
+    transform: translateX(-5px) translateY(10px) rotate(-1deg); 
+    opacity: 0.3;
+  }
+  75% { 
+    transform: translateX(-10px) translateY(-10px) rotate(2deg); 
+    opacity: 0.5;
+  }
+}
+
+.animate-wave {
+  animation: wave 8s ease-in-out infinite;
+}
+
+.animate-caustic {
+  animation: caustic 12s ease-in-out infinite;
+}
+
+/* Additional animations for particles */
+@keyframes twinkle {
+  0%, 100% { opacity: 0; }
+  50% { opacity: 1; }
+}
+
+.animate-twinkle {
+  animation: twinkle 3s ease-in-out infinite;
+}
+
+/* Enhanced blob animation */
+@keyframes blob {
+  0% { 
+    transform: translate(0px, 0px) scale(1) rotate(0deg); 
+    border-radius: 60% 40% 70% 30% / 60% 30% 70% 40%;
+  }
+  25% { 
+    transform: translate(30px, -50px) scale(1.1) rotate(90deg); 
+    border-radius: 30% 60% 40% 70% / 50% 60% 30% 60%;
+  }
+  50% { 
+    transform: translate(-20px, 20px) scale(0.9) rotate(180deg); 
+    border-radius: 70% 30% 60% 40% / 30% 70% 40% 60%;
+  }
+  75% { 
+    transform: translate(40px, 10px) scale(1.05) rotate(270deg); 
+    border-radius: 40% 70% 30% 60% / 60% 40% 70% 30%;
+  }
+  100% { 
+    transform: translate(0px, 0px) scale(1) rotate(360deg); 
+    border-radius: 60% 40% 70% 30% / 60% 30% 70% 40%;
+  }
+}
+
+/* Aurora Effect Animation */
+@keyframes aurora {
+  0%, 100% { 
+    transform: translateX(-100px) translateY(0px) scale(1); 
+    opacity: 0.2;
+  }
+  25% { 
+    transform: translateX(50px) translateY(-20px) scale(1.1); 
+    opacity: 0.3;
+  }
+  50% { 
+    transform: translateX(100px) translateY(20px) scale(0.9); 
+    opacity: 0.25;
+  }
+  75% { 
+    transform: translateX(-50px) translateY(-10px) scale(1.05); 
+    opacity: 0.35;
+  }
+}
+
+/* Floating Orbs Animation */
+@keyframes float {
+  0%, 100% { 
+    transform: translateY(0px) translateX(0px) scale(1); 
+    opacity: 0.1;
+  }
+  25% { 
+    transform: translateY(-30px) translateX(20px) scale(1.2); 
+    opacity: 0.15;
+  }
+  50% { 
+    transform: translateY(20px) translateX(-30px) scale(0.8); 
+    opacity: 0.2;
+  }
+  75% { 
+    transform: translateY(-20px) translateX(-20px) scale(1.1); 
+    opacity: 0.12;
+  }
+}
+
+.animate-aurora {
+  animation: aurora 20s ease-in-out infinite;
+}
+
+.animate-float {
+  animation: float 25s ease-in-out infinite;
+}

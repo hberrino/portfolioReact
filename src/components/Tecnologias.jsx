@@ -78,7 +78,6 @@ export default function Tecnologias({ lang }) {
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-black bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent drop-shadow-2xl">
             {lang === 'es' ? 'Tecnologías' : 'Technologies'}
           </h2>
-          <div className="absolute -inset-1 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 blur-lg rounded-full"></div>
         </div>
         <p className="text-center text-base sm:text-lg text-neutral-200 max-w-2xl mx-auto mb-8 font-light">
           {t?.sections?.technologiesSubtitle}
@@ -131,9 +130,6 @@ export default function Tecnologias({ lang }) {
           />
         ))}
       </TechSection>
-
-      <div className="absolute top-20 sm:top-40 right-4 sm:right-10 w-24 sm:w-32 h-24 sm:h-32 bg-cyan-500/10 rounded-full blur-3xl animate-pulse"></div>
-      <div className="absolute bottom-20 sm:bottom-40 left-4 sm:left-10 w-32 sm:w-40 h-32 sm:h-40 bg-blue-500/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '3s' }}></div>
     </section>
   );
 }

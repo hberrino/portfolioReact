@@ -8,9 +8,7 @@ import Sobremi from "./components/Sobremi.jsx";
 import Contacto from "./components/Contacto.jsx";
 import Footer from "./components/Footer.jsx";
 
-import * as THREE from "three";
-import CELLS from "vanta/dist/vanta.cells.min";
-
+import "./styles/background.css";
 import { texts } from "./Data/texts.js";
 
 export default function App() {
@@ -18,11 +16,7 @@ export default function App() {
   const t = texts[lang];
 
   const [isMobileDevice, setIsMobileDevice] = useState(false);
-
-  const vantaRef = useRef(null);
-  const vantaEffect = useRef(null);
   const scrollTimeout = useRef(null);
-  const vantaObserver = useRef(null);
 
   // -------------------
   // Detectar dispositivo móvil de forma segura
@@ -90,61 +84,90 @@ export default function App() {
       document.removeEventListener("click", handleSmoothScroll);
       window.removeEventListener("scroll", handleScroll);
       if (scrollTimeout.current) clearTimeout(scrollTimeout.current);
-      if (vantaEffect.current) vantaEffect.current.destroy();
-      if (vantaObserver.current) vantaObserver.current.disconnect();
     };
   }, [handleSmoothScroll, handleScroll]);
 
-  // -------------------
-  // Lazy load Vanta para mejorar LCP y TBT
-  // -------------------
-  useEffect(() => {
-    if (isMobileDevice) return;
-
-    vantaObserver.current = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting && !vantaEffect.current) {
-          vantaEffect.current = CELLS({
-            el: vantaRef.current,
-            mouseControls: true,
-            touchControls: true,
-            gyroControls: false,
-            minHeight: 200.0,
-            minWidth: 200.0,
-            scale: 0.8,
-            color1: 0x000000,
-            color2: 0x0a4a7c,
-            size: 1.8,
-            speed: 1.5,
-            THREE,
-          });
-          vantaObserver.current.disconnect();
-        }
-      },
-      { threshold: 0.1 }
-    );
-
-    if (vantaRef.current) vantaObserver.current.observe(vantaRef.current);
-  }, [isMobileDevice]);
 
   // -------------------
   // Render
   // -------------------
+  const oceanColors = ["bg-cyan-400", "bg-blue-500", "bg-teal-400", "bg-indigo-400", "bg-sky-400"];
+
   return (
     <div
-      ref={vantaRef}
-      className={`relative min-h-screen w-full text-white overflow-hidden scroll-smooth ${
-        isMobileDevice
-          ? "bg-gradient-to-b from-neutral-950 via-neutral-900 to-neutral-950"
-          : "bg-black"
-      }`}
+      className="relative min-h-screen w-full text-white overflow-hidden scroll-smooth bg-gradient-to-br from-slate-900 via-slate-950 to-blue-950"
     >
-      {/* Fallback estático para mejorar LCP */}
-      {!isMobileDevice && (
-        <div className="absolute inset-0 w-full h-full flex items-center justify-center pointer-events-none">
-          <h1 className="text-white text-5xl font-bold">Mi Portfolio</h1>
+      {/* Animated Background */}
+      <div className="absolute inset-0 overflow-hidden">
+        {/* Enhanced Ocean Layers - Slightly Brighter */}
+        <div className="absolute -inset-10 opacity-30">
+          <div className={`absolute top-0 -left-4 w-80 h-80 ${oceanColors[0]} rounded-full mix-blend-screen filter blur-2xl animate-blob`}></div>
+          <div className={`absolute top-0 -right-4 w-96 h-96 ${oceanColors[1]} rounded-full mix-blend-screen filter blur-3xl animate-blob animation-delay-2000`}></div>
+          <div className={`absolute -bottom-8 left-20 w-72 h-72 ${oceanColors[2]} rounded-full mix-blend-screen filter blur-2xl animate-blob animation-delay-4000`}></div>
+          <div className={`absolute bottom-0 right-20 w-80 h-80 ${oceanColors[3]} rounded-full mix-blend-screen filter blur-2xl animate-blob animation-delay-6000`}></div>
+          <div className={`absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[28rem] h-[28rem] ${oceanColors[4]} rounded-full mix-blend-screen filter blur-3xl animate-blob animation-delay-8000`}></div>
         </div>
-      )}
+        
+        {/* Additional Light Layer - Slightly Brighter */}
+        <div className="absolute -inset-10 opacity-12">
+          <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full mix-blend-overlay filter blur-3xl animate-pulse"></div>
+          <div className="absolute bottom-1/4 right-1/4 w-64 h-64 bg-gradient-to-r from-teal-400 to-cyan-500 rounded-full mix-blend-overlay filter blur-3xl animate-pulse animation-delay-3000"></div>
+        </div>
+        
+        {/* Subtle Wave Effect - Slightly Brighter */}
+        <div className="absolute inset-0 opacity-8">
+          <div className="absolute inset-0 bg-gradient-to-t from-blue-700/20 via-transparent to-cyan-700/20 animate-wave"></div>
+        </div>
+        
+        {/* Enhanced Grid Pattern - Slightly Brighter */}
+        <div className="absolute inset-0 bg-grid-white/[0.02] bg-grid-16"></div>
+        
+        {/* Floating Particles - Slightly Brighter */}
+        <div className="absolute inset-0">
+          {[...Array(20)].map((_, i) => (
+            <div
+              key={i}
+              className="absolute bg-white rounded-full animate-pulse"
+              style={{
+                width: `${Math.random() * 2 + 0.5}px`,
+                height: `${Math.random() * 2 + 0.5}px`,
+                left: `${Math.random() * 100}%`,
+                top: `${Math.random() * 100}%`,
+                animationDelay: `${Math.random() * 5}s`,
+                animationDuration: `${3 + Math.random() * 4}s`,
+                opacity: Math.random() * 0.4 + 0.1
+              }}
+            ></div>
+          ))}
+        </div>
+
+        {/* Caustic Light Effect - Slightly Brighter */}
+        <div className="absolute inset-0 opacity-18">
+          <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-cyan-500/15 via-transparent to-blue-500/15 animate-caustic"></div>
+        </div>
+
+        {/* Aurora Effect - Slightly Brighter */}
+        <div className="absolute inset-0 opacity-25">
+          <div className="absolute top-0 left-1/4 w-1/2 h-1/3 bg-gradient-to-r from-transparent via-cyan-500/25 to-transparent filter blur-3xl animate-aurora"></div>
+          <div className="absolute bottom-0 right-1/4 w-1/3 h-1/4 bg-gradient-to-l from-transparent via-blue-500/20 to-transparent filter blur-3xl animate-aurora animation-delay-4000"></div>
+        </div>
+
+        {/* Floating Light Orbs - Slightly Brighter */}
+        <div className="absolute inset-0">
+          {[...Array(6)].map((_, i) => (
+            <div
+              key={`orb-${i}`}
+              className="absolute w-4 h-4 bg-cyan-400/25 rounded-full filter blur-xl animate-float"
+              style={{
+                left: `${Math.random() * 100}%`,
+                top: `${Math.random() * 100}%`,
+                animationDelay: `${Math.random() * 8}s`,
+                animationDuration: `${15 + Math.random() * 10}s`
+              }}
+            ></div>
+          ))}
+        </div>
+      </div>
 
       {/* Barra de progreso */}
       <div className="fixed top-0 left-0 w-full h-1 bg-white/10 z-50">

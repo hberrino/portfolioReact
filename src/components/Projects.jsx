@@ -38,16 +38,14 @@ export default function Projects({ title, lang }) {
   return (
     <section
       id="projects"
-      className="min-h-screen pt-26 pb-32 px-4 sm:px-6 flex flex-col items-center relative"
+      className="min-h-screen pt-26 pb-32 px-4 sm:px-6 flex flex-col items-center relative z-10"
     >
       
-      <div className="text-center mb-12 sm:mb-16 relative z-10">
+      <div className="text-center mb-12 sm:mb-16">
         <div className="relative inline-block">
           <h2 className="mt-2 text-3xl sm:text-4xl md:text-5xl font-black mb-4 bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent drop-shadow-2xl">
             {title}
           </h2>
-          <div className="absolute -inset-1 bg-gradient-to-r from-cyan-500/30 to-blue-500/30 blur-xl rounded-full animate-pulse"></div>
-          <div className="absolute -inset-2 bg-gradient-to-r from-cyan-400/20 to-purple-400/20 blur-2xl rounded-full"></div>
         </div>
         
         <p className="text-center text-base sm:text-lg text-neutral-200 max-w-2xl mx-auto mb-8 font-light">
@@ -81,9 +79,6 @@ export default function Projects({ title, lang }) {
           ))}
         </div>
       </div>
-
-      <div className="absolute top-12 sm:top-20 left-4 sm:left-10 w-24 sm:w-32 h-24 sm:h-32 bg-purple-500/10 rounded-full blur-3xl animate-pulse"></div>
-      <div className="absolute bottom-12 sm:bottom-20 right-4 sm:right-10 w-32 sm:w-40 h-32 sm:h-40 bg-fuchsia-500/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
     </section>
   );
 }

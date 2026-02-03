@@ -82,7 +82,6 @@ export default function Sobremi({ lang }) {
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-black bg-gradient-to-r from-violet-400 via-purple-400 to-pink-400 bg-clip-text text-transparent drop-shadow-2xl">
               {t.sections.aboutTitle}
             </h2>
-            <div className="absolute -inset-2 bg-gradient-to-r from-violet-500/20 to-pink-500/20 blur-xl rounded-full animate-pulse"></div>
           </div>
           
           <p className="text-center text-base sm:text-lg text-neutral-200 max-w-2xl mx-auto mb-8 font-light">

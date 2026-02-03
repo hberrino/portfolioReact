@@ -1,8 +1,8 @@
-import { useState } from "react";
+import { useState, memo } from "react";
 import { techs as techsData } from "../Data/data";
 import { texts } from "../Data/texts";
 
-export default function ProjectCard({
+const ProjectCard = memo(function ProjectCard({
   title,
   description,
   github,
@@ -28,7 +28,15 @@ export default function ProjectCard({
       
       {video && (
         <div className="relative w-full aspect-video sm:aspect-[16/9] overflow-hidden bg-black/30">
-          <video src={video} controls className="w-full h-full object-contain" preload="metadata" />
+          <video 
+            src={video} 
+            controls 
+            className="w-full h-full object-contain" 
+            preload="none"
+            poster={images && images[0]}
+            muted
+            playsInline
+          />
           <div className="absolute top-2 sm:top-3 left-1/2 -translate-x-1/2 bg-black/60 backdrop-blur-md text-white text-xs px-2 py-1 sm:px-3 sm:py-1.5 rounded-full border border-white/20 text-center">
             Demo user: test<br/>Demo pass: test123
           </div>
@@ -45,6 +53,9 @@ export default function ProjectCard({
             alt={`${title} screenshot ${current + 1}`}
             className="w-full h-full object-cover transition-all duration-700 group-hover:scale-105"
             loading="lazy"
+            width="640"
+            height="360"
+            decoding="async"
           />
 
           {!demo && (
@@ -144,4 +155,6 @@ export default function ProjectCard({
       </div>
     </article>
   );
-}
+});
+
+export default ProjectCard;

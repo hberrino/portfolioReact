@@ -116,7 +116,6 @@ export default function Contacto({ lang }) {
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-black bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent drop-shadow-2xl">
               {t.title}
             </h2>
-            <div className="absolute -inset-1 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 blur-lg rounded-full"></div>
           </div>
           
           <div className="relative mt-6 mb-6">

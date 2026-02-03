@@ -82,15 +82,9 @@ export default function Hero({ lang }) {
 
       id="inicio"
 
-      className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 md:px-8 text-white overflow-hidden"
+      className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 md:px-8 text-white"
 
     >
-
-      <div className="pointer-events-none absolute -top-20 sm:-top-40 -left-20 sm:-left-40 w-[300px] sm:w-[450px] h-[300px] sm:h-[450px] bg-cyan-600/15 blur-[100px] sm:blur-[150px] rounded-full"></div>
-
-      <div className="pointer-events-none absolute bottom-0 right-0 w-[350px] sm:w-[500px] h-[350px] sm:h-[500px] bg-blue-600/10 blur-[180px] sm:blur-[220px] rounded-full"></div>
-
-
 
       <div className="max-w-6xl w-full flex flex-col md:flex-row gap-8 sm:gap-12 relative z-10 py-16 sm:py-20 items-center">
 
@@ -193,13 +187,13 @@ export default function Hero({ lang }) {
               <div className="relative w-24 h-24 sm:w-28 sm:h-28 rounded-full overflow-hidden border-2 border-white/20 shadow-2xl bg-black/20 backdrop-blur-sm">
 
                 <img
-
                   src={Foto}
-
                   alt="Hernán Berrino"
-
                   className="scale-130 w-full h-full object-cover object-center transition-transform duration-300 group-hover:scale-110"
-
+                  loading="eager"
+                  width="112"
+                  height="112"
+                  decoding="async"
                 />
 
               </div>
