@@ -11,6 +11,8 @@ const ProjectCard = memo(function ProjectCard({
   images,
   techs,
   deploy,
+  note,
+  demoLabel,
   lang = "es",
 }) {
   const [current, setCurrent] = useState(0);
@@ -37,12 +39,21 @@ const ProjectCard = memo(function ProjectCard({
             muted
             playsInline
           />
-          <div className="absolute top-2 sm:top-3 left-1/2 -translate-x-1/2 bg-black/60 backdrop-blur-md text-white text-xs px-2 py-1 sm:px-3 sm:py-1.5 rounded-full border border-white/20 text-center">
-            Demo user: test<br/>Demo pass: test123
-          </div>
-          <div className="absolute bottom-2 sm:bottom-3 right-2 sm:right-3 bg-black/60 backdrop-blur-md text-white text-xs px-2 py-1 sm:px-3 sm:py-1.5 rounded-full border border-white/20">
-            Recomend: Fullscreen
-          </div>
+          {note && (
+            <div className="absolute top-2 sm:top-3 left-1/2 -translate-x-1/2 bg-black/60 backdrop-blur-md text-white text-xs px-2 py-1 sm:px-3 sm:py-1.5 rounded-full border border-white/20 text-center">
+              {note}
+            </div>
+          )}
+          {!note && (
+            <>
+              <div className="absolute top-2 sm:top-3 left-1/2 -translate-x-1/2 bg-black/60 backdrop-blur-md text-white text-xs px-2 py-1 sm:px-3 sm:py-1.5 rounded-full border border-white/20 text-center">
+                Demo user: test<br/>Demo pass: test123
+              </div>
+              <div className="absolute bottom-2 sm:bottom-3 right-2 sm:right-3 bg-black/60 backdrop-blur-md text-white text-xs px-2 py-1 sm:px-3 sm:py-1.5 rounded-full border border-white/20">
+                Recomend: Fullscreen
+              </div>
+            </>
+          )}
         </div>
       )}
 
@@ -58,7 +69,13 @@ const ProjectCard = memo(function ProjectCard({
             decoding="async"
           />
 
-          {!demo && (
+          {note && (
+            <div className="absolute top-2 sm:top-3 left-1/2 -translate-x-1/2 bg-black/60 backdrop-blur-md text-white text-xs px-2 py-1 sm:px-3 sm:py-1.5 rounded-full border border-white/20 text-center">
+              {note}
+            </div>
+          )}
+
+          {!note && !demo && (
             <div className="absolute top-2 sm:top-3 left-1/2 -translate-x-1/2 bg-black/60 backdrop-blur-md text-white text-xs px-2 py-1 sm:px-3 sm:py-1.5 rounded-full border border-white/20 text-center">
               {t.projects.readmeNote}
             </div>
@@ -142,7 +159,7 @@ const ProjectCard = memo(function ProjectCard({
                 className="flex items-center gap-1 sm:gap-1.5 px-2 py-1 sm:px-3 sm:py-1.5 bg-gradient-to-r from-purple-500/20 to-purple-600/20 hover:from-purple-500/30 hover:to-purple-600/30 rounded-lg text-xs font-medium text-purple-300 transition-all duration-300 border border-purple-400/30 hover:border-purple-400/50"
               >
                 <span className="text-xs sm:text-sm">🔗</span>
-                Demo
+                {demoLabel || "Demo"}
               </a>
             )}
           </div>

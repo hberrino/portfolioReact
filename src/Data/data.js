@@ -26,6 +26,32 @@ export const techGroups = {
 export const projects = [
   {
     title: {
+      es: "tuMASCOTAndil",
+      en: "tuMASCOTAndil",
+    },
+    description: {
+      es: "Aplicación full stack desarrollada enteramente por mí, para aportar a la comunidad tandilense con un sistema para transitar, reportar y buscar mascotas perdidas.",
+      en: "Full stack application developed entirely by me, to contribute to the Tandil community with a system to transit, report, and search for lost pets.",
+    },
+    github: "https://github.com/hberrino/tuMASCOTAndil",
+    demo: "https://www.tumascotandil.site/",
+    video: "/videos/tumascotandilpromo.mp4",
+    techs: ["Java", "Springboot", "Postman", "MySQL", "Docker", "Git", "Tailwind", "React", "Node", "Vite"],
+    deploy: {
+      backend: "Render",
+      frontend: "Vercel",
+    },
+    note: {
+      es: "Pulsa online para ir al sitio",
+      en: "Click online to go to the site",
+    },
+    demoLabel: {
+      es: "Online",
+      en: "Online",
+    },
+  },
+  {
+    title: {
       es: "Sistema backend E-commerce",
       en: "E-commerce backend system",
     },

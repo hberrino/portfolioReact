@@ -73,6 +73,8 @@ export default function Projects({ title, lang }) {
                 {...project}
                 title={project.title[lang]}
                 description={project.description[lang]}
+                note={project.note ? project.note[lang] : undefined}
+                demoLabel={project.demoLabel ? project.demoLabel[lang] : undefined}
                 lang={lang}
               />
             </div>

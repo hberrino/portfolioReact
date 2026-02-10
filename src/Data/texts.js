@@ -53,7 +53,8 @@ Además, tengo conocimientos sólidos de frontend, lo que me permite comprender 
     },
 
     projects: {
-      readmeNote: "Para más información ver ReadMe en github."
+      readmeNote: "Para más información ver ReadMe en github.",
+      onlineNote: "Pulsa online para ir al sitio"
     },
 
     hero: {
@@ -135,7 +136,8 @@ Additionally, I have solid frontend knowledge, which allows me to understand the
     },
 
     projects: {
-      readmeNote: "For more information see ReadMe on github."
+      readmeNote: "For more information see ReadMe on github.",
+      onlineNote: "Click online to go to the site"
     },
 
     hero: {
