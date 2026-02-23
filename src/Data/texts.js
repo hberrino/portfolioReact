@@ -2,7 +2,7 @@ export const texts = {
   es: {
    about: {
   me: `Soy desarrollador backend y me encuentro en la etapa final de mi formación universitaria en TUDAI – UNICEN.
-Me interesa el desarrollo de sistemas backend y la construcción de APIs REST con una lógica clara y bien estructurada.
+Me interesa el desarrollo de sistemas backend, la construcción de APIs REST con lógica clara y bien estructurada, y la integración de inteligencia artificial en productos reales.
 Busco incorporarme a un equipo profesional donde pueda aportar valor y seguir creciendo como desarrollador.`,
 
   offer: `Cuento con una base sólida en programación estructurada, programación orientada a objetos y algoritmos, lo que me permite abordar problemas de forma analítica y ordenada.
@@ -60,9 +60,9 @@ Además, tengo conocimientos sólidos de frontend, lo que me permite comprender 
     hero: {
       availability: "Disponible, buscando un nuevo desafío.",
       greeting: "Hola, soy",
-      role: "Backend Java Developer",
+      role: "Backend Java Developer + Implementación IA",
       description:
-        "Último año de TUDAI – UNICEN. Desarrollo APIs REST con Java Spring Boot, y sistemas backend con bases de datos relacionales. Conocimientos sólidos de frontend en React, para desarrollos end-to-end.",
+        "Último año de TUDAI – UNICEN. Desarrollo APIs REST con Java Spring Boot, implementación de Spring AI, y sistemas backend con bases de datos relacionales. Conocimientos sólidos de frontend en React, para desarrollos end-to-end.",
       buttons: {
         projects: "Ver Proyectos",
         downloadCV: "Descargar CV",
@@ -85,7 +85,7 @@ Además, tengo conocimientos sólidos de frontend, lo que me permite comprender 
   en: {
     about: {
   me: `I am a backend developer and I am in the final stage of my university studies at TUDAI – UNICEN.
-I am interested in backend systems development and building REST APIs with clear and well-structured logic.
+I am interested in backend systems development, building REST APIs with clear and well-structured logic, and integrating artificial intelligence into real products.
 I am looking to join a professional team where I can add value and continue growing as a developer.`,
 
   offer: `I have a solid foundation in structured programming, object-oriented programming, and algorithms, which allows me to approach problems in an analytical and organized way.
@@ -143,9 +143,9 @@ Additionally, I have solid frontend knowledge, which allows me to understand the
     hero: {
       availability: "Available, looking for a new challenge.",
       greeting: "Hi, I'm",
-      role: "Full Stack Developer",
+      role: "Backend Java Developer + AI Implementation",
       description:
-        "Final year at TUDAI - UNICEN. I develop REST APIs with Java Spring Boot and backend systems with relational databases. Strong frontend knowledge in React for end-to-end development.",
+        "Final year at TUDAI - UNICEN. I develop REST APIs with Java Spring Boot, Spring AI implementation, and backend systems with relational databases. Strong frontend knowledge in React for end-to-end development.",
       buttons: {
         projects: "View Projects",
         downloadCV: "Download CV",

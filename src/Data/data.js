@@ -26,6 +26,27 @@ export const techGroups = {
 export const projects = [
   {
     title: {
+      es: "Asistente Reclutador IA",
+      en: "AI Recruiter Assistant",
+    },
+    description: {
+      es: "Aplicación web con implementación de IA utilizando API de OpenAI (ChatGPT), para análisis de CVs, genera un porcentaje de match, lista de habilidades detectadas, fortalezas, gaps y recomendaciones accionables.",
+      en: "Web application with AI implementation using OpenAI API (ChatGPT), for CV analysis, generates a match percentage, detected skills list, strengths, gaps and actionable recommendations.",
+    },
+    github: "https://github.com/hberrino/Asistente-Reclutador-IA",
+    video: "/videos/asistenteIA.mp4",
+    techs: ["Java", "Springboot", "Postman", "MySQL", "Docker", "Git", "Tailwind", "React", "Node", "Vite"],
+    deploy: {
+      backend: "Render",
+      frontend: "Vercel",
+    },
+    note: {
+      es: "Para mas informacion ver ReadMe en Github",
+      en: "For more information see ReadMe on Github",
+    },
+  },
+  {
+    title: {
       es: "tuMASCOTAndil",
       en: "tuMASCOTAndil",
     },
