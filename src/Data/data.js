@@ -35,7 +35,7 @@ export const projects = [
     },
     github: "https://github.com/hberrino/Asistente-Reclutador-IA",
     video: "/videos/asistenteIA.mp4",
-    techs: ["Java", "Springboot", "Postman", "MySQL", "Docker", "Git", "Tailwind", "React", "Node", "Vite"],
+    techs: ["Java", "Springboot", "Postman", "Docker", "Git", "Tailwind", "React", "Node", "Vite"],
     deploy: {
       backend: "Render",
       frontend: "Vercel",
