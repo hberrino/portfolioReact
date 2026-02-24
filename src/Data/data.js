@@ -34,6 +34,7 @@ export const projects = [
       en: "Web application with AI implementation using OpenAI API (ChatGPT), for CV analysis, generates a match percentage, detected skills list, strengths, gaps and actionable recommendations.",
     },
     github: "https://github.com/hberrino/Asistente-Reclutador-IA",
+    demo: "https://aiassistantfront.vercel.app/",
     video: "/videos/asistenteIA.mp4",
     techs: ["Java", "Springboot", "Postman", "Docker", "Git", "Tailwind", "React", "Node", "Vite"],
     deploy: {
@@ -41,8 +42,12 @@ export const projects = [
       frontend: "Vercel",
     },
     note: {
-      es: "Para mas informacion ver ReadMe en Github",
-      en: "For more information see ReadMe on Github",
+      es: "Pulsa online para ir al sitio",
+      en: "Click online to go to the site",
+    },
+    demoLabel: {
+      es: "Online",
+      en: "Online",
     },
   },
   {
