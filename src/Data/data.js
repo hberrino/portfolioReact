@@ -34,7 +34,7 @@ export const projects = [
       en: "Web application with AI implementation using OpenAI API (ChatGPT), for CV analysis, generates a match percentage, detected skills list, strengths, gaps and actionable recommendations.",
     },
     github: "https://github.com/hberrino/Asistente-Reclutador-IA",
-    demo: "https://aiassistantfront.vercel.app/",
+    demo: "https://www.iareclutadorasistente.site/",
     video: "/videos/asistenteIA.mp4",
     techs: ["Java", "Springboot", "Postman", "Docker", "Git", "Tailwind", "React", "Node", "Vite"],
     deploy: {
