@@ -60,7 +60,7 @@ Además, desarrollo el frontend necesario para entregar soluciones completas, pe
       greeting: "Hola, soy",
       role: "Backend Engineer especializado en integración de IA",
       description:
-        "Desarrollo APIs escalables con Java y Spring Boot, diseño arquitecturas claras y entrego soluciones listas para producción de extremo a extremo.",
+        "Desarrollo APIs escalables con Java y Spring Boot, diseño arquitecturas claras y entrego soluciones listas para producción.",
       buttons: {
         projects: "Ver Proyectos",
         downloadCV: "Descargar CV",
