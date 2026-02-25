@@ -62,7 +62,7 @@ export const projects = [
     github: "https://github.com/hberrino/tuMASCOTAndil",
     demo: "https://www.tumascotandil.site/",
     video: "/videos/tumascotandilpromo.mp4",
-    techs: ["Java", "Springboot", "Postman", "MySQL", "Docker", "Git", "Tailwind", "React", "Node", "Vite"],
+    techs: ["Java", "Springboot", "Postman", "MySQL", "Docker", "Git", "Tailwind", "React", "Vite"],
     deploy: {
       backend: "Render",
       frontend: "Vercel",

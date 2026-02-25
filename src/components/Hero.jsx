@@ -204,7 +204,7 @@ export default function Hero({ lang }) {
 
 
 
-          <h2 className="pt-2 text-xl sm:text-2xl text-gray-300 font-light font-sans">
+          <h2 className="pt-2 text-xl sm:text-2xl bg-gradient-to-r from-cyan-300 via-cyan-400 to-blue-400 bg-clip-text text-transparent font-light font-sans drop-shadow-[0_2px_6px_rgba(6,182,212,0.25)]">
 
             {t.hero.role}
 
@@ -296,7 +296,7 @@ export default function Hero({ lang }) {
 
             <div className="flex flex-wrap gap-2 justify-center md:justify-start break-words">
 
-              {techs.map(({ name, icon }) => (
+              {techs.filter(({ name }) => !["Node", "Express", "Github"].includes(name)).map(({ name, icon }) => (
 
                 <span
 

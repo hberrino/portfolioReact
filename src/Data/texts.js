@@ -1,13 +1,11 @@
 export const texts = {
   es: {
    about: {
-  me: `Soy desarrollador backend y me encuentro en la etapa final de mi formación universitaria en TUDAI – UNICEN.
-Me interesa el desarrollo de sistemas backend, la construcción de APIs REST con lógica clara y bien estructurada, y la integración de inteligencia artificial en productos reales.
-Busco incorporarme a un equipo profesional donde pueda aportar valor y seguir creciendo como desarrollador.`,
+  me: `Soy Backend Engineer enfocado en la construcción de productos reales. Me especializo en el desarrollo de APIs REST con Java y Spring Boot, integrando modelos de Inteligencia Artificial en soluciones funcionales.
+Trabajo con enfoque en arquitectura clara, escalabilidad y entrega en producción. Busco formar parte de equipos donde pueda aportar valor construyendo sistemas sólidos de extremo a extremo.`,
 
-  offer: `Cuento con una base sólida en programación estructurada, programación orientada a objetos y algoritmos, lo que me permite abordar problemas de forma analítica y ordenada.
-Trabajo con foco en la calidad del código, la mantenibilidad y las buenas prácticas de desarrollo.
-Además, tengo conocimientos sólidos de frontend, lo que me permite comprender el flujo completo de una aplicación y colaborar en desarrollos end-to-end.`,
+  offer: `Diseño y desarrollo sistemas backend con lógica estructurada y buenas prácticas de arquitectura. Construyo APIs robustas, gestiono bases de datos relacionales y realizo integraciones con servicios de IA para potenciar funcionalidades inteligentes.
+Además, desarrollo el frontend necesario para entregar soluciones completas, permitiéndome llevar un producto desde la idea hasta el deploy.`,
 },
 
 
@@ -22,11 +20,11 @@ Además, tengo conocimientos sólidos de frontend, lo que me permite comprender 
         "Curiosidad",
         "Adaptabilidad",
       ],
-      contributionTitle: "Qué puedo aportar",
+      contributionTitle: "Cómo construyo soluciones",
       description:
-        "Bases sólidas en lógica y programación con Java. Desarrollo APIs, CRUDs y dashboards con stack moderno. Capaz de avanzar con autonomía, investigar, destrabar problemas y entregar resultados funcionales.",
+        "Trabajo con arquitectura clara y capas bien definidas, priorizando escalabilidad y mantenibilidad. Diseño APIs robustas, estructuro bases de datos relacionales e integro servicios de inteligencia artificial. Cada proyecto está pensado para ser funcional, sólido y desplegable.",
       highlight:
-        "No solo estudio: ejecuto, entrego y demuestro con proyectos reales.",
+        "Construyo, despliego y valido cada solución en entornos reales.",
       softSkillsTitle: "Soft skills",
     },
 
@@ -60,9 +58,9 @@ Además, tengo conocimientos sólidos de frontend, lo que me permite comprender 
     hero: {
       availability: "Disponible, buscando un nuevo desafío.",
       greeting: "Hola, soy",
-      role: "Backend Java Developer + Implementación IA",
+      role: "Backend Engineer especializado en integración de IA",
       description:
-        "Último año de TUDAI – UNICEN. Desarrollo APIs REST con Java Spring Boot, implementación de Spring AI, y sistemas backend con bases de datos relacionales. Conocimientos sólidos de frontend en React, para desarrollos end-to-end.",
+        "Desarrollo APIs escalables con Java y Spring Boot, diseño arquitecturas claras y entrego soluciones listas para producción de extremo a extremo.",
       buttons: {
         projects: "Ver Proyectos",
         downloadCV: "Descargar CV",
@@ -84,13 +82,11 @@ Además, tengo conocimientos sólidos de frontend, lo que me permite comprender 
 
   en: {
     about: {
-  me: `I am a backend developer and I am in the final stage of my university studies at TUDAI – UNICEN.
-I am interested in backend systems development, building REST APIs with clear and well-structured logic, and integrating artificial intelligence into real products.
-I am looking to join a professional team where I can add value and continue growing as a developer.`,
+  me: `I'm a Backend Engineer focused on building real-world products. I specialize in developing REST APIs with Java and Spring Boot, integrating AI models into functional solutions.
+I work with a strong emphasis on clean architecture, scalability, and production-ready delivery. I'm looking to join teams where I can contribute by building solid systems end-to-end.`,
 
-  offer: `I have a solid foundation in structured programming, object-oriented programming, and algorithms, which allows me to approach problems in an analytical and organized way.
-I work with a strong focus on code quality, maintainability, and good development practices.
-Additionally, I have solid frontend knowledge, which allows me to understand the complete application flow and collaborate on end-to-end development.`,
+  offer: `I design and develop backend systems with structured logic and strong architectural practices. I build robust APIs, manage relational databases, and integrate AI services to enable intelligent features.
+I also develop the necessary frontend to deliver complete solutions, allowing me to take a product from concept to deployment.`,
 },
 
 
@@ -105,11 +101,11 @@ Additionally, I have solid frontend knowledge, which allows me to understand the
         "Curiosity",
         "Adaptability",
       ],
-      contributionTitle: "What I bring",
+      contributionTitle: "How I build solutions",
       description:
-        "Strong foundations in logic and Java programming. I build APIs, CRUD systems, and dashboards using a modern stack. Able to work autonomously, research, unblock issues, and deliver functional results.",
+        "I work with clear architecture and well-defined layers, prioritizing scalability and maintainability. I design robust APIs, structure relational databases, and integrate artificial intelligence services. Every project is designed to be functional, solid, and deployable.",
       highlight:
-        "I don't just study: I execute, deliver, and prove it with real projects.",
+        "I build, deploy, and validate each solution in real environments.",
       softSkillsTitle: "Soft skills",
     },
 
@@ -143,9 +139,9 @@ Additionally, I have solid frontend knowledge, which allows me to understand the
     hero: {
       availability: "Available, looking for a new challenge.",
       greeting: "Hi, I'm",
-      role: "Backend Java Developer + AI Implementation",
+      role: "Backend Engineer specialized in AI Integration",
       description:
-        "Final year at TUDAI - UNICEN. I develop REST APIs with Java Spring Boot, Spring AI implementation, and backend systems with relational databases. Strong frontend knowledge in React for end-to-end development.",
+        "I build scalable APIs with Java and Spring Boot, design clean architectures, and deliver production-ready solutions end-to-end.",
       buttons: {
         projects: "View Projects",
         downloadCV: "Download CV",
