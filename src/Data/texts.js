@@ -1,7 +1,7 @@
 export const texts = {
   es: {
    about: {
-  me: `Soy Backend Engineer enfocado en la construcción de productos reales. Me especializo en el desarrollo de APIs REST con Java y Spring Boot, integrando modelos de Inteligencia Artificial en soluciones funcionales.
+  me: `Soy Backend developer enfocado en la construcción de productos reales. Me especializo en el desarrollo de APIs REST con Java y Spring Boot, integrando modelos de Inteligencia Artificial en soluciones funcionales.
 Trabajo con enfoque en arquitectura clara, escalabilidad y entrega en producción. Busco formar parte de equipos donde pueda aportar valor construyendo sistemas sólidos de extremo a extremo.`,
 
   offer: `Diseño y desarrollo sistemas backend con lógica estructurada y buenas prácticas de arquitectura. Construyo APIs robustas, gestiono bases de datos relacionales y realizo integraciones con servicios de IA para potenciar funcionalidades inteligentes.
@@ -58,7 +58,7 @@ Además, desarrollo el frontend necesario para entregar soluciones completas, pe
     hero: {
       availability: "Disponible, buscando un nuevo desafío.",
       greeting: "Hola, soy",
-      role: "Backend Engineer especializado en integración de IA",
+      role: "Backend developer + Integración de IA",
       description:
         "Desarrollo APIs escalables con Java y Spring Boot, diseño arquitecturas claras y entrego soluciones listas para producción.",
       buttons: {
@@ -82,7 +82,7 @@ Además, desarrollo el frontend necesario para entregar soluciones completas, pe
 
   en: {
     about: {
-  me: `I'm a Backend Engineer focused on building real-world products. I specialize in developing REST APIs with Java and Spring Boot, integrating AI models into functional solutions.
+  me: `I'm a Backend developer focused on building real-world products. I specialize in developing REST APIs with Java and Spring Boot, integrating AI models into functional solutions.
 I work with a strong emphasis on clean architecture, scalability, and production-ready delivery. I'm looking to join teams where I can contribute by building solid systems end-to-end.`,
 
   offer: `I design and develop backend systems with structured logic and strong architectural practices. I build robust APIs, manage relational databases, and integrate AI services to enable intelligent features.
@@ -139,7 +139,7 @@ I also develop the necessary frontend to deliver complete solutions, allowing me
     hero: {
       availability: "Available, looking for a new challenge.",
       greeting: "Hi, I'm",
-      role: "Backend Engineer specialized in AI Integration",
+      role: "Backend developer + AI integration",
       description:
         "I build scalable APIs with Java and Spring Boot, design clean architectures, and deliver production-ready solutions end-to-end.",
       buttons: {
