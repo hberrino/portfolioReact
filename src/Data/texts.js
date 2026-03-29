@@ -58,7 +58,7 @@ Además, desarrollo el frontend necesario para entregar soluciones completas, pe
     hero: {
       availability: "Disponible, buscando un nuevo desafío.",
       greeting: "Hola, soy",
-      role: "Backend developer + Integración de IA",
+      role: "Desarrollador de Aplicaciones | Backend",
       description:
         "Desarrollo APIs escalables con Java y Spring Boot, diseño arquitecturas claras y entrego soluciones listas para producción.",
       buttons: {
@@ -139,7 +139,7 @@ I also develop the necessary frontend to deliver complete solutions, allowing me
     hero: {
       availability: "Available, looking for a new challenge.",
       greeting: "Hi, I'm",
-      role: "Backend developer + AI integration",
+      role: "Application Developer | Backend",
       description:
         "I build scalable APIs with Java and Spring Boot, design clean architectures, and deliver production-ready solutions end-to-end.",
       buttons: {

@@ -78,6 +78,24 @@ export const projects = [
   },
   {
     title: {
+      es: "Aplicación web estacionamiento",
+      en: "Parking web application",
+    },
+    description: {
+      es: "Gestión de estacionamiento con cálculo automático de tarifas según duración y tipo de vehículo. Sistema integral para control de ingresos y egresos de vehículos.",
+      en: "Parking management with automatic fare calculation based on duration and vehicle type. Comprehensive system for vehicle entry and exit control.",
+    },
+    github: "https://github.com/hberrino/ParkingReactRemodel",
+    demo: "https://parkingdemo-nine.vercel.app/",
+    video: "/videos/Parkingvid.mp4",
+    techs: ["React", "Tailwind", "MongoDB", "Node", "Express", "Vite", "Git"],
+    deploy: {
+      backend: "Render",
+      frontend: "Vercel",
+    },
+  },
+  {
+    title: {
       es: "Sistema backend E-commerce",
       en: "E-commerce backend system",
     },
@@ -95,24 +113,6 @@ export const projects = [
     techs: ["Java", "Springboot", "MySQL", "Postman", "Docker", "Git"],
     deploy: {
       backend: "Docker build",
-    },
-  },
-  {
-    title: {
-      es: "Aplicación web estacionamiento",
-      en: "Parking web application",
-    },
-    description: {
-      es: "Gestión de estacionamiento con cálculo automático de tarifas según duración y tipo de vehículo. Sistema integral para control de ingresos y egresos de vehículos.",
-      en: "Parking management with automatic fare calculation based on duration and vehicle type. Comprehensive system for vehicle entry and exit control.",
-    },
-    github: "https://github.com/hberrino/ParkingReactRemodel",
-    demo: "https://parkingdemo-nine.vercel.app/",
-    video: "/videos/Parkingvid.mp4",
-    techs: ["React", "Tailwind", "MongoDB", "Node", "Express", "Vite", "Git"],
-    deploy: {
-      backend: "Render",
-      frontend: "Vercel",
     },
   },
   {
