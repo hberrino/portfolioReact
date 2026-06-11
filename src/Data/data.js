@@ -6,6 +6,7 @@ export const techs = [
   { name: "React", icon: "/icons/React.svg" },
   { name: "Node", icon: "/icons/Node.svg" },
   { name: "Express", icon: "/icons/Express.png" },
+  { name: "PHP", icon: "/icons/Php.png" },
   { name: "Tailwind", icon: "/icons/Tailwind.svg" },
   { name: "MySQL", icon: "/icons/MySQL.png" },
   { name: "MongoDB", icon: "/icons/MongoDB.png" },
@@ -19,7 +20,7 @@ export const techs = [
 
 export const techGroups = {
   frontend: ["JS", "React", "HTML", "CSS", "Tailwind"],
-  backend: ["Java", "Springboot", "Docker", "MySQL", "Node", "Express", "MongoDB"],
+  backend: ["Java", "Springboot", "Node", "Express", "PHP", "MySQL", "MongoDB", "Docker"],
   tools: ["Git", "Github", "NPM", "Vite", "Postman"],
 };
 
@@ -46,8 +47,8 @@ export const projects = [
     ],
     techs: ["React", "Node", "Express", "MySQL", "Vite", "Tailwind", "Git"],
     deploy: {
-      backend: "Render",
-      frontend: "Vercel",
+      backend: "AWS",
+      frontend: "Nginx",
     },
     note: {
       es: "Pulsa online para ir al sitio",

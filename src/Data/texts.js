@@ -1,11 +1,11 @@
 export const texts = {
   es: {
    about: {
-  me: `Soy Backend developer enfocado en la construcción de productos reales. Me especializo en el desarrollo de APIs REST con Java y Spring Boot, integrando modelos de Inteligencia Artificial en soluciones funcionales.
-Trabajo con enfoque en arquitectura clara, escalabilidad y entrega en producción. Busco formar parte de equipos donde pueda aportar valor construyendo sistemas sólidos de extremo a extremo.`,
+  me: `Soy desarrollador Full Stack orientado a crear aplicaciones web completas, desde interfaces en React hasta APIs, bases de datos y despliegues cloud.
+Tengo experiencia en proyectos reales con paneles de administración, integración de servicios externos, automatización de procesos e inteligencia artificial. Busco formar parte de equipos donde pueda aportar valor construyendo soluciones funcionales de extremo a extremo.`,
 
-  offer: `Diseño y desarrollo sistemas backend con lógica estructurada y buenas prácticas de arquitectura. Construyo APIs robustas, gestiono bases de datos relacionales y realizo integraciones con servicios de IA para potenciar funcionalidades inteligentes.
-Además, desarrollo el frontend necesario para entregar soluciones completas, permitiéndome llevar un producto desde la idea hasta el deploy.`,
+  offer: `Analizo requerimientos y desarrollo soluciones web completas. Creo interfaces con React, construyo APIs REST con Java, Spring Boot, Node.js, Express y PHP, e integro bases de datos y servicios externos.
+Trabajo con arquitecturas claras, Docker y despliegues cloud para llevar cada producto desde la idea hasta producción.`,
 },
 
 
@@ -22,7 +22,7 @@ Además, desarrollo el frontend necesario para entregar soluciones completas, pe
       ],
       contributionTitle: "Cómo construyo soluciones",
       description:
-        "Trabajo con arquitectura clara y capas bien definidas, priorizando escalabilidad y mantenibilidad. Diseño APIs robustas, estructuro bases de datos relacionales e integro servicios de inteligencia artificial. Cada proyecto está pensado para ser funcional, sólido y desplegable.",
+        "Desarrollo aplicaciones web completas, conectando interfaces claras con APIs, bases de datos y servicios externos. Trabajo con arquitecturas mantenibles y despliegues cloud para crear productos funcionales, sólidos y listos para usuarios reales.",
       highlight:
         "Construyo, despliego y valido cada solución en entornos reales.",
       softSkillsTitle: "Soft skills",
@@ -58,9 +58,9 @@ Además, desarrollo el frontend necesario para entregar soluciones completas, pe
     hero: {
       availability: "Disponible, buscando un nuevo desafío.",
       greeting: "Hola, soy",
-      role: "Desarrollador de Aplicaciones | Backend",
+      role: "Desarrollador Full Stack",
       description:
-        "Desarrollo APIs escalables con Java y Spring Boot, diseño arquitecturas claras y entrego soluciones listas para producción.",
+        "Creo aplicaciones web completas con React, Java, Spring Boot, Node.js y PHP, desde la interfaz y la API hasta la base de datos y el despliegue.",
       buttons: {
         projects: "Ver Proyectos",
         downloadCV: "Descargar CV",
@@ -82,11 +82,11 @@ Además, desarrollo el frontend necesario para entregar soluciones completas, pe
 
   en: {
     about: {
-  me: `I'm a Backend developer focused on building real-world products. I specialize in developing REST APIs with Java and Spring Boot, integrating AI models into functional solutions.
-I work with a strong emphasis on clean architecture, scalability, and production-ready delivery. I'm looking to join teams where I can contribute by building solid systems end-to-end.`,
+  me: `I'm a Full Stack developer focused on building complete web applications, from React interfaces to APIs, databases, and cloud deployments.
+I have experience with real-world projects involving admin panels, external service integrations, process automation, and artificial intelligence. I'm looking to join teams where I can contribute by building functional end-to-end solutions.`,
 
-  offer: `I design and develop backend systems with structured logic and strong architectural practices. I build robust APIs, manage relational databases, and integrate AI services to enable intelligent features.
-I also develop the necessary frontend to deliver complete solutions, allowing me to take a product from concept to deployment.`,
+  offer: `I analyze requirements and develop complete web solutions. I create React interfaces, build REST APIs with Java, Spring Boot, Node.js, Express, and PHP, and integrate databases and external services.
+I work with clear architectures, Docker, and cloud deployments to take each product from concept to production.`,
 },
 
 
@@ -103,7 +103,7 @@ I also develop the necessary frontend to deliver complete solutions, allowing me
       ],
       contributionTitle: "How I build solutions",
       description:
-        "I work with clear architecture and well-defined layers, prioritizing scalability and maintainability. I design robust APIs, structure relational databases, and integrate artificial intelligence services. Every project is designed to be functional, solid, and deployable.",
+        "I develop complete web applications by connecting clear interfaces with APIs, databases, and external services. I work with maintainable architectures and cloud deployments to create functional, solid products ready for real users.",
       highlight:
         "I build, deploy, and validate each solution in real environments.",
       softSkillsTitle: "Soft skills",
@@ -139,9 +139,9 @@ I also develop the necessary frontend to deliver complete solutions, allowing me
     hero: {
       availability: "Available, looking for a new challenge.",
       greeting: "Hi, I'm",
-      role: "Application Developer | Backend",
+      role: "Full Stack Developer",
       description:
-        "I build scalable APIs with Java and Spring Boot, design clean architectures, and deliver production-ready solutions end-to-end.",
+        "I build complete web applications with React, Java, Spring Boot, Node.js, and PHP, from the interface and API to the database and deployment.",
       buttons: {
         projects: "View Projects",
         downloadCV: "Download CV",
