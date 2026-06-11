@@ -26,6 +26,40 @@ export const techGroups = {
 export const projects = [
   {
     title: {
+      es: "Moon Studio — Turnero y administración",
+      en: "Moon Studio — Booking & Admin Panel",
+    },
+    description: {
+      es: "Plataforma web para un estudio de belleza: reserva de turnos online para clientes y panel de administración del local. Frontend en React con Vite y Tailwind; backend en Node.js con Express y MySQL.",
+      en: "Web platform for a beauty studio: online appointment booking for clients and a full admin panel for the business. React frontend with Vite and Tailwind; Node.js backend with Express and MySQL.",
+    },
+    github: "https://github.com/hberrino/MoonStudioFront",
+    demo: "https://moon-studio-front.vercel.app/",
+    images: [
+      "/images/moon1.jpg",
+      "/images/moon2.jpg",
+      "/images/moon3.jpg",
+      "/images/moon4.jpg",
+      "/images/moon5.jpg",
+      "/images/moon6.jpg",
+      "/images/moon7.jpg",
+    ],
+    techs: ["React", "Node", "Express", "MySQL", "Vite", "Tailwind", "Git"],
+    deploy: {
+      backend: "Render",
+      frontend: "Vercel",
+    },
+    note: {
+      es: "Pulsa online para ir al sitio",
+      en: "Click online to go to the site",
+    },
+    demoLabel: {
+      es: "Online",
+      en: "Online",
+    },
+  },
+  {
+    title: {
       es: "Asistente Reclutador IA",
       en: "AI Recruiter Assistant",
     },
