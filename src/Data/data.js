@@ -35,7 +35,7 @@ export const projects = [
       en: "Web platform for a beauty studio: online appointment booking for clients and a full admin panel for the business. React frontend with Vite and Tailwind; Node.js backend with Express and MySQL.",
     },
     github: "https://github.com/hberrino/MoonStudioFront",
-    demo: "https://moon-studio-front.vercel.app/",
+    demo: "https://moonstudio.com.ar/",
     images: [
       "/images/moon1.jpg",
       "/images/moon2.jpg",
