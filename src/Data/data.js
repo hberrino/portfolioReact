@@ -47,8 +47,8 @@ export const projects = [
     ],
     techs: ["React", "Node", "Express", "MySQL", "Vite", "Tailwind", "Git"],
     deploy: {
-      backend: "Node.js en AWS",
-      frontend: "React/Vite vía Nginx",
+      backend: "AWS",
+      frontend: "Nginx",
     },
     note: {
       es: "Pulsa online para ir al sitio",
