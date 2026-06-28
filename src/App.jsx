@@ -49,6 +49,53 @@ export default function App() {
     };
   }, [handleSmoothScroll, handleScroll]);
 
+  useEffect(() => {
+    const revealSelector = [
+      ".hero-copy",
+      ".work-showcase",
+      ".section-heading",
+      ".project-card",
+      ".technology-group-detailed",
+      ".about-photo",
+      ".about-content",
+      ".contact-copy",
+      ".contact-form",
+      ".footer-main",
+    ].join(",");
+    const observed = new WeakSet();
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.12, rootMargin: "0px 0px -45px 0px" },
+    );
+
+    const observeElements = (root = document) => {
+      root.querySelectorAll(revealSelector).forEach((element, index) => {
+        if (observed.has(element)) return;
+        observed.add(element);
+        element.classList.add("reveal-item");
+        element.style.setProperty("--reveal-delay", `${Math.min(index % 4, 3) * 70}ms`);
+        observer.observe(element);
+      });
+    };
+
+    observeElements();
+    const mutationObserver = new MutationObserver(() => observeElements());
+    mutationObserver.observe(document.body, { childList: true, subtree: true });
+
+    return () => {
+      observer.disconnect();
+      mutationObserver.disconnect();
+    };
+  }, []);
+
   return (
     <div className="site-shell">
       <div className="ambient ambient-one" />
@@ -57,7 +104,7 @@ export default function App() {
         <div id="scroll-progress" className="scroll-progress" />
       </div>
       <Navbar lang={lang} setLang={setLang} />
-      <main>
+      <main key={lang} className={`language-view language-${lang}`}>
         <Hero lang={lang} />
         <Projects title={t.sections.projectsTitle} lang={lang} />
         <Tecnologias lang={lang} />

@@ -47,7 +47,7 @@ export default function Hero({ lang }) {
       </div>
 
       <div className="work-showcase" aria-label={lang === "es" ? "Selección de proyectos" : "Selected projects"}>
-        <span className="showcase-label">{lang === "es" ? "Proyectos reales" : "Real projects"}</span>
+        <span className="showcase-label">{lang === "es" ? "Proyectos online" : "Live projects"}</span>
         {showcase.map(({ project, image }, index) => (
           <a
             key={project.title.es}
