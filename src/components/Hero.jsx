@@ -16,11 +16,16 @@ export default function Hero({ lang }) {
           <span />
           {t.hero.availability}
         </div>
-        <h1>
-          {t.hero.greeting}
-          <br />
-          <em>Hernán.</em>
-        </h1>
+        <div className="hero-heading">
+          <h1>
+            {t.hero.greeting}
+            <br />
+            <em>Hernán.</em>
+          </h1>
+          <div className="hero-avatar">
+            <img src="/imgs/yo.jpg" alt="Hernán Berrino" />
+          </div>
+        </div>
         <p className="hero-role">{t.hero.role}</p>
         <p className="hero-education">
           {lang === "es"
