@@ -1,10 +1,10 @@
 export const texts = {
   es: {
    about: {
-  me: `Soy desarrollador Full Stack orientado a crear aplicaciones web completas, desde interfaces en React hasta APIs, bases de datos y despliegues cloud.
+  me: `Soy desarrollador Full Stack orientado a crear aplicaciones completas, desde interfaces en React hasta APIs, bases de datos y despliegues cloud.
 Tengo experiencia en proyectos reales con paneles de administración, integración de servicios externos, automatización de procesos e inteligencia artificial. Busco formar parte de equipos donde pueda aportar valor construyendo soluciones funcionales de extremo a extremo.`,
 
-  offer: `Analizo requerimientos y desarrollo soluciones web completas. Creo interfaces con React, construyo APIs REST con Java, Spring Boot, Node.js, Express y PHP, e integro bases de datos y servicios externos.
+  offer: `Analizo requerimientos y desarrollo soluciones completas. Creo interfaces con React, construyo APIs REST con Java, Spring Boot, Node.js, Express y PHP, e integro bases de datos y servicios externos.
 Trabajo con arquitecturas claras, Docker y despliegues cloud para llevar cada producto desde la idea hasta producción.`,
 },
 
@@ -82,10 +82,10 @@ Trabajo con arquitecturas claras, Docker y despliegues cloud para llevar cada pr
 
   en: {
     about: {
-  me: `I'm a Full Stack developer focused on building complete web applications, from React interfaces to APIs, databases, and cloud deployments.
+  me: `I'm a Full Stack developer focused on building complete applications, from React interfaces to APIs, databases, and cloud deployments.
 I have experience with real-world projects involving admin panels, external service integrations, process automation, and artificial intelligence. I'm looking to join teams where I can contribute by building functional end-to-end solutions.`,
 
-  offer: `I analyze requirements and develop complete web solutions. I create React interfaces, build REST APIs with Java, Spring Boot, Node.js, Express, and PHP, and integrate databases and external services.
+  offer: `I analyze requirements and develop complete solutions. I create React interfaces, build REST APIs with Java, Spring Boot, Node.js, Express, and PHP, and integrate databases and external services.
 I work with clear architectures, Docker, and cloud deployments to take each product from concept to production.`,
 },
 

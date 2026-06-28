@@ -44,6 +44,9 @@ export const projects = [
       "/images/moon5.jpg",
       "/images/moon6.jpg",
       "/images/moon7.jpg",
+      "/images/moon8.jpg",
+      "/images/moon9.jpg",
+      "/images/moon10.jpg",
     ],
     techs: ["React", "Node", "Express", "MySQL", "Vite", "Tailwind", "Git"],
     deploy: {
