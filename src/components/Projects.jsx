@@ -1,5 +1,4 @@
 import { projects } from "../Data/data";
-import { texts } from "../Data/texts";
 import ProjectCard from "./ProjectCard";
 import { useState } from "react";
 
@@ -18,10 +17,10 @@ export default function Projects({ title, lang }) {
     <section id="projects" className="section section-tinted">
       <div className="section-wrap">
         <header className="section-heading">
-          <span className="eyebrow">{lang === "es" ? "Trabajo seleccionado" : "Selected work"}</span>
+          <span className="eyebrow">Portfolio</span>
           <div>
             <h2>{title}</h2>
-            <p>{texts[lang].sections.projectsSubtitle}</p>
+            <p>{lang === "es" ? "Proyectos destacados" : "Featured projects"}</p>
           </div>
         </header>
         <div className="projects-grid">

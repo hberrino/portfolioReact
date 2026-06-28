@@ -1,4 +1,4 @@
-import { projects } from "../Data/data";
+import { projects, techs } from "../Data/data";
 import { texts } from "../Data/texts";
 
 export default function Hero({ lang }) {
@@ -8,6 +8,9 @@ export default function Hero({ lang }) {
     { project: projects[2], image: "/images/tumascotandilfoto.jpg" },
     { project: projects[1], image: "/images/asistenteiafoto.jpg" },
   ];
+  const tickerTechs = techs.filter(({ name }) =>
+    ["Java", "Springboot", "JS", "React", "Node", "Express", "PHP", "Tailwind", "MySQL", "MongoDB", "Docker", "Git", "Vite"].includes(name),
+  );
 
   return (
     <section id="inicio" className="hero section-wrap">
@@ -72,6 +75,21 @@ export default function Hero({ lang }) {
         <a href="#projects" className="showcase-stamp">
           {lang === "es" ? "Ver +" : "View +"}
         </a>
+      </div>
+
+      <div className="stack-ticker" aria-label={lang === "es" ? "Tecnologías principales" : "Core technologies"}>
+        <div className="stack-ticker-track">
+          {[0, 1].map((copy) => (
+            <div className="stack-ticker-group" key={copy} aria-hidden={copy === 1}>
+              {tickerTechs.map((tech) => (
+                <span key={`${copy}-${tech.name}`}>
+                  <img src={tech.icon} alt="" />
+                  {tech.name}
+                </span>
+              ))}
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );
