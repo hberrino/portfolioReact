@@ -57,8 +57,8 @@ const ProjectCard = memo(function ProjectCard({
         )}
 
         <div className="project-links">
-          <a href={github} target="_blank" rel="noreferrer">Code <span>↗</span></a>
           {demo && <a className="project-online" href={demo} target="_blank" rel="noreferrer">{demoLabel || "Demo"} <span>↗</span></a>}
+          <a className="project-code" href={github} target="_blank" rel="noreferrer">Code <span>↗</span></a>
         </div>
       </div>
     </article>

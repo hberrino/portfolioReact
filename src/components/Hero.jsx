@@ -21,9 +21,9 @@ export default function Hero({ lang }) {
         </div>
         <div className="hero-heading">
           <h1>
-            {t.hero.greeting}
+            Hernán
             <br />
-            <em>Hernán.</em>
+            <em>Berrino.</em>
           </h1>
           <div className="hero-avatar">
             <img src="/imgs/yo.jpg" alt="Hernán Berrino" />

@@ -57,7 +57,6 @@ Trabajo con arquitecturas claras, Docker y despliegues cloud para llevar cada pr
 
     hero: {
       availability: "Disponible, buscando un nuevo desafío.",
-      greeting: "Hola, soy",
       role: "Desarrollador Full Stack",
       description:
         "Creo aplicaciones web completas con React, Java, Spring Boot, Node.js y PHP, desde la interfaz y la API hasta la base de datos y el despliegue.",
@@ -138,7 +137,6 @@ I work with clear architectures, Docker, and cloud deployments to take each prod
 
     hero: {
       availability: "Available, looking for a new challenge.",
-      greeting: "Hi, I'm",
       role: "Full Stack Developer",
       description:
         "I build complete web applications with React, Java, Spring Boot, Node.js, and PHP, from the interface and API to the database and deployment.",
