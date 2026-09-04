@@ -17,10 +17,10 @@ export default function Navbar({ lang, setLang }) {
     <nav className={`navbar ${scrolled ? "navbar-scrolled" : ""}`}>
       <div className="nav-inner">
         <a href="#inicio" className="brand" aria-label="Ir al inicio">
-          <span className="brand-mark">{"{HB}"}</span>
+          <span className="brand-mark">HB.</span>
           <span className="brand-copy">
+            <strong>Hernán Berrino</strong>
             <small>Full Stack Developer</small>
-            <small className="brand-stack">Java · Node · React · SQL · AWS</small>
           </span>
         </a>
 

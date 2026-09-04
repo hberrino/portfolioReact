@@ -6,10 +6,12 @@ export default function Projects({ title, lang }) {
   const [showAll, setShowAll] = useState(false);
   const orderedProjects = [
     projects[0],
-    projects[2],
     projects[1],
     projects[3],
-    ...projects.slice(4),
+    projects[4],
+    projects[2],
+    projects[5],
+    ...projects.slice(6),
   ];
   const visibleProjects = showAll ? orderedProjects : orderedProjects.slice(0, 4);
 
@@ -20,7 +22,7 @@ export default function Projects({ title, lang }) {
           <span className="eyebrow">Portfolio</span>
           <div>
             <h2>{title}</h2>
-            <p>{lang === "es" ? "Proyectos destacados" : "Featured projects"}</p>
+            <p>{lang === "es" ? "Experiencia seleccionada" : "Selected experience"}</p>
           </div>
         </header>
         <div className="projects-grid">
@@ -45,7 +47,7 @@ export default function Projects({ title, lang }) {
             >
               {showAll
                 ? (lang === "es" ? "Ver menos" : "Show less")
-                : (lang === "es" ? `Ver más proyectos (${projects.length - 4})` : `View more projects (${projects.length - 4})`)}
+                : (lang === "es" ? `Ver más trabajos (${projects.length - 4})` : `View more work (${projects.length - 4})`)}
             </button>
           </div>
         )}

@@ -1,11 +1,16 @@
 export const texts = {
   es: {
    about: {
-  me: `Soy desarrollador Full Stack orientado a crear aplicaciones completas, desde interfaces en React hasta APIs, bases de datos y despliegues cloud.
-Tengo experiencia en proyectos reales con paneles de administración, integración de servicios externos, automatización de procesos e inteligencia artificial. Busco formar parte de equipos donde pueda aportar valor construyendo soluciones funcionales de extremo a extremo.`,
+  me: `Soy una persona perseverante, constante y disciplinada. Me comprometo con cada objetivo, aprendo de los desafíos y sostengo el esfuerzo hasta encontrar una solución.
+Como desarrollador Full Stack creo aplicaciones completas, desde interfaces en React hasta APIs, bases de datos y despliegues cloud. Tengo experiencia con soluciones reales que incluyen paneles de administración, servicios externos, automatización e inteligencia artificial.`,
 
   offer: `Analizo requerimientos y desarrollo soluciones completas. Creo interfaces con React, construyo APIs REST con Java, Spring Boot, Node.js, Express y PHP, e integro bases de datos y servicios externos.
 Trabajo con arquitecturas claras, Docker y despliegues cloud para llevar cada producto desde la idea hasta producción.`,
+  pressEyebrow: "En los medios",
+  pressSource: "Entrevista · Instagram",
+  pressTitle: "Una conversación sobre mi recorrido y la forma en que construyo mi camino profesional.",
+  pressDescription: "La entrevista reúne una mirada más personal sobre el aprendizaje, la constancia y el trabajo que hay detrás de cada avance.",
+  pressCta: "Leer entrevista",
 },
 
 
@@ -41,7 +46,7 @@ Trabajo con arquitecturas claras, Docker y despliegues cloud para llevar cada pr
       aboutMeTitle: "Quién soy",
       aboutOfferTitle: "Qué hago",
       projectsTitle: "Trabajos",
-      projectsSubtitle: "Mis proyectos destacados",
+      projectsSubtitle: "Experiencia seleccionada",
       technologiesSubtitle: "Tecnologías y herramientas utilizadas",
       contactTitle: "Contacto",
       footerBuilt: "Construido con",
@@ -61,15 +66,16 @@ Trabajo con arquitecturas claras, Docker y despliegues cloud para llevar cada pr
       description:
         "Creo aplicaciones web completas con React, Java, Spring Boot, Node.js y PHP, desde la interfaz y la API hasta la base de datos y el despliegue.",
       buttons: {
-        projects: "Ver Proyectos",
-        downloadCV: "Descargar CV",
+        projects: "Ver trabajos",
+        downloadFullStackCV: "Descargar CV Full Stack",
+        downloadJavaCV: "Descargar CV Java Backend",
       },
     },
 
     contact: {
       title: "Trabajemos juntos",
       subtitle:
-        "Estoy abierto a nuevas oportunidades, proyectos y colaboraciones. Si tenés una idea o propuesta, charlamos.",
+        "Estoy abierto a nuevas oportunidades, trabajos y colaboraciones. Si tenés una idea o propuesta, charlamos.",
       linkedin: "LinkedIn",
       gmail: "Gmail",
       name: "Nombre",
@@ -81,11 +87,16 @@ Trabajo con arquitecturas claras, Docker y despliegues cloud para llevar cada pr
 
   en: {
     about: {
-  me: `I'm a Full Stack developer focused on building complete applications, from React interfaces to APIs, databases, and cloud deployments.
-I have experience with real-world projects involving admin panels, external service integrations, process automation, and artificial intelligence. I'm looking to join teams where I can contribute by building functional end-to-end solutions.`,
+  me: `I'm a persevering, consistent and disciplined person. I commit to every goal, learn from challenges and sustain the effort until I find a solution.
+As a Full Stack developer, I build complete applications, from React interfaces to APIs, databases and cloud deployments. I have experience with real solutions involving admin panels, external services, automation and artificial intelligence.`,
 
   offer: `I analyze requirements and develop complete solutions. I create React interfaces, build REST APIs with Java, Spring Boot, Node.js, Express, and PHP, and integrate databases and external services.
 I work with clear architectures, Docker, and cloud deployments to take each product from concept to production.`,
+  pressEyebrow: "In the media",
+  pressSource: "Interview · Instagram",
+  pressTitle: "A conversation about my journey and how I am building my professional path.",
+  pressDescription: "The interview offers a more personal perspective on learning, consistency and the work behind each step forward.",
+  pressCta: "Read interview",
 },
 
 
@@ -121,7 +132,7 @@ I work with clear architectures, Docker, and cloud deployments to take each prod
       aboutMeTitle: "Who I am",
       aboutOfferTitle: "What I do",
       projectsTitle: "Projects",
-      projectsSubtitle: "My featured projects",
+      projectsSubtitle: "Selected experience",
       technologiesSubtitle: "Technologies and tools used",
       contactTitle: "Contact",
       footerBuilt: "Built with",
@@ -141,8 +152,9 @@ I work with clear architectures, Docker, and cloud deployments to take each prod
       description:
         "I build complete web applications with React, Java, Spring Boot, Node.js, and PHP, from the interface and API to the database and deployment.",
       buttons: {
-        projects: "View Projects",
-        downloadCV: "Download CV",
+        projects: "View work",
+        downloadFullStackCV: "Download Full Stack CV",
+        downloadJavaCV: "Download Java Backend CV",
       },
     },
 

@@ -1,17 +1,11 @@
-import { projects, techs } from "../Data/data";
+import { techs } from "../Data/data";
 import { texts } from "../Data/texts";
 
 export default function Hero({ lang }) {
   const t = texts[lang];
-  const showcase = [
-    { project: projects[0], image: "/images/moon1.jpg" },
-    { project: projects[2], image: "/images/tumascotandilfoto.jpg" },
-    { project: projects[1], image: "/images/asistenteiafoto.jpg" },
-  ];
   const tickerTechs = techs.filter(({ name }) =>
     ["Java", "Springboot", "JS", "React", "Node", "Express", "PHP", "Tailwind", "MySQL", "MongoDB", "Docker", "Git", "Vite"].includes(name),
   );
-
   return (
     <section id="inicio" className="hero section-wrap">
       <div className="hero-copy">
@@ -19,17 +13,11 @@ export default function Hero({ lang }) {
           <span />
           {t.hero.availability}
         </div>
-        <div className="hero-heading">
-          <h1>
-            Hernán
-            <br />
-            <em>Berrino.</em>
-          </h1>
-          <div className="hero-avatar">
-            <img src="/imgs/yo.jpg" alt="Hernán Berrino" />
-          </div>
-        </div>
-        <p className="hero-role">{t.hero.role}</p>
+        <p className="hero-kicker">Hernán Berrino · {t.hero.role}</p>
+        <h1>
+          {lang === "es" ? "Desarrollo aplicaciones" : "I build applications"}
+          <em>{lang === "es" ? " de la idea a producción." : " from concept to production."}</em>
+        </h1>
         <p className="hero-education">
           {lang === "es"
             ? "Técnico Universitario en Desarrollo de Aplicaciones Informáticas · UNICEN"
@@ -42,10 +30,13 @@ export default function Hero({ lang }) {
         </p>
         <div className="hero-actions">
           <a href="#projects" className="button button-primary">
-            {t.hero.buttons.projects} <span>↗</span>
+            {t.hero.buttons.projects} <span aria-hidden="true">↗</span>
           </a>
-          <a href="/docs/cv_hbmES.pdf" download className="button button-secondary">
-            {t.hero.buttons.downloadCV}
+          <a href="/docs/CV_Hernan_Berrino_Full_Stack.pdf" download className="button button-secondary">
+            {t.hero.buttons.downloadFullStackCV}
+          </a>
+          <a href="/docs/CV_Hernan_Berrino_Backend_Java.pdf" download className="button button-secondary">
+            {t.hero.buttons.downloadJavaCV}
           </a>
         </div>
         <div className="hero-social">
@@ -54,27 +45,20 @@ export default function Hero({ lang }) {
         </div>
       </div>
 
-      <div className="work-showcase" aria-label={lang === "es" ? "Selección de proyectos" : "Selected projects"}>
-        <span className="showcase-label">{lang === "es" ? "Proyectos online" : "Live projects"}</span>
-        {showcase.map(({ project, image }, index) => (
-          <a
-            key={project.title.es}
-            href={project.demo}
-            target="_blank"
-            rel="noreferrer"
-            className={`showcase-card showcase-card-${index + 1}`}
-          >
-            <img src={image} alt="" />
-            <div>
-              <small>0{index + 1}</small>
-              <strong>{project.title[lang]}</strong>
-              <span>{project.techs.slice(0, 3).join(" · ")}</span>
-            </div>
-          </a>
-        ))}
-        <a href="#projects" className="showcase-stamp">
-          {lang === "es" ? "Ver +" : "View +"}
-        </a>
+      <div className="hero-visual">
+        <div className="hero-photo">
+          <img src="/imgs/yop.jpg" alt="Hernán Berrino" />
+        </div>
+        <div className="hero-visual-caption">
+          <div>
+            <span>{lang === "es" ? "Enfoque" : "Focus"}</span>
+            <strong>{lang === "es" ? "Producto · Código · Producción" : "Product · Code · Production"}</strong>
+          </div>
+          <div>
+            <span>{lang === "es" ? "Trabajos realizados" : "Completed work"}</span>
+            <strong>+8</strong>
+          </div>
+        </div>
       </div>
 
       <div className="stack-ticker" aria-label={lang === "es" ? "Tecnologías principales" : "Core technologies"}>

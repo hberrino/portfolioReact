@@ -12,7 +12,7 @@ export default function Footer({ lang }) {
             <div>
               <strong>Hernán Berrino</strong>
               <p>Full Stack Developer</p>
-              <small>Buenos Aires, Argentina</small>
+              <small>{lang === "es" ? "Desarrollo web de extremo a extremo" : "End-to-end web development"}</small>
             </div>
           </div>
 

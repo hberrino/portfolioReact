@@ -64,6 +64,37 @@ export const projects = [
   },
   {
     title: {
+      es: "E-commerce — Pagos y envíos automatizados",
+      en: "E-commerce — Automated payments & shipping",
+    },
+    description: {
+      es: "Tienda online full stack con carrito, Checkout Pro como pasarela de pago y gestión automatizada de envíos. Frontend desarrollado con React y Tailwind; backend con Node.js y Express, desplegado en AWS con Nginx.",
+      en: "Full-stack online store with a shopping cart, Checkout Pro payment gateway and automated shipping management. React and Tailwind frontend; Node.js and Express backend, deployed on AWS with Nginx.",
+    },
+    github: "https://github.com/hberrino/metodoentrevista.ecom",
+    demo: "https://metodoentrevista.store/",
+    images: [
+      "/images/ecom1.jpg",
+      "/images/ecom2.jpg",
+      "/images/ecom3.jpg",
+      "/images/ecom4.jpg",
+    ],
+    techs: ["React", "Tailwind", "Node", "Express", "Vite", "Git"],
+    deploy: {
+      backend: "AWS",
+      frontend: "Nginx",
+    },
+    note: {
+      es: "Pulsa online para ir al sitio",
+      en: "Click online to go to the site",
+    },
+    demoLabel: {
+      es: "Online",
+      en: "Online",
+    },
+  },
+  {
+    title: {
       es: "Asistente Reclutador IA",
       en: "AI Recruiter Assistant",
     },
@@ -104,6 +135,37 @@ export const projects = [
     deploy: {
       backend: "Render",
       frontend: "Vercel",
+    },
+    note: {
+      es: "Pulsa online para ir al sitio",
+      en: "Click online to go to the site",
+    },
+    demoLabel: {
+      es: "Online",
+      en: "Online",
+    },
+  },
+  {
+    title: {
+      es: "HB Digital Studio — Servicios web",
+      en: "HB Digital Studio — Web services",
+    },
+    description: {
+      es: "Landing comercial creada para ofrecer servicios de desarrollo web a negocios, con propuesta de valor, metodología de trabajo, planes y contacto. Desarrollada con React y Vite, pre-renderizada como sitio estático y desplegada con Nginx, HTTPS y Cloudflare.",
+      en: "Commercial landing page created to offer web development services to businesses, featuring a value proposition, working process, plans and contact. Built with React and Vite, pre-rendered as a static site and deployed with Nginx, HTTPS and Cloudflare.",
+    },
+    github: "https://github.com/hberrino/hbdigitalstudio.git",
+    demo: "https://hbdigitalstudio.com/",
+    images: [
+      "/images/hbdigital1.png",
+      "/images/hbdigital2.png",
+      "/images/hbdigital3.png",
+      "/images/hbdigital4.png",
+    ],
+    techs: ["React", "Vite", "HTML", "CSS", "Git"],
+    deploy: {
+      frontend: "Nginx",
+      security: "Cloudflare + HTTPS",
     },
     note: {
       es: "Pulsa online para ir al sitio",

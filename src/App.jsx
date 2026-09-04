@@ -52,7 +52,7 @@ export default function App() {
   useEffect(() => {
     const revealSelector = [
       ".hero-copy",
-      ".work-showcase",
+      ".hero-visual",
       ".section-heading",
       ".project-card",
       ".technology-group-detailed",
@@ -98,8 +98,6 @@ export default function App() {
 
   return (
     <div className="site-shell">
-      <div className="ambient ambient-one" />
-      <div className="ambient ambient-two" />
       <div className="scroll-track">
         <div id="scroll-progress" className="scroll-progress" />
       </div>
