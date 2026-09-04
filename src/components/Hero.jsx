@@ -52,7 +52,7 @@ export default function Hero({ lang }) {
         <div className="hero-visual-caption">
           <div>
             <span>{lang === "es" ? "Enfoque" : "Focus"}</span>
-            <strong>{lang === "es" ? "Producto · Código · Producción" : "Product · Code · Production"}</strong>
+            <strong>{lang === "es" ? "Producto · Solución · Escalabilidad" : "Product · Solution · Scalability"}</strong>
           </div>
           <div>
             <span>{lang === "es" ? "Soluciones desarrolladas" : "Solutions developed"}</span>
