@@ -55,7 +55,7 @@ export default function Hero({ lang }) {
             <strong>{lang === "es" ? "Producto · Código · Producción" : "Product · Code · Production"}</strong>
           </div>
           <div>
-            <span>{lang === "es" ? "Trabajos realizados" : "Completed work"}</span>
+            <span>{lang === "es" ? "Soluciones desarrolladas" : "Solutions developed"}</span>
             <strong>+8</strong>
           </div>
         </div>
