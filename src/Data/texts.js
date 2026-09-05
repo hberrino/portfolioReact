@@ -45,7 +45,7 @@ Trabajo con arquitecturas claras, Docker y despliegues cloud para llevar cada pr
       aboutTitle: "Sobre mí",
       aboutMeTitle: "Quién soy",
       aboutOfferTitle: "Qué hago",
-      projectsTitle: "Trabajos",
+      projectsTitle: "Soluciones en acción.",
       projectsSubtitle: "Experiencia seleccionada",
       technologiesSubtitle: "Tecnologías y herramientas utilizadas",
       contactTitle: "Contacto",
@@ -62,7 +62,7 @@ Trabajo con arquitecturas claras, Docker y despliegues cloud para llevar cada pr
 
     hero: {
       availability: "Disponible, buscando un nuevo desafío.",
-      role: "Desarrollador Full Stack",
+      role: "Desarrollador de aplicaciones",
       description:
         "Creo aplicaciones web completas con React, Java, Spring Boot, Node.js y PHP, desde la interfaz y la API hasta la base de datos y el despliegue.",
       buttons: {
@@ -121,7 +121,7 @@ I work with clear architectures, Docker, and cloud deployments to take each prod
 
     nav: {
       inicio: "Home",
-      projects: "Projects",
+      projects: "Work",
       tecnologias: "Technologies",
       sobremi: "About me",
       contacto: "Contact",
@@ -131,7 +131,7 @@ I work with clear architectures, Docker, and cloud deployments to take each prod
       aboutTitle: "About me",
       aboutMeTitle: "Who I am",
       aboutOfferTitle: "What I do",
-      projectsTitle: "Projects",
+      projectsTitle: "Solutions in action.",
       projectsSubtitle: "Selected experience",
       technologiesSubtitle: "Technologies and tools used",
       contactTitle: "Contact",
@@ -148,7 +148,7 @@ I work with clear architectures, Docker, and cloud deployments to take each prod
 
     hero: {
       availability: "Available, looking for a new challenge.",
-      role: "Full Stack Developer",
+      role: "Application Developer",
       description:
         "I build complete web applications with React, Java, Spring Boot, Node.js, and PHP, from the interface and API to the database and deployment.",
       buttons: {
@@ -161,7 +161,7 @@ I work with clear architectures, Docker, and cloud deployments to take each prod
     contact: {
       title: "Let’s work together",
       subtitle:
-        "I’m open to new opportunities, projects, and collaborations. If you have an idea or proposal, let’s talk.",
+        "I’m open to new opportunities, work, and collaborations. If you have an idea or proposal, let’s talk.",
       linkedin: "LinkedIn",
       gmail: "Gmail",
       name: "Name",

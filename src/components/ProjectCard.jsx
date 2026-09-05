@@ -14,7 +14,7 @@ const ProjectCard = memo(function ProjectCard({
     <article className="project-card">
       <div className="project-media">
         {video ? (
-          <video src={video} controls preload="none" muted playsInline poster={images?.[0]} />
+          <video src={video} controls preload="none" muted playsInline poster={images?.[0] || (video.includes("tumascotandil") ? "/images/tumascotandilfoto.jpg" : video.includes("asistenteIA") ? "/images/asistenteiafoto.jpg" : undefined)} />
         ) : hasImages ? (
           <img src={images[current]} alt={`${title} captura ${current + 1}`} loading="lazy" />
         ) : null}

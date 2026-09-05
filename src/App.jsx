@@ -12,6 +12,7 @@ export default function App() {
   const [lang, setLang] = useState("es");
   const scrollTimeout = useRef(null);
   const t = texts[lang];
+  useEffect(() => { document.documentElement.lang = lang; }, [lang]);
 
   const handleSmoothScroll = useCallback((event) => {
     const anchor = event.target.closest("a");
@@ -23,7 +24,7 @@ export default function App() {
     if (target) {
       window.scrollTo({
         top: target.getBoundingClientRect().top + window.scrollY - 76,
-        behavior: "smooth",
+        behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth",
       });
     }
   }, []);

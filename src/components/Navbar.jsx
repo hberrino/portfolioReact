@@ -20,7 +20,7 @@ export default function Navbar({ lang, setLang }) {
           <span className="brand-mark">HB.</span>
           <span className="brand-copy">
             <strong>Hernán Berrino</strong>
-            <small>Full Stack Developer</small>
+            <small>{lang === "es" ? "Desarrollador de aplicaciones" : "Application Developer"}</small>
           </span>
         </a>
 

@@ -8,13 +8,13 @@ export default function Sobremi({ lang }) {
       <div className="section-wrap about-layout">
         <div className="about-photo">
           <img src="/imgs/yop.jpg" alt="Hernán Berrino" loading="lazy" />
-          <div className="about-photo-caption">
+          <div className="about-photo-caption"><p>{lang === "es" ? "Técnico Universitario en Desarrollo de Aplicaciones Informáticas · UNICEN" : "University Technician in Application Development · UNICEN"}</p>
             <p>{lang === "es" ? "Disciplina para aprender, criterio para decidir y constancia para llegar al resultado." : "Discipline to learn, judgment to decide and consistency to reach the result."}</p>
           </div>
         </div>
         <div className="about-content">
           <span className="eyebrow">{t.sections.aboutTitle}</span>
-          <h2>{lang === "es" ? "Perseverancia, constancia y disciplina en todo lo que hago." : "Perseverance, consistency and discipline in everything I do."}</h2>
+          <h2>{lang === "es" ? "Detrás de cada solución, hay alguien que no se rinde." : "Behind every solution, someone who keeps going."}</h2>
           <div className="about-columns">
             <div>
               <h3>{t.sections.aboutMeTitle}</h3>

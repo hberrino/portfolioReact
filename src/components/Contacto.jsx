@@ -56,8 +56,8 @@ export default function Contacto({ lang }) {
             <button className="button button-primary" type="submit" disabled={status === "loading"}>
               {status === "loading" ? (lang === "es" ? "Enviando..." : "Sending...") : t.send}
             </button>
-            {status === "success" && <p className="success">{lang === "es" ? "Mensaje enviado. ¡Gracias!" : "Message sent. Thank you!"}</p>}
-            {status === "error" && <p className="error">{lang === "es" ? "No se pudo enviar. Intentá nuevamente." : "Could not send. Please try again."}</p>}
+            {status === "success" && <p role="status" className="success">{lang === "es" ? "Mensaje enviado. ¡Gracias!" : "Message sent. Thank you!"}</p>}
+            {status === "error" && <p role="alert" className="error">{lang === "es" ? "No se pudo enviar. Intentá nuevamente." : "Could not send. Please try again."}</p>}
           </div>
         </form>
       </div>

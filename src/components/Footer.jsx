@@ -11,8 +11,8 @@ export default function Footer({ lang }) {
             <span className="footer-mark">HB</span>
             <div>
               <strong>Hernán Berrino</strong>
-              <p>Full Stack Developer</p>
-              <small>{lang === "es" ? "Desarrollo web de extremo a extremo" : "End-to-end web development"}</small>
+              <p>{lang === "es" ? "Desarrollador de aplicaciones" : "Application Developer"}</p>
+              <small>{lang === "es" ? "De la idea a producción" : "From idea to production"}</small>
             </div>
           </div>
 

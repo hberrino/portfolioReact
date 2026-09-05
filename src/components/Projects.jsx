@@ -19,7 +19,7 @@ export default function Projects({ title, lang }) {
     <section id="projects" className="section section-tinted">
       <div className="section-wrap">
         <header className="section-heading">
-          <span className="eyebrow">Portfolio</span>
+          <span className="eyebrow">01 / {lang === "es" ? "TRABAJOS SELECCIONADOS" : "SELECTED WORK"}</span>
           <div>
             <h2>{title}</h2>
             <p>{lang === "es" ? "Experiencia seleccionada" : "Selected experience"}</p>
